@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Accounting Tools – All in 1 Accounting Solutions</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Kaushan+Script&display=swap">
+<style>
+:root{--bg:#EAF0F8;--panel:#DCE6F4;--card:#F4F7FC;--ink:#14213A;--muted:#566684;--line:#C3D0E6;--icn:#164A9C;--acc:#F28C1A;--navy:#0A2147;--blue:#1D5FBF;--field:#FFFFFF;--warn:#8A4B00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1222;--panel:#121D36;--card:#0F182D;--ink:#E6ECF8;--muted:#9AA8C6;--line:#223253;--icn:#8DB8FF;--navy:#07142B;--field:#0A1222;--warn:#FFC98A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A1222;--panel:#121D36;--card:#0F182D;--ink:#E6ECF8;--muted:#9AA8C6;--line:#223253;--icn:#8DB8FF;--navy:#07142B;--field:#0A1222;--warn:#FFC98A;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "Noto Sans","Segoe UI",Arial,sans-serif}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+header{background:var(--navy);color:#fff}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header .wrap{padding-top:22px;padding-bottom:26px}
+.logo{display:inline-block;background:var(--blue);border-radius:4px;padding:6px 18px 8px;font-family:"Kaushan Script","Segoe Script","Brush Script MT",cursive;font-size:2rem;line-height:1.1;margin-bottom:16px}
+h1{margin:0 0 6px;font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:700}
+header p{margin:0;opacity:.9}
+main{padding:22px 0 10px}
+.panel{background:var(--panel);border-radius:6px;padding:22px 24px 26px;margin-bottom:18px}
+.panel h2{margin:0 0 4px;font-size:1.25rem}
+.desc{margin:0 0 18px;color:var(--muted)}
+.cols{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+.box{background:var(--card);border-radius:6px;padding:18px 20px}
+label{display:block;font-size:.85rem;font-weight:500;color:var(--muted);margin:12px 0 4px}
+label:first-child{margin-top:0}
+input,select{width:100%;font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:4px;background:var(--field);color:var(--ink)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+fieldset{border:0;padding:0;margin:0}
+[hidden]{display:none!important}
+.out{margin:0}
+.out div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.out dt{color:var(--muted)}
+.out dd{margin:0;font-weight:700;text-align:right}
+.out .big{border-bottom:0;border-top:2px solid var(--ink);margin-top:6px;padding-top:12px;font-size:1.15rem}
+.out .big dt{color:var(--ink)}
+.hint{margin:0;color:var(--muted)}
+.note{margin:12px 0 0;font-size:.85rem;color:var(--warn)}
+.small{font-size:.82rem;color:var(--muted);margin:14px 0 0}
+.small a{color:var(--icn);text-decoration:underline}
+.rates{margin:18px 0 0;font-size:.85rem;color:var(--muted)}
+.rates b{color:var(--ink)}
+@media (max-width:820px){.cols{grid-template-columns:1fr}.panel{padding:18px 16px 22px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="index.html" style="text-decoration:none;color:#fff" aria-label="All in 1, back to home page">All in 1</a>
+<h1>Free Accounting Tools</h1>
+<p>Free calculators for everyday accounting and GST work.</p>
+</div></header>
+<main><div class="wrap">
+<section class="panel" id="gst-late-fee">
+<h2>GST Late Fee Calculator</h2>
+<p class="desc">Work out the late fee and interest for a delayed GSTR-1 or GSTR-3B. Everything you type stays in your browser.</p>
+<div class="cols">
+<div class="box">
+<label for="ret">Return</label>
+<select id="ret"><option value="3b">GSTR-3B (monthly or quarterly)</option><option value="1">GSTR-1 (monthly or quarterly)</option></select>
+<label for="kind">Type of return</label>
+<select id="kind"><option value="normal">Return with tax or supplies</option><option value="nil">Nil return</option></select>
+<label for="turn">Aggregate turnover in the previous financial year</label>
+<select id="turn"><option value="2000">Up to ₹1.5 crore</option><option value="5000">₹1.5 crore to ₹5 crore</option><option value="10000">Above ₹5 crore</option></select>
+<div class="row2">
+<div><label for="due">Due date</label><input id="due" type="date"></div>
+<div><label for="filed">Filing date</label><input id="filed" type="date"></div>
+</div>
+<div id="int-box">
+<label for="tax">Tax paid late in cash (₹)</label>
+<input id="tax" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
+<label for="paid">Date the tax was paid (leave blank if same as filing date)</label>
+<input id="paid" type="date">
+</div>
+</div>
+<div class="box">
+<div id="out" aria-live="polite"><p class="hint">Enter the due date and the filing date to see the late fee.</p></div>
+</div>
+</div>
+<p class="rates"><b>Rates used:</b> late fee of ₹50 a day (₹25 CGST + ₹25 SGST) for a return with tax or supplies, and ₹20 a day (₹10 + ₹10) for a nil return. Maximum late fee per return is ₹2,000, ₹5,000 or ₹10,000 by turnover slab, and ₹500 for a nil return. Interest is 18% a year on tax paid late, under Section 50, and applies to GSTR-3B only.</p>
+<p class="small">This is an estimate. The GST portal works out the final late fee when you file, and notifications can change the rules, so confirm on the <a href="https://www.gst.gov.in/" target="_blank" rel="noopener">GST portal</a> before paying. Rates cross-checked with <a href="https://www.aiaccountant.com/resources/gst-late-fee-calculator" target="_blank" rel="noopener">this guide</a> and <a href="https://accountune.com/gst-penalty-late-filing" target="_blank" rel="noopener">this one</a>. GSTR-9, GSTR-4 and other returns are not covered here.</p>
+</section>
+</div></main>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var inr=function(v){return '₹'+v.toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2})};
+function d(id){var v=$(id).value;if(!v)return null;var p=v.split('-');return Date.UTC(+p[0],+p[1]-1,+p[2])}
+function row(k,v,c){return '<div'+(c?' class="'+c+'"':'')+'><dt>'+k+'</dt><dd>'+v+'</dd></div>'}
+function calc(){
+ var is3b=$('ret').value==='3b',nil=$('kind').value==='nil';
+ $('int-box').hidden=!is3b||nil;
+ var due=d('due'),fil=d('filed'),out=$('out');
+ if(due===null||fil===null){out.innerHTML='<p class="hint">Enter the due date and the filing date to see the late fee.</p>';return}
+ var days=Math.round((fil-due)/864e5);
+ var perDay=nil?20:50,cap=nil?500:+$('turn').value;
+ var raw=days>0?perDay*days:0,fee=Math.min(raw,cap),capped=raw>cap;
+ var tax=parseFloat($('tax').value),interest=0,idays=0;
+ if(is3b&&!nil&&isFinite(tax)&&tax>0){var pd=d('paid');if(pd===null)pd=fil;idays=Math.round((pd-due)/864e5);if(idays>0)interest=tax*0.18*idays/365}
+ var h='<dl class="out">'+row('Days late',days>0?days:0)+row('Late fee per day',inr(perDay));
+ if(days>0){h+=row('Late fee before cap',inr(raw))+row('Maximum for this return',inr(cap))}
+ h+=row('Late fee, CGST',inr(fee/2))+row('Late fee, SGST',inr(fee/2))+row('Total late fee',inr(fee));
+ if(is3b&&!nil)h+=row('Interest at 18% a year'+(idays>0?' ('+idays+' days)':''),inr(interest));
+ h+=row('Total payable',inr(fee+interest),'big')+'</dl>';
+ if(days<=0)h+='<p class="note">The return was filed on or before the due date, so there is no late fee.</p>';
+ else if(capped)h+='<p class="note">The late fee has reached the maximum for this return.</p>';
+ if(!is3b)h+='<p class="note">GSTR-1 carries a late fee only. Interest applies to tax paid late through GSTR-3B.</p>';
+ out.innerHTML=h}
+['ret','kind','turn','due','filed','tax','paid'].forEach(function(i){$(i).addEventListener('input',calc);$(i).addEventListener('change',calc)});
+calc();
+})();
+</script>
+</body>
+</html>
