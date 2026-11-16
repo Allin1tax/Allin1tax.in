@@ -1,362 +1,960 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>YouTube Videos &amp; Tutorials – All in 1 Accounting Solutions</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Kaushan+Script&display=swap">
-<style>
-:root{--bg:#EAF0F8;--panel:#DCE6F4;--card:#F4F7FC;--ink:#14213A;--muted:#566684;--line:#C3D0E6;--icn:#164A9C;--acc:#F28C1A;--navy:#0A2147;--blue:#1D5FBF;--field:#FFFFFF;--red:#FF0000;box-sizing:border-box}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1222;--panel:#121D36;--card:#0F182D;--ink:#E6ECF8;--muted:#9AA8C6;--line:#223253;--icn:#8DB8FF;--navy:#07142B;--field:#0A1222;color-scheme:dark}}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "Noto Sans","Segoe UI",Arial,sans-serif}
-header{background:var(--navy);color:#fff}
-.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-header .wrap{padding-top:22px;padding-bottom:26px}
-.top-bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px}
-.logo{display:inline-block;background:var(--blue);border-radius:4px;padding:6px 18px 8px;font-family:"Kaushan Script","Segoe Script","Brush Script MT",cursive;font-size:2rem;line-height:1.1;color:#fff;text-decoration:none}
-.btn-ch{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:8px 18px;border-radius:4px;font-weight:700;text-decoration:none;font-size:.9rem}
-.btn-ch:hover{filter:brightness(1.1)}
-.btn-ch svg{width:18px;height:18px;fill:#fff}
-h1{margin:0 0 6px;font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:700}
-header p{margin:0;opacity:.9}
-main{padding:24px 0 40px}
-.search-bar{margin-bottom:22px;display:flex;gap:12px;align-items:center}
-.search-bar input{flex:1;max-width:420px;padding:10px 14px;border:1px solid var(--line);border-radius:6px;background:var(--field);color:var(--ink);font:inherit}
-.search-bar input:focus{outline:2px solid var(--acc)}
-.count{font-size:.85rem;color:var(--muted);font-weight:600}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:20px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
-.card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.12)}
-.thumb{position:relative;width:100%;aspect-ratio:16/9;background:#000;overflow:hidden}
-.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s ease}
-.card:hover .thumb img{transform:scale(1.04)}
-.play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.25);transition:background .2s ease}
-.card:hover .play{background:rgba(0,0,0,.45)}
-.p-btn{width:46px;height:32px;background:var(--red);border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.5);transition:transform .15s ease}
-.card:hover .p-btn{transform:scale(1.1)}
-.p-btn svg{width:16px;height:16px;margin-left:2px}
-.info{padding:14px 16px;display:flex;flex-direction:column;flex:1}
-.info h3{font-size:.9rem;font-weight:700;line-height:1.4;margin:0 0 10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--ink)}
-.meta{margin-top:auto;font-size:.8rem;font-weight:600;color:var(--icn);display:flex;align-items:center;gap:6px}
-.meta svg{width:16px;height:16px}
-.bar{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted);text-align:center}
-@media (max-width:600px){.grid{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>YouTube Video Tutorials &amp; Guides | All in 1 Accounting Solutions</title>
+  <meta name="description" content="Watch step-by-step practical video tutorials on GST return filing, Income Tax, TDS, EPFO KYC, DSC setup, Tally Prime and tech tricks from @Allin-eg7mp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Kaushan+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-950: #070e1b;
+      --navy-900: #0B192C;
+      --navy-800: #1E3E62;
+      --blue-600: #1D5FBF;
+      --blue-500: #2563EB;
+      --blue-50: #EFF6FF;
+      --accent: #F28C1A;
+      --red: #FF0000;
+      --red-hover: #CC0000;
+      
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-subtle: #F1F5F9;
+      --border: #E2E8F0;
+      --border-subtle: #EDF2F7;
+
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-light: #94A3B8;
+
+      --shadow-sm: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 14px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.1), 0 4px 8px -2px rgba(15, 23, 42, 0.05);
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-xl: 18px;
+      --radius-full: 9999px;
+
+      box-sizing: border-box;
+      color-scheme: light;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #090E17;
+        --surface: #111A28;
+        --surface-subtle: #182234;
+        --border: #223049;
+        --border-subtle: #192437;
+        --text-main: #F1F5F9;
+        --text-muted: #94A3B8;
+        --text-light: #64748B;
+        color-scheme: dark;
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14.5px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--blue-500);
+      outline-offset: 3px;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 60%, var(--navy-800) 100%);
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header .wrap {
+      padding-top: 24px;
+      padding-bottom: 28px;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      background: linear-gradient(135deg, #1D5FBF, #2563EB);
+      border-radius: var(--radius-md);
+      padding: 6px 16px 8px;
+      font-family: "Kaushan Script", cursive;
+      font-size: 1.8rem;
+      line-height: 1.1;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(29, 95, 191, 0.35);
+      transition: transform .15s ease;
+    }
+
+    .logo:hover {
+      transform: translateY(-1px);
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #CBD5E1;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.08);
+      transition: all .15s ease;
+    }
+
+    .back-home:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #fff;
+    }
+
+    .btn-ch {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.88rem;
+      box-shadow: 0 4px 14px rgba(255, 0, 0, 0.35);
+      transition: all .15s ease;
+    }
+
+    .btn-ch:hover {
+      background: var(--red-hover);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .btn-ch svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+
+    header h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      margin: 0;
+      color: #CBD5E1;
+      font-size: 0.98rem;
+      max-width: 52em;
+    }
+
+    /* Controls Bar */
+    main {
+      padding: 28px 0 50px;
+    }
+
+    .controls-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .search-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .search-input-wrap {
+      flex: 1;
+      max-width: 480px;
+      position: relative;
+    }
+
+    .search-input-wrap input {
+      width: 100%;
+      padding: 11px 16px 11px 40px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      background: var(--surface-subtle);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.92rem;
+      transition: all .15s ease;
+    }
+
+    .search-input-wrap input:focus {
+      outline: none;
+      border-color: var(--blue-500);
+      background: var(--surface);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-light);
+      pointer-events: none;
+    }
+
+    .video-count {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--blue-600);
+      background: var(--blue-50);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+    }
+
+    /* Category Filter Chips */
+    .chip-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .chip {
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all .15s ease;
+    }
+
+    .chip:hover {
+      border-color: var(--blue-500);
+      color: var(--text-main);
+    }
+
+    .chip.active {
+      background: var(--navy-900);
+      border-color: var(--navy-900);
+      color: #fff;
+    }
+
+    /* Video Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: all .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: #CBD5E1;
+    }
+
+    .thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .25s ease;
+    }
+
+    .card:hover .thumb img {
+      transform: scale(1.05);
+    }
+
+    .play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.25);
+      transition: background .2s ease;
+    }
+
+    .card:hover .play {
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .p-btn {
+      width: 48px;
+      height: 34px;
+      background: var(--red);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      transition: transform .15s ease;
+    }
+
+    .card:hover .p-btn {
+      transform: scale(1.12);
+    }
+
+    .p-btn svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 2px;
+    }
+
+    .info {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .cat-tag {
+      align-self: flex-start;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      background: var(--surface-subtle);
+      color: var(--text-muted);
+    }
+
+    .cat-tag.gst { background: #DCFCE7; color: #166534; }
+    .cat-tag.tds { background: #F3E8FF; color: #6B21A8; }
+    .cat-tag.itr { background: #DBEAFE; color: #1E40AF; }
+    .cat-tag.pf  { background: #FEF3C7; color: #92400E; }
+    .cat-tag.reg { background: #E0E7FF; color: #3730A3; }
+    .cat-tag.tally { background: #FFEDD5; color: #9A3412; }
+    .cat-tag.tech { background: #E2E8F0; color: #334155; }
+
+    .info h3 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      line-height: 1.45;
+      margin: 0 0 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: var(--text-main);
+    }
+
+    .meta {
+      margin-top: auto;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .empty-state {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 26px 0 40px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--blue-600);
+      font-weight: 500;
+    }
+
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .controls-card {
+        padding: 16px 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-  <div class="wrap">
-    <div class="top-bar">
-      <a class="logo" href="index.html" aria-label="All in 1, back to home">All in 1</a>
-      <a class="btn-ch" href="https://www.youtube.com/@Allin-eg7mp/videos" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#fff"/></svg>
-        Subscribe / Visit Channel (@Allin-eg7mp)
-      </a>
+  <!-- Header -->
+  <header>
+    <div class="wrap">
+      <div class="top-nav">
+        <div class="logo-badge">
+          <a class="logo" href="index.html" aria-label="All in 1, back to home">All in 1</a>
+          <a class="back-home" href="index.html">&larr; Back to Main Website</a>
+        </div>
+        <div class="header-actions">
+          <a class="btn-ch" href="https://www.youtube.com/@Allin-eg7mp/videos" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+            Subscribe / Visit Channel (@Allin-eg7mp)
+          </a>
+        </div>
+      </div>
+      <h1>YouTube Video Tutorials &amp; Guides</h1>
+      <p>Official video guides on GST compliance, ITR filing, TDS, EPFO KYC &amp; DSC, Tally Prime setups and essential office tech tricks.</p>
     </div>
-    <h1>YouTube Videos &amp; Tutorials</h1>
-    <p>Official video guides on GST, Income Tax, TDS, EPFO, Tally Prime and tech tricks by All in 1 Accounting Solutions.</p>
-  </div>
-</header>
-<main>
-  <div class="wrap">
-    <div class="search-bar">
-      <input id="q" type="search" placeholder="Search videos (e.g. GST, TDS, Tally, DSC, Excel)..." aria-label="Search videos">
-      <span class="count" id="count">30 videos</span>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="wrap">
+      <div class="controls-card">
+        <div class="search-row">
+          <div class="search-input-wrap">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="q" type="search" placeholder="Search 30 videos (e.g. GST, TDS, Tally, DSC, Excel)..." aria-label="Search videos">
+          </div>
+          <span class="video-count" id="count">30 Videos</span>
+        </div>
+
+        <!-- Filter Chips -->
+        <div class="chip-bar" id="chipBar">
+          <button class="chip active" data-cat="all">All (30)</button>
+          <button class="chip" data-cat="gst">GST Returns (7)</button>
+          <button class="chip" data-cat="tally">Tally Prime (3)</button>
+          <button class="chip" data-cat="reg">Registrations &amp; DSC (4)</button>
+          <button class="chip" data-cat="tds">TDS (2)</button>
+          <button class="chip" data-cat="pf">EPFO &amp; PF (1)</button>
+          <button class="chip" data-cat="itr">Income Tax (1)</button>
+          <button class="chip" data-cat="tech">Tech &amp; Excel Tricks (12)</button>
+        </div>
+      </div>
+
+      <!-- Video Grid -->
+      <div class="grid" id="v-grid">
+        <!-- Card 1 -->
+        <a class="card" href="https://www.youtube.com/watch?v=jw6PZ-D27DM" target="_blank" rel="noopener" data-cat="pf" data-title="epfo latest new dsc process for approval of kyc pf dsc signer utility process pf kyc">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/jw6PZ-D27DM/hqdefault.jpg" alt="EPFO DSC Signer Utility &amp; KYC" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag pf">EPFO &bull; PF</span>
+            <h3>EPFO Latest New DSC process for approval of KYC | PF DSC Signer Utility process</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a class="card" href="https://www.youtube.com/watch?v=b4wjabGhaz4" target="_blank" rel="noopener" data-cat="tally" data-title="how to add company logo in sales invoice company wise in tally prime tally prime print setup">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/b4wjabGhaz4/hqdefault.jpg" alt="Tally Prime Logo Setup" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tally">Tally Prime</span>
+            <h3>HOW TO ADD COMPANY LOGO IN SALES INVOICE COMPANY WISE IN TALLY PRIME</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a class="card" href="https://www.youtube.com/watch?v=bbhtlXqK42s" target="_blank" rel="noopener" data-cat="reg" data-title="associate dsc of director in v3 portal register dsc in v3 portal mca">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/bbhtlXqK42s/hqdefault.jpg" alt="Associate DSC Director V3" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag reg">MCA &bull; DSC</span>
+            <h3>Associate DSC Of Director In V3 Portal | Register DSC in MCA V3 Portal</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a class="card" href="https://www.youtube.com/watch?v=ae4ztgJ2PHI" target="_blank" rel="noopener" data-cat="tally" data-title="print multiple vouchers how to print multiple invoices in single click tally prime">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/ae4ztgJ2PHI/hqdefault.jpg" alt="Print Multiple Vouchers Tally" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tally">Tally Prime</span>
+            <h3>Print Multiple Vouchers || How to print multiple Invoices In single Click</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 5 -->
+        <a class="card" href="https://www.youtube.com/watch?v=rZUc7Q56hw8" target="_blank" rel="noopener" data-cat="tally" data-title="tallyerp9freelicenseversion tallyfreedownloadbyallin1 tally erp 9 free download">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/rZUc7Q56hw8/hqdefault.jpg" alt="Tally ERP 9 Guide" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tally">Tally ERP</span>
+            <h3>Tally ERP 9 Free Educational Setup &amp; Download Guide</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 6 -->
+        <a class="card" href="https://www.youtube.com/watch?v=czeVIFp8Mj8" target="_blank" rel="noopener" data-cat="gst" data-title="qrmp challan create and payment live gst payment pmt-06">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/czeVIFp8Mj8/hqdefault.jpg" alt="QRMP Challan Payment" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag gst">GST</span>
+            <h3>QRMP Challan Create and Payment | Live PMT-06 GST Payment</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 7 -->
+        <a class="card" href="https://www.youtube.com/watch?v=3SIsursI_6Q" target="_blank" rel="noopener" data-cat="itr" data-title="itr of last 5 years can be verified income tax return one time relaxation scheme">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/3SIsursI_6Q/hqdefault.jpg" alt="ITR E-Verification Relaxation" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag itr">Income Tax</span>
+            <h3>ITR of last 5 years can be verified | Income Tax Return Relaxation Scheme</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 8 -->
+        <a class="card" href="https://www.youtube.com/watch?v=wkN9m5nFfgA" target="_blank" rel="noopener" data-cat="gst" data-title="how to cancel e way bill live process eway bill portal">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/wkN9m5nFfgA/hqdefault.jpg" alt="Cancel E Way Bill" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag gst">E-Way Bill</span>
+            <h3>How to Cancel E-Way Bill | Live step-by-step process</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 9 -->
+        <a class="card" href="https://www.youtube.com/watch?v=0pZigftTbGU" target="_blank" rel="noopener" data-cat="gst" data-title="gstr1 monthly option to quarterly edit gstr 1 quarterly option to monthly gst edit">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/0pZigftTbGU/hqdefault.jpg" alt="GSTR-1 Monthly to Quarterly" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag gst">GST</span>
+            <h3>GSTR-1 monthly option to quarterly, edit GSTR-1 quarterly to monthly</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 10 -->
+        <a class="card" href="https://www.youtube.com/watch?v=kBH_ZoQIlXk" target="_blank" rel="noopener" data-cat="gst" data-title="gstr1 monthly option to quarterly edit gstr 1 return frequency">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/kBH_ZoQIlXk/hqdefault.jpg" alt="GSTR-1 Filing Settings" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag gst">GST</span>
+            <h3>GSTR-1 Filing &amp; Return Frequency Settings (Part 2)</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 11 -->
+        <a class="card" href="https://www.youtube.com/watch?v=7dzul34DGRU" target="_blank" rel="noopener" data-cat="gst" data-title="file gstr-3b by sms how to file gstr 3b through sms nil return">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/7dzul34DGRU/hqdefault.jpg" alt="File GSTR-3B by SMS" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag gst">GST SMS</span>
+            <h3>File GSTR-3B by SMS | How to file GSTR-3B Nil Return through SMS</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 12 -->
+        <a class="card" href="https://www.youtube.com/watch?v=3uh16vcgofo" target="_blank" rel="noopener" data-cat="gst" data-title="how to file new gst return forms explained sahaj sugam anx 1 anx2 ret 1 ret 2 ret 3">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/3uh16vcgofo/hqdefault.jpg" alt="New GST Return Forms" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag gst">GST Forms</span>
+            <h3>HOW TO FILE NEW GST RETURN forms Explained: Sahaj, Sugam, ANX-1 &amp; ANX-2</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 13 -->
+        <a class="card" href="https://www.youtube.com/watch?v=M7yIzhZFJeY" target="_blank" rel="noopener" data-cat="tds" data-title="tds nil return filing form 24q 26q nil statement traces">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/M7yIzhZFJeY/hqdefault.jpg" alt="TDS Nil Return" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tds">TDS</span>
+            <h3>TDS Nil Return Filing &amp; Non-Filing Declaration in Traces</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 14 -->
+        <a class="card" href="https://www.youtube.com/watch?v=n1ULvQFPtcQ" target="_blank" rel="noopener" data-cat="tds" data-title="tds late payment fee tds late return fee tds interest calculation section 201 234e">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/n1ULvQFPtcQ/hqdefault.jpg" alt="TDS Late Fee &amp; Interest" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tds">TDS &bull; Section 234E</span>
+            <h3>TDS Late Payment Fee | TDS Interest Calculation | Section 201(1A) &amp; 234E</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 15 -->
+        <a class="card" href="https://www.youtube.com/watch?v=02e50QXL4bw" target="_blank" rel="noopener" data-cat="reg" data-title="how to download udyam certificate live msme registration certificate">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/02e50QXL4bw/hqdefault.jpg" alt="Download Udyam Certificate" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag reg">Udyam &bull; MSME</span>
+            <h3>How to Download Udyam Certificate Live | MSME Registration Guide</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 16 -->
+        <a class="card" href="https://www.youtube.com/watch?v=ZvtHtfLS0tA" target="_blank" rel="noopener" data-cat="reg" data-title="know your aadhar registered mobile number live uidai">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/ZvtHtfLS0tA/hqdefault.jpg" alt="Check Aadhaar Mobile Number" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag reg">Aadhaar &bull; UIDAI</span>
+            <h3>Know Your Aadhaar Registered Mobile Number || Live UIDAI check</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 17 -->
+        <a class="card" href="https://www.youtube.com/watch?v=7spCPCaGVto" target="_blank" rel="noopener" data-cat="reg" data-title="how to apply for pass for opening industries in lockdown haryana saral">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/7spCPCaGVto/hqdefault.jpg" alt="Industrial Passes Portal" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag reg">Government Portal</span>
+            <h3>How to apply for industrial registration pass &amp; permissions</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 18 -->
+        <a class="card" href="https://www.youtube.com/watch?v=z9KoMkVlb4g" target="_blank" rel="noopener" data-cat="tech" data-title="excel date stripping excel formula date hack">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/z9KoMkVlb4g/hqdefault.jpg" alt="Excel Date Stripping" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Excel Hack</span>
+            <h3>Excel #3 Date Stripping | Extract Year, Month &amp; Day in Single Formula</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 19 -->
+        <a class="card" href="https://www.youtube.com/watch?v=7MsoMTDU-Z0" target="_blank" rel="noopener" data-cat="tech" data-title="hack 2 converting dates into days excel trick text formula">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/7MsoMTDU-Z0/hqdefault.jpg" alt="Convert Dates into Days Excel" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Excel Hack</span>
+            <h3>Hack #2: Converting Dates into Days (Mon, Tue, Wed) in Excel</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 20 -->
+        <a class="card" href="https://www.youtube.com/watch?v=y5_ZzMCEmVU" target="_blank" rel="noopener" data-cat="tech" data-title="excel hack trick 01 count the characters in cell len formula">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/y5_ZzMCEmVU/hqdefault.jpg" alt="Count Characters in Cell Excel" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Excel Hack</span>
+            <h3>Excel Hack Trick #01: Count the Characters in Cell (LEN Formula)</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 21 -->
+        <a class="card" href="https://www.youtube.com/watch?v=unLRGgi4B3g" target="_blank" rel="noopener" data-cat="tech" data-title="how to repair corrupted pen drive or memory card 1000 working diskpart">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/unLRGgi4B3g/hqdefault.jpg" alt="Repair Corrupted Pen Drive" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Tech Fix</span>
+            <h3>How to repair corrupted pen drive or memory card || 100% working fix</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 22 -->
+        <a class="card" href="https://www.youtube.com/watch?v=k6nJaIpRK-o" target="_blank" rel="noopener" data-cat="tech" data-title="how to activate windows 10 without software activate windows settings fix now">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/k6nJaIpRK-o/hqdefault.jpg" alt="Windows 10 Settings" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Windows Guide</span>
+            <h3>Windows Settings Configuration &amp; Activation Troubleshooting Guide</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 23 -->
+        <a class="card" href="https://www.youtube.com/watch?v=ji49wvV55mQ" target="_blank" rel="noopener" data-cat="tech" data-title="fasttag apply online toll tag registration">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/ji49wvV55mQ/hqdefault.jpg" alt="FASTag Apply Online" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Online Utility</span>
+            <h3>FASTag Apply Online Process &amp; Vehicle Number Linking</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 24 -->
+        <a class="card" href="https://www.youtube.com/watch?v=bn1HsocHHPQ" target="_blank" rel="noopener" data-cat="tech" data-title="covid 19 vaccine registration process cowin appointment step by step">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/bn1HsocHHPQ/hqdefault.jpg" alt="CoWin Portal Registration" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Govt Portal</span>
+            <h3>CoWin Portal Registration &amp; Certificate Download Guide</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 25 -->
+        <a class="card" href="https://www.youtube.com/watch?v=5D56rg1O2Uw" target="_blank" rel="noopener" data-cat="tech" data-title="smartphone processors ranking list snapdragon bionic dimensity">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/5D56rg1O2Uw/hqdefault.jpg" alt="Smartphone Processors Ranking" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Hardware Tech</span>
+            <h3>SMARTPHONE PROCESSORS RANKING LIST &amp; Performance Comparison</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 26 -->
+        <a class="card" href="https://www.youtube.com/watch?v=Vn3zaWDHTTs" target="_blank" rel="noopener" data-cat="tech" data-title="pm modi announces 20 lakh crore economic package brief details atmanirbhar bharat">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/Vn3zaWDHTTs/hqdefault.jpg" alt="Economic Package MSME" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Finance News</span>
+            <h3>Atmanirbhar Bharat Economic Package for MSMEs &amp; Small Businesses</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 27 -->
+        <a class="card" href="https://www.youtube.com/watch?v=a8aX6R-oWz8" target="_blank" rel="noopener" data-cat="tech" data-title="findwifipassword how to find wifi password windows cmd">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/a8aX6R-oWz8/hqdefault.jpg" alt="Find WiFi Password" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Tech Trick</span>
+            <h3>How to Find Saved WiFi Password in Windows via Command Prompt</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 28 -->
+        <a class="card" href="https://www.youtube.com/watch?v=NrMskgj7ez0" target="_blank" rel="noopener" data-cat="tech" data-title="how to delete gmail account permanently google account settings">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/NrMskgj7ez0/hqdefault.jpg" alt="Delete Gmail Account" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Google Guide</span>
+            <h3>How to Delete Gmail / Google Account Permanently step-by-step</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 29 -->
+        <a class="card" href="https://www.youtube.com/watch?v=UCppiqvi73g" target="_blank" rel="noopener" data-cat="tech" data-title="email id kaise banaye gmail id kaise banaye how to make email id create email">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/UCppiqvi73g/hqdefault.jpg" alt="Create Gmail ID" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Basics</span>
+            <h3>Email ID Kaise Banaye | How to Create a New Gmail ID on Mobile &amp; PC</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 30 -->
+        <a class="card" href="https://www.youtube.com/watch?v=CvTFunOVH0A" target="_blank" rel="noopener" data-cat="tech" data-title="computersoft essential office computer software utility tools">
+          <div class="thumb">
+            <img src="https://i.ytimg.com/vi/CvTFunOVH0A/hqdefault.jpg" alt="Computer Software Guide" loading="lazy">
+            <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
+          </div>
+          <div class="info">
+            <span class="cat-tag tech">Software</span>
+            <h3>Essential Computer Software &amp; Utilities for Accounting Offices</h3>
+            <span class="meta"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>Watch Tutorial &rarr;</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="empty-state" id="emptyState">
+        <h3>No matching videos found</h3>
+        <p>Try searching with another keyword like GST, TDS, Tally, or Excel.</p>
+      </div>
     </div>
-    <div class="grid" id="v-grid">
-      <a class="card" href="https://www.youtube.com/watch?v=jw6PZ-D27DM" target="_blank" rel="noopener" data-title="epfo latest new dsc process for approval of kyc | pf dsc signer utility process | pf kyc">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/jw6PZ-D27DM/hqdefault.jpg" alt="EPFO Latest New DSC process for approval of KYC | PF DSC Signer Utility process | PF KYC" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>EPFO Latest New DSC process for approval of KYC | PF DSC Signer Utility process | PF KYC</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=unLRGgi4B3g" target="_blank" rel="noopener" data-title="how to repair corrupted pen drive or memory card || 1000% working">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/unLRGgi4B3g/hqdefault.jpg" alt="How to Repair Corrupted Pen Drive or Memory Card || 1000% Working" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>How to Repair Corrupted Pen Drive or Memory Card || 1000% Working</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=b4wjabGhaz4" target="_blank" rel="noopener" data-title="how to add company logo in sales invoice company wise in tally prime | tally prime print setup">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/b4wjabGhaz4/hqdefault.jpg" alt="HOW TO ADD COMPANY LOGO IN SALES INVOICE COMPANY WISE IN TALLY PRIME | TALLY PRIME PRINT SETUP" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>HOW TO ADD COMPANY LOGO IN SALES INVOICE COMPANY WISE IN TALLY PRIME | TALLY PRIME PRINT SETUP</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=bbhtlXqK42s" target="_blank" rel="noopener" data-title="associate dsc of director in v3 portal | register dsc in v3 portal">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/bbhtlXqK42s/hqdefault.jpg" alt="Associate DSC Of Director In V3 Portal | Register DSC in V3 Portal" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>Associate DSC Of Director In V3 Portal | Register DSC in V3 Portal</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=5D56rg1O2Uw" target="_blank" rel="noopener" data-title="smartphone processors ranking list">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/5D56rg1O2Uw/hqdefault.jpg" alt="SMARTPHONE PROCESSORS RANKING LIST" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>SMARTPHONE PROCESSORS RANKING LIST</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=z9KoMkVlb4g" target="_blank" rel="noopener" data-title="excel #3 date stripping">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/z9KoMkVlb4g/hqdefault.jpg" alt="Excel #3 Date Stripping" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>Excel #3 Date Stripping</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=7MsoMTDU-Z0" target="_blank" rel="noopener" data-title="hack #2 converting dates into days">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/7MsoMTDU-Z0/hqdefault.jpg" alt="Hack #2 Converting Dates into Days" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>Hack #2 Converting Dates into Days</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=y5_ZzMCEmVU" target="_blank" rel="noopener" data-title="excel hack trick #01 count the characters in cell">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/y5_ZzMCEmVU/hqdefault.jpg" alt="Excel Hack Trick #01 Count the Characters in Cell" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>Excel Hack Trick #01 Count the Characters in Cell</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=02e50QXL4bw" target="_blank" rel="noopener" data-title="how to download udyam certificate live 2021">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/02e50QXL4bw/hqdefault.jpg" alt="How to Download Udyam Certificate Live 2021" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>How to Download Udyam Certificate Live 2021</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=k6nJaIpRK-o" target="_blank" rel="noopener" data-title="how to activate windows 10 without software | activate windows go to settings | fix now">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/k6nJaIpRK-o/hqdefault.jpg" alt="How to Activate Windows 10 without Software | Activate Windows Go to Settings | Fix Now" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>How to Activate Windows 10 without Software | Activate Windows Go to Settings | Fix Now</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=ZvtHtfLS0tA" target="_blank" rel="noopener" data-title="know your aadhaar registered mobile number || live">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/ZvtHtfLS0tA/hqdefault.jpg" alt="Know Your Aadhaar Registered Mobile Number || Live" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>Know Your Aadhaar Registered Mobile Number || Live</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=ji49wvV55mQ" target="_blank" rel="noopener" data-title="fasttag apply online 2021">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/ji49wvV55mQ/hqdefault.jpg" alt="FastTag Apply Online 2021" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>FastTag Apply Online 2021</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=ae4ztgJ2PHI" target="_blank" rel="noopener" data-title="print multiple vouchers || how to print multiple invoices in single click || tally prime">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/ae4ztgJ2PHI/hqdefault.jpg" alt="Print Multiple Vouchers || How to Print Multiple Invoices In Single Click || Tally Prime" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>Print Multiple Vouchers || How to Print Multiple Invoices In Single Click || Tally Prime</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=bn1HsocHHPQ" target="_blank" rel="noopener" data-title="covid-19 vaccine registration process 18+ | cowin registration | step by step in hindi">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/bn1HsocHHPQ/hqdefault.jpg" alt="COVID-19 Vaccine Registration Process 18+ | CoWin Registration | Step by Step in Hindi" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>COVID-19 Vaccine Registration Process 18+ | CoWin Registration | Step by Step in Hindi</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=czeVIFp8Mj8" target="_blank" rel="noopener" data-title="qrmp challan create and payment | live jan 2021">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/czeVIFp8Mj8/hqdefault.jpg" alt="QRMP Challan Create and Payment | Live Jan 2021" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>QRMP Challan Create and Payment | Live Jan 2021</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=3SIsursI_6Q" target="_blank" rel="noopener" data-title="itr of last 5 years can be verified | income tax return one time relaxation scheme">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/3SIsursI_6Q/hqdefault.jpg" alt="ITR of Last 5 Years Can Be Verified | Income Tax Return One Time Relaxation Scheme" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>ITR of Last 5 Years Can Be Verified | Income Tax Return One Time Relaxation Scheme</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=wkN9m5nFfgA" target="_blank" rel="noopener" data-title="how to cancel e-way bill | live process | 2020">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/wkN9m5nFfgA/hqdefault.jpg" alt="How to Cancel E-Way Bill | Live Process | 2020" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>How to Cancel E-Way Bill | Live Process | 2020</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=0pZigftTbGU" target="_blank" rel="noopener" data-title="gstr-1 monthly option to quarterly | edit gstr-1 quarterly option to monthly || gst edit">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/0pZigftTbGU/hqdefault.jpg" alt="GSTR-1 Monthly Option to Quarterly | Edit GSTR-1 Quarterly Option to Monthly || GST Edit" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>GSTR-1 Monthly Option to Quarterly | Edit GSTR-1 Quarterly Option to Monthly || GST Edit</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=kBH_ZoQIlXk" target="_blank" rel="noopener" data-title="gstr-1 filing & return settings | step-by-step guide">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/kBH_ZoQIlXk/hqdefault.jpg" alt="GSTR-1 Filing & Return Settings | Step-by-Step Guide" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>GSTR-1 Filing & Return Settings | Step-by-Step Guide</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=7dzul34DGRU" target="_blank" rel="noopener" data-title="file gstr-3b by sms | how to file gstr-3b through sms | gstr 3b sms">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/7dzul34DGRU/hqdefault.jpg" alt="File GSTR-3B by SMS | How to File GSTR-3B through SMS | GSTR 3B SMS" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>File GSTR-3B by SMS | How to File GSTR-3B through SMS | GSTR 3B SMS</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=M7yIzhZFJeY" target="_blank" rel="noopener" data-title="tds nil return filing process">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/M7yIzhZFJeY/hqdefault.jpg" alt="TDS Nil Return Filing Process" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>TDS Nil Return Filing Process</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=7spCPCaGVto" target="_blank" rel="noopener" data-title="how to apply for pass for opening industries in lockdown for haryana">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/7spCPCaGVto/hqdefault.jpg" alt="How to Apply for Pass for Opening Industries in Lockdown for Haryana" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>How to Apply for Pass for Opening Industries in Lockdown for Haryana</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=Vn3zaWDHTTs" target="_blank" rel="noopener" data-title="pm modi announces 20 lakh crore economic package brief details">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/Vn3zaWDHTTs/hqdefault.jpg" alt="PM Modi Announces 20 Lakh Crore Economic Package Brief Details" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>PM Modi Announces 20 Lakh Crore Economic Package Brief Details</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=a8aX6R-oWz8" target="_blank" rel="noopener" data-title="how to find wifi password">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/a8aX6R-oWz8/hqdefault.jpg" alt="How to Find WiFi Password" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>How to Find WiFi Password</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=rZUc7Q56hw8" target="_blank" rel="noopener" data-title="tally erp 9 free license version | tally free download by all in 1">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/rZUc7Q56hw8/hqdefault.jpg" alt="Tally ERP 9 Free License Version | Tally Free Download by All in 1" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>Tally ERP 9 Free License Version | Tally Free Download by All in 1</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=NrMskgj7ez0" target="_blank" rel="noopener" data-title="how to delete gmail account permanently 2020">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/NrMskgj7ez0/hqdefault.jpg" alt="How to Delete Gmail Account Permanently 2020" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>How to Delete Gmail Account Permanently 2020</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=UCppiqvi73g" target="_blank" rel="noopener" data-title="email id kaise banaye | gmail id kaise banaye | how to create email id">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/UCppiqvi73g/hqdefault.jpg" alt="Email ID Kaise Banaye | Gmail ID Kaise Banaye | How to Create Email ID" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>Email ID Kaise Banaye | Gmail ID Kaise Banaye | How to Create Email ID</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=n1ULvQFPtcQ" target="_blank" rel="noopener" data-title="tds late payment fee | tds late return fee | tds interest calculation | tds penalty & fee">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/n1ULvQFPtcQ/hqdefault.jpg" alt="TDS Late Payment Fee | TDS Late Return Fee | TDS Interest Calculation | TDS Penalty & Fee" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>TDS Late Payment Fee | TDS Late Return Fee | TDS Interest Calculation | TDS Penalty & Fee</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=CvTFunOVH0A" target="_blank" rel="noopener" data-title="computer software & tools guide | all in 1">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/CvTFunOVH0A/hqdefault.jpg" alt="Computer Software & Tools Guide | All in 1" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>Computer Software & Tools Guide | All in 1</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>      <a class="card" href="https://www.youtube.com/watch?v=3uh16vcgofo" target="_blank" rel="noopener" data-title="how to file new gst return forms explained: sahaj sugam anx 1 anx 2 ret 1 ret 2 ret 3">
-        <div class="thumb">
-          <img src="https://i.ytimg.com/vi/3uh16vcgofo/hqdefault.jpg" alt="HOW TO FILE NEW GST RETURN Forms Explained: Sahaj Sugam ANX 1 ANX 2 RET 1 RET 2 RET 3" loading="lazy">
-          <div class="play"><span class="p-btn"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span></div>
-        </div>
-        <div class="info">
-          <h3>HOW TO FILE NEW GST RETURN Forms Explained: Sahaj Sugam ANX 1 ANX 2 RET 1 RET 2 RET 3</h3>
-          <span class="meta"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-.9-1-1.7-1.9-1.9C19.9 3.8 12 3.8 12 3.8s-7.9 0-9.6.5c-.9.2-1.6 1-1.9 1.9C0 8 0 12 0 12s0 4 .5 5.8c.3.9 1 1.7 1.9 1.9 1.7.5 9.6.5 9.6.5s7.9 0 9.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" fill="#ff0000"/></svg>Watch on YouTube</span>
-        </div>
-      </a>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      &copy; 2026 All in 1 Accounting Solutions. <a href="index.html">Main Website</a> &bull; <a href="blog.html">Blog</a> &bull; <a href="free-accounting-tools.html">GST Calculator</a> &bull; <a href="https://www.youtube.com/@Allin-eg7mp/videos" target="_blank" rel="noopener">Official YouTube Channel</a>
     </div>
-    <div class="bar">&copy; 2026 All in 1 Accounting Solutions. Official YouTube: <a href="https://www.youtube.com/@Allin-eg7mp/videos" target="_blank" rel="noopener" style="color:var(--icn);text-decoration:underline;">@Allin-eg7mp</a></div>
-  </div>
-</main>
-<script>
-  (function(){
-    var q = document.getElementById('q');
-    var cards = document.querySelectorAll('#v-grid .card');
-    var count = document.getElementById('count');
-    if(!q || !cards.length) return;
-    q.addEventListener('input', function(){
-      var val = q.value.trim().toLowerCase();
-      var visible = 0;
-      cards.forEach(function(c){
-        var match = !val || (c.getAttribute('data-title') || '').indexOf(val) > -1;
-        c.style.display = match ? '' : 'none';
-        if(match) visible++;
+  </footer>
+
+  <script>
+    (function () {
+      var q = document.getElementById('q');
+      var cards = document.querySelectorAll('#v-grid .card');
+      var count = document.getElementById('count');
+      var emptyState = document.getElementById('emptyState');
+      var chips = document.querySelectorAll('#chipBar .chip');
+      var activeCat = 'all';
+
+      function filter() {
+        var val = q ? q.value.trim().toLowerCase() : '';
+        var visible = 0;
+
+        cards.forEach(function (c) {
+          var title = (c.getAttribute('data-title') || '').toLowerCase();
+          var cat = c.getAttribute('data-cat') || '';
+
+          var matchesCat = (activeCat === 'all') || (cat === activeCat);
+          var matchesQuery = !val || (title.indexOf(val) > -1);
+
+          if (matchesCat && matchesQuery) {
+            c.style.display = '';
+            visible++;
+          } else {
+            c.style.display = 'none';
+          }
+        });
+
+        if (count) count.textContent = visible + (visible === 1 ? ' Video' : ' Videos');
+        if (emptyState) emptyState.style.display = visible === 0 ? 'block' : 'none';
+      }
+
+      if (q) q.addEventListener('input', filter);
+
+      chips.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          chips.forEach(function (c) { c.classList.remove('active'); });
+          btn.classList.add('active');
+          activeCat = btn.getAttribute('data-cat') || 'all';
+          filter();
+        });
       });
-      count.textContent = visible + (visible === 1 ? ' video' : ' videos');
-    });
-  })();
-</script>
+    })();
+  </script>
 </body>
+
 </html>

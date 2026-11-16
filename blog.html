@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tax, GST &amp; Accounting Blog | All in 1 Accounting Solutions</title>
+  <meta name="description" content="Expert insights, statutory notifications, filing guides and compliance alerts on GST, Income Tax, TDS, EPFO, MCA and Tally Prime by All in 1 Accounting Solutions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Kaushan+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-950: #070e1b;
+      --navy-900: #0B192C;
+      --navy-800: #1E3E62;
+      --blue-600: #1D5FBF;
+      --blue-500: #2563EB;
+      --blue-50: #EFF6FF;
+      --accent: #F28C1A;
+      --green: #10B981;
+      --green-50: #ECFDF5;
+      
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-subtle: #F1F5F9;
+      --border: #E2E8F0;
+      --border-subtle: #EDF2F7;
+
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-light: #94A3B8;
+
+      --shadow-sm: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 14px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.1), 0 4px 8px -2px rgba(15, 23, 42, 0.05);
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-xl: 18px;
+      --radius-full: 9999px;
+
+      box-sizing: border-box;
+      color-scheme: light;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #090E17;
+        --surface: #111A28;
+        --surface-subtle: #182234;
+        --border: #223049;
+        --border-subtle: #192437;
+        --text-main: #F1F5F9;
+        --text-muted: #94A3B8;
+        --text-light: #64748B;
+        color-scheme: dark;
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14.5px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Navigation Header */
+    header {
+      background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 60%, var(--navy-800) 100%);
+      color: #fff;
+      padding: 24px 0 44px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(29, 95, 191, 0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .logo-badge {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo {
+      font-family: 'Kaushan Script', cursive;
+      font-size: 1.7rem;
+      color: #FFFFFF;
+      letter-spacing: 0.5px;
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.75);
+      background: rgba(255, 255, 255, 0.08);
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+    }
+
+    .back-home:hover {
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+      padding: 8px 14px;
+      border-radius: var(--radius-md);
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      transition: all 0.18s ease;
+    }
+
+    .btn-action:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .btn-primary {
+      background: var(--blue-500);
+      color: #FFFFFF;
+      border-color: var(--blue-500);
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin: 0 0 10px;
+      line-height: 1.2;
+    }
+
+    header p {
+      font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 720px;
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* Main Container */
+    main {
+      padding: 32px 0 60px;
+    }
+
+    /* Controls Bar */
+    .controls-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 20px 24px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 28px;
+    }
+
+    .search-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .search-input-wrap {
+      flex: 1;
+      min-width: 260px;
+      position: relative;
+    }
+
+    .search-input-wrap input {
+      width: 100%;
+      height: 44px;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 0 16px 0 42px;
+      font-size: 0.92rem;
+      font-family: inherit;
+      color: var(--text-main);
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-input-wrap input:focus {
+      background: var(--surface);
+      border-color: var(--blue-500);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-light);
+      pointer-events: none;
+    }
+
+    .article-count {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: var(--surface-subtle);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .chip-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      background: var(--surface-subtle);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .chip:hover {
+      background: var(--border);
+      color: var(--text-main);
+    }
+
+    .chip.active {
+      background: var(--navy-900);
+      color: #FFFFFF;
+      border-color: var(--navy-900);
+    }
+
+    /* Articles Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--blue-500);
+    }
+
+    .card-top {
+      padding: 20px 22px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cat-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+    }
+
+    .cat-badge.gst { background: #EEF2FF; color: #4338CA; }
+    .cat-badge.itr { background: #ECFDF5; color: #047857; }
+    .cat-badge.tds { background: #FFFBEB; color: #B45309; }
+    .cat-badge.pf { background: #F0FDF4; color: #15803D; }
+    .cat-badge.mca { background: #FDF2F8; color: #BE185D; }
+    .cat-badge.tech { background: #F5F3FF; color: #6D28D9; }
+
+    .card-date {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .card-body {
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--text-main);
+      margin: 0 0 10px;
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin: 0 0 16px;
+      flex: 1;
+    }
+
+    .highlights {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .highlights li {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      line-height: 1.4;
+    }
+
+    .highlights li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .card-footer {
+      padding: 14px 22px;
+      background: var(--surface-subtle);
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .yt-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #DC2626;
+      transition: color 0.15s ease;
+    }
+
+    .yt-link:hover {
+      color: #991B1B;
+      text-decoration: underline;
+    }
+
+    .yt-link svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    .consult-link {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--blue-600);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .consult-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Banner CTA */
+    .cta-banner {
+      margin-top: 48px;
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 32px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .cta-banner h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 0 0 6px;
+    }
+
+    .cta-banner p {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.82);
+      margin: 0;
+      max-width: 600px;
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-calc {
+      background: var(--accent);
+      color: #1A0D00;
+      font-weight: 800;
+      padding: 10px 20px;
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: filter 0.15s ease;
+    }
+
+    .btn-calc:hover {
+      filter: brightness(1.08);
+    }
+
+    .btn-call {
+      background: rgba(255, 255, 255, 0.12);
+      color: #FFFFFF;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s ease;
+    }
+
+    .btn-call:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Empty state */
+    .empty-state {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius-xl);
+      grid-column: 1 / -1;
+    }
+
+    .empty-state h3 {
+      margin: 0 0 6px;
+      font-size: 1.2rem;
+      color: var(--text-main);
+    }
+
+    .empty-state p {
+      margin: 0;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      color: var(--text-muted);
+      font-size: 0.84rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      color: var(--blue-600);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .controls-card {
+        padding: 16px 18px;
+      }
+      .cta-banner {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="wrap">
+      <div class="top-nav">
+        <div class="logo-badge">
+          <a class="logo" href="index.html" aria-label="All in 1, back to home">All in 1</a>
+          <a class="back-home" href="index.html">&larr; Back to Main Website</a>
+        </div>
+        <div class="header-actions">
+          <a class="btn-action" href="youtube.html" target="_blank" rel="noopener">
+            <svg style="width:14px;height:14px;fill:#EF4444;" viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="currentColor"/></svg>
+            YouTube Videos
+          </a>
+          <a class="btn-action" href="free-accounting-tools.html" target="_blank" rel="noopener">
+            <svg style="width:14px;height:14px;stroke:currentColor;fill:none;" viewBox="0 0 24 24" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="16" y2="14"/></svg>
+            GST Calculator
+          </a>
+          <a class="btn-action btn-primary" href="tel:+919625000350">
+            <svg style="width:14px;height:14px;stroke:currentColor;fill:none;" viewBox="0 0 24 24" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +91 96250 00350
+          </a>
+        </div>
+      </div>
+      <h1>Tax, GST &amp; Accounting Insights Blog</h1>
+      <p>Practical guides, statutory notifications, tax calendar updates and compliance checklists authored by All in 1 Accounting Solutions.</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="wrap">
+      <div class="controls-card">
+        <div class="search-row">
+          <div class="search-input-wrap">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="q" type="search" placeholder="Search articles (e.g. GST, ITR, TDS, PF, MCA, Tally)..." aria-label="Search articles">
+          </div>
+          <span class="article-count" id="count">8 Articles</span>
+        </div>
+
+        <!-- Filter Chips -->
+        <div class="chip-bar" id="chipBar">
+          <button class="chip active" data-cat="all">All Topics (8)</button>
+          <button class="chip" data-cat="gst">GST Compliance (2)</button>
+          <button class="chip" data-cat="itr">Income Tax &amp; ITR (2)</button>
+          <button class="chip" data-cat="tds">TDS &amp; TCS (1)</button>
+          <button class="chip" data-cat="pf">EPFO &amp; Payroll (1)</button>
+          <button class="chip" data-cat="mca">MCA &amp; ROC (1)</button>
+          <button class="chip" data-cat="tech">Tally &amp; Tech (1)</button>
+        </div>
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="grid" id="grid">
+        <!-- Article 1 -->
+        <article class="card" data-cat="itr" data-title="cbdt circular 07 2026 itr deadline audit taxpayers extended 21 november income tax return tax audit">
+          <div class="card-top">
+            <span class="cat-badge itr">Income Tax</span>
+            <span class="card-date">November 2026</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">CBDT Circular 07/2026: ITR Filing Deadline for Audit Taxpayers Extended to 21 Nov 2026</h2>
+            <p class="card-desc">The Central Board of Direct Taxes (CBDT) has formally extended the due date for furnishing Returns of Income for AY 2026-27 for corporate and tax-audit assessees from 31 October to 21 November 2026.</p>
+            <ul class="highlights">
+              <li>Applies to partners of audited firms and corporate entities</li>
+              <li>Form 3CA/3CB-3CD audit report deadline considerations</li>
+              <li>Interest under Section 234A applies if self-assessment tax exceeds ₹1 Lakh</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a class="yt-link" href="https://www.youtube.com/watch?v=3SIsursI_6Q" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M21.58 7.19a2.5 2.5 0 0 0-1.76-1.77C18.26 5 12 5 12 5s-6.26 0-7.82.42c-.88.24-1.57.93-1.81 1.82A26.4 26.4 0 0 0 2 12c0 1.63.15 3.2.37 4.76.24.89.93 1.58 1.81 1.82 1.56.42 7.82.42 7.82.42s6.26 0 7.82-.42c.88-.24 1.57-.93 1.81-1.82.22-1.56.37-3.13.37-4.76 0-1.63-.15-3.2-.37-4.81zM9.75 15.02V8.98l5.85 3.02-5.85 3.02z"/></svg>
+              Watch ITR Guide
+            </a>
+            <a class="consult-link" href="index.html#contact">Consult CA &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="card" data-cat="gst" data-title="gstr 3b late fee section 47 interest section 50 calculation formula rules gst return delayed filing">
+          <div class="card-top">
+            <span class="cat-badge gst">GST Compliance</span>
+            <span class="card-date">November 2026</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">GSTR-3B Late Fee &amp; Section 50 Interest: Complete Computation Guide</h2>
+            <p class="card-desc">Comprehensive breakdown of statutory late fees under Section 47 and mandatory 18% per annum interest computation under Section 50 on net cash tax liability.</p>
+            <ul class="highlights">
+              <li>Nil returns: ₹20/day total (₹10 CGST + ₹10 SGST) capped at ₹500</li>
+              <li>Turnover up to ₹1.5 Cr: Capped at ₹2,000; up to ₹5 Cr: capped at ₹5,000</li>
+              <li>Interest calculated strictly on cash ledger balance, not ITC</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a class="yt-link" href="free-accounting-tools.html" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Open Live Calculator
+            </a>
+            <a class="consult-link" href="free-accounting-tools.html">Calculate Fee &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="card" data-cat="gst" data-title="qrmp challan pmt 06 monthly payment quarterly return gstr 1 gstr 3b 35 percent fixed sum">
+          <div class="card-top">
+            <span class="cat-badge gst">GST Compliance</span>
+            <span class="card-date">October 2026</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">QRMP Scheme Masterclass: Fixed Sum PMT-06 Challan vs Quarterly Returns</h2>
+            <p class="card-desc">For MSMEs and registered persons with annual aggregate turnover up to ₹5 Crore, the Quarterly Return Monthly Payment (QRMP) scheme simplifies compliance.</p>
+            <ul class="highlights">
+              <li>Pay tax for month 1 &amp; 2 via Form GST PMT-06 by the 25th of next month</li>
+              <li>Fixed sum method (pre-filled 35% of previous quarter cash liability)</li>
+              <li>Quarterly GSTR-1 and GSTR-3B filing timeline and IFF upload options</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a class="yt-link" href="https://www.youtube.com/watch?v=czeVIFp8Mj8" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch PMT-06 Video
+            </a>
+            <a class="consult-link" href="index.html#contact">Get Assistance &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="card" data-cat="tds" data-title="form 24q 26q 27q tds quarterly return section 234e late fee traces challan 281 reconciliation">
+          <div class="card-top">
+            <span class="cat-badge tds">TDS &amp; TCS</span>
+            <span class="card-date">October 2026</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">TDS Filing Deadlines &amp; Section 234E Late Filing Fee: What Deductors Must Know</h2>
+            <p class="card-desc">Every business deducting tax at source must file quarterly returns in Form 24Q (salaries), 26Q (non-salary resident payments), and 27Q. Delay attracts severe daily penalties.</p>
+            <ul class="highlights">
+              <li>Mandatory fee of ₹200 per day under Section 234E until return is filed</li>
+              <li>Section 201(1A) penal interest: 1% for late deduction, 1.5% for late deposit</li>
+              <li>Reconciliation of Challan 281 with Form 16/16A generation on TRACES</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a class="yt-link" href="https://www.youtube.com/watch?v=n1ULvQFPtcQ" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch TDS Fee Guide
+            </a>
+            <a class="consult-link" href="index.html#contact">Talk to Expert &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="card" data-cat="pf" data-title="epfo dsc signer utility java setup kyc approval process uan aadhaar seeding unified portal">
+          <div class="card-top">
+            <span class="cat-badge pf">EPFO &amp; Payroll</span>
+            <span class="card-date">September 2026</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">EPFO DSC Signer Utility Setup &amp; Bulk Member KYC Approval Process</h2>
+            <p class="card-desc">Setting up Digital Signature Certificates (DSC) on the EPFO Unified Employer Portal frequently runs into Java port binding and token driver conflicts. Here is how to fix it.</p>
+            <ul class="highlights">
+              <li>Configuring EPFO DSC Signer service on Windows 10/11 localhost</li>
+              <li>Approving pending member KYC requests (Aadhaar, Bank PAN) with DSC</li>
+              <li>Avoiding ECR rejection due to unverified member credentials</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a class="yt-link" href="https://www.youtube.com/watch?v=jw6PZ-D27DM" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch DSC Setup Video
+            </a>
+            <a class="consult-link" href="index.html#contact">DSC Support &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="card" data-cat="mca" data-title="mca v3 portal register director dsc associate class 3 token din registration company roc">
+          <div class="card-top">
+            <span class="cat-badge mca">MCA &amp; ROC</span>
+            <span class="card-date">September 2026</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">How to Associate Director DSC on MCA V3 Portal: Step-by-Step Fix</h2>
+            <p class="card-desc">The Ministry of Corporate Affairs V3 portal requires all DIN holders and practicing professionals to associate Class 3 DSC tokens with their business user profiles.</p>
+            <ul class="highlights">
+              <li>Upgrading Class 2 to Class 3 cryptographic tokens</li>
+              <li>Installing MCA EMsigner and configuring WebSocket port 8080/8085</li>
+              <li>Resolving "DSC token not recognized" and name mismatch errors</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a class="yt-link" href="https://www.youtube.com/watch?v=bbhtlXqK42s" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch MCA DSC Tutorial
+            </a>
+            <a class="consult-link" href="index.html#contact">File ROC &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Article 7 -->
+        <article class="card" data-cat="tech" data-title="tally prime logo sales invoice setup bulk voucher print e invoice gstr 2b reconciliation">
+          <div class="card-top">
+            <span class="cat-badge tech">Tally &amp; Tech</span>
+            <span class="card-date">August 2026</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Tally Prime Printing &amp; Customization: Adding Company Logo &amp; Batch Voucher Print</h2>
+            <p class="card-desc">Professional invoicing builds client trust. Discover how to configure multi-company logos on standard tax invoices and print hundreds of vouchers with one click.</p>
+            <ul class="highlights">
+              <li>Setting up BMP/JPEG logo files in Tally Prime print configuration</li>
+              <li>Multi-voucher batch printing from Daybook &amp; Sales Register</li>
+              <li>Direct WhatsApp PDF dispatch setup for fast receivables collection</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a class="yt-link" href="https://www.youtube.com/watch?v=b4wjabGhaz4" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch Tally Guide
+            </a>
+            <a class="consult-link" href="youtube.html">All Tally Guides &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Article 8 -->
+        <article class="card" data-cat="itr" data-title="itr verification one time relaxation scheme income tax past 5 years e verify aadhaar otp">
+          <div class="card-top">
+            <span class="cat-badge itr">Income Tax</span>
+            <span class="card-date">July 2026</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">One-Time Relaxation Scheme for ITR Verification: Regularize Past 5 Years</h2>
+            <p class="card-desc">Did you file your income tax return but forgot to e-verify within the 30-day window? Unverified returns are treated as invalid (never filed) unless regularized under relief circulars.</p>
+            <ul class="highlights">
+              <li>Steps to verify past years' ITR using Aadhaar OTP, Net Banking or DSC</li>
+              <li>Condonation of delay under Section 119(2)(b) for stuck tax refunds</li>
+              <li>Ensuring processing of refund with interest under Section 244A</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a class="yt-link" href="https://www.youtube.com/watch?v=3SIsursI_6Q" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch Verification Steps
+            </a>
+            <a class="consult-link" href="index.html#contact">Get Tax Help &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Empty state -->
+        <div class="empty-state" id="emptyState">
+          <h3>No articles matched your search</h3>
+          <p>Try searching for terms like "GST", "ITR", "TDS", "PF", or select "All Topics".</p>
+        </div>
+      </div>
+
+      <!-- CTA Banner -->
+      <section class="cta-banner">
+        <div>
+          <h3>Need Help With Your Tax &amp; GST Compliance?</h3>
+          <p>All in 1 Accounting Solutions assists MSMEs, traders, startups and professionals across India with accurate accounting, timely filing and complete audit representation.</p>
+        </div>
+        <div class="cta-btns">
+          <a class="btn-calc" href="free-accounting-tools.html" target="_blank" rel="noopener">
+            Free GST Calculator &rarr;
+          </a>
+          <a class="btn-call" href="tel:+919625000350">
+            Call +91 96250 00350
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      &copy; 2026 All in 1 Accounting Solutions. <a href="index.html">Main Website</a> &bull; <a href="youtube.html">YouTube Tutorials</a> &bull; <a href="free-accounting-tools.html">GST Calculator</a> &bull; <a href="tel:+919625000350">Helpline: +91 96250 00350</a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var q = document.getElementById('q');
+      var chipBar = document.getElementById('chipBar');
+      var chips = chipBar.querySelectorAll('.chip');
+      var cards = document.querySelectorAll('#grid .card');
+      var emptyState = document.getElementById('emptyState');
+      var countEl = document.getElementById('count');
+
+      var activeCategory = 'all';
+
+      function applyFilter() {
+        var query = (q.value || '').trim().toLowerCase();
+        var visibleCount = 0;
+
+        cards.forEach(function (c) {
+          var cat = c.getAttribute('data-cat') || '';
+          var title = (c.getAttribute('data-title') || '') + ' ' + (c.innerText || '');
+          title = title.toLowerCase();
+
+          var matchesCat = (activeCategory === 'all') || (cat === activeCategory);
+          var matchesQuery = !query || (title.indexOf(query) !== -1);
+
+          if (matchesCat && matchesQuery) {
+            c.style.display = 'flex';
+            visibleCount++;
+          } else {
+            c.style.display = 'none';
+          }
+        });
+
+        countEl.textContent = visibleCount + ' Article' + (visibleCount === 1 ? '' : 's');
+        if (visibleCount === 0) {
+          emptyState.style.display = 'block';
+        } else {
+          emptyState.style.display = 'none';
+        }
+      }
+
+      q.addEventListener('input', applyFilter);
+
+      chipBar.addEventListener('click', function (e) {
+        var t = e.target.closest('.chip');
+        if (!t) return;
+        chips.forEach(function (c) { c.classList.remove('active'); });
+        t.classList.add('active');
+        activeCategory = t.getAttribute('data-cat') || 'all';
+        applyFilter();
+      });
+    })();
+  </script>
+</body>
+
+</html>

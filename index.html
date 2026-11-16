@@ -4,265 +4,604 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>All in 1 Accounting Solutions</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Kaushan+Script&family=Arvo:wght@700&display=swap">
+  <title>All in 1 Accounting Solutions | Tax, GST &amp; Business Compliance</title>
+  <meta name="description" content="Fixed-price bookkeeping, GST returns, income tax filing, audits and notice replies for individuals, shops, professionals and companies in Delhi &amp; Pan-India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Kaushan+Script&family=Arvo:wght@700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #EAF0F8;
-      --panel: #DCE6F4;
-      --ink: #14213A;
-      --muted: #566684;
-      --side: #0A2147;
-      --dark: #1E4F9C;
-      --tile: #FFFFFF;
-      --icn: #164A9C;
-      --line: #C3D0E6;
-      --green: #2E8B3D;
-      --acc: #F28C1A;
-      --on: #FFFFFF;
+      --navy-950: #070e1b;
+      --navy-900: #0B192C;
+      --navy-800: #1E3E62;
+      --blue-600: #1D5FBF;
+      --blue-500: #2563EB;
+      --blue-50: #EFF6FF;
+      --blue-100: #DBEAFE;
+      --accent: #F28C1A;
+      --accent-hover: #E07B09;
+      --green-600: #16A34A;
+      --green-50: #F0FDF4;
+      --red-600: #DC2626;
+      --purple-600: #7C3AED;
+      --rose-600: #E11D48;
+      
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-subtle: #F1F5F9;
+      --border: #E2E8F0;
+      --border-subtle: #EDF2F7;
+      
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-light: #94A3B8;
+      
+      --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-sm: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.1), 0 4px 8px -2px rgba(15, 23, 42, 0.05);
+      --shadow-hover: 0 14px 28px -4px rgba(37, 99, 235, 0.14), 0 4px 10px -2px rgba(15, 23, 42, 0.06);
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-xl: 18px;
+      --radius-full: 9999px;
+      
       box-sizing: border-box;
-      padding-top: env(safe-area-inset-top, 0px);
-      padding-bottom: env(safe-area-inset-bottom, 0px);
-      color-scheme: light
+      color-scheme: light;
     }
 
-    html {
-      scroll-padding-top: env(safe-area-inset-top, 0px);
-      scroll-behavior: smooth
-    }
-
-    @media (prefers-color-scheme:dark) {
+    @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
-        --bg: #0A1222;
-        --panel: #121D36;
-        --ink: #E6ECF8;
-        --muted: #9AA8C6;
-        --side: #07142B;
-        --dark: #1A3C78;
-        --tile: #EDF2FB;
-        --line: #223253;
-        color-scheme: dark
+        --bg: #090E17;
+        --surface: #111A28;
+        --surface-subtle: #182234;
+        --border: #223049;
+        --border-subtle: #192437;
+        --text-main: #F1F5F9;
+        --text-muted: #94A3B8;
+        --text-light: #64748B;
+        --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.5);
+        color-scheme: dark;
       }
     }
 
-    :root[data-theme="dark"] {
-      --bg: #0A1222;
-      --panel: #121D36;
-      --ink: #E6ECF8;
-      --muted: #9AA8C6;
-      --side: #07142B;
-      --dark: #1A3C78;
-      --tile: #EDF2FB;
-      --line: #223253;
-      color-scheme: dark
+    *, *::before, *::after {
+      box-sizing: inherit;
     }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: inherit
+    html {
+      scroll-padding-top: 80px;
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       background: var(--bg);
-      color: var(--ink);
-      font: 15px/1.55 "Noto Sans", "Segoe UI", Arial, sans-serif
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14.5px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
-      color: inherit
+      color: inherit;
+      text-decoration: none;
     }
 
     :focus-visible {
-      outline: 3px solid var(--acc);
-      outline-offset: 2px
+      outline: 2px solid var(--blue-500);
+      outline-offset: 3px;
     }
 
+    /* Layout structure */
     .app {
       display: grid;
-      grid-template-columns: 268px 1fr;
-      min-height: 100vh
+      grid-template-columns: 280px 1fr;
+      min-height: 100vh;
     }
 
+    /* Mobile Header */
+    .mobile-header {
+      display: none;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--navy-900);
+      color: #fff;
+      padding: 12px 16px;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    .mobile-logo {
+      font-family: "Kaushan Script", cursive;
+      font-size: 1.6rem;
+      color: #fff;
+    }
+    .mobile-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .mobile-call-btn {
+      background: var(--green-600);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .menu-toggle {
+      background: rgba(255, 255, 255, 0.12);
+      border: 0;
+      color: #fff;
+      border-radius: 6px;
+      padding: 7px 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Desktop Sidebar */
     aside {
-      background: var(--side);
-      color: var(--on);
-      padding: 22px 14px;
+      background: var(--navy-900);
+      color: #fff;
+      padding: 22px 16px;
       position: sticky;
       top: 0;
       height: 100vh;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
-      gap: 18px
+      gap: 16px;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.2) transparent;
     }
 
+    aside::-webkit-scrollbar {
+      width: 5px;
+    }
+    aside::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+    }
+
+    .brand-box {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 4px;
+    }
     .brand {
-      background: #1D5FBF;
-      border-radius: 4px;
+      background: linear-gradient(135deg, #1D5FBF, #2563EB);
+      color: #fff;
+      border-radius: var(--radius-md);
       padding: 10px 14px;
-      font-size: 1.45rem;
-      font-weight: 500;
-      text-decoration: none;
-      align-self: flex-start;
-      line-height: 1.2
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(29, 95, 191, 0.35);
+      transition: transform .15s ease;
     }
-
-    .me {
-      background: linear-gradient(135deg, #0B3A75, #1F63C6);
-      border-radius: 8px;
-      padding: 16px
+    .brand:hover {
+      transform: translateY(-1px);
     }
-
-    .me b {
+    .b-name {
       display: block;
-      font-size: .95rem;
-      letter-spacing: .02em;
-      text-transform: uppercase
+      font-family: "Kaushan Script", cursive;
+      font-size: 2.1rem;
+      line-height: 1.1;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
-
-    .me span {
+    .b-tag {
       display: block;
-      font-size: .85rem;
-      margin: 6px 0 12px;
-      opacity: .92
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-top: 5px;
+      color: #E0E7FF;
+    }
+    .b-sub {
+      display: block;
+      font-size: 0.62rem;
+      color: #93C5FD;
+      margin-top: 3px;
+      letter-spacing: 0.04em;
     }
 
-    .me a {
-      display: inline-block;
-      border: 1px solid #fff;
-      border-radius: 4px;
-      padding: 5px 12px;
-      font-size: .82rem;
-      text-decoration: none
+    /* Helpline Quick Card */
+    .helpline-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .helpline-status {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #4ADE80;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4ADE80;
+      box-shadow: 0 0 8px #4ADE80;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .helpline-num {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .helpline-btn {
+      margin-top: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--blue-600);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+      font-weight: 700;
+      transition: background .15s ease;
+    }
+    .helpline-btn:hover {
+      background: var(--blue-500);
     }
 
-    .me a:hover {
-      background: rgba(255, 255, 255, .16)
-    }
-
+    /* Navigation Links */
     aside nav {
       display: flex;
       flex-direction: column;
-      gap: 2px
+      gap: 3px;
     }
 
     aside nav a {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 9px 10px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500
+      gap: 12px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #CBD5E1;
+      transition: all .15s ease;
     }
 
     aside nav a:hover {
-      background: rgba(255, 255, 255, .1)
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      transform: translateX(2px);
+    }
+
+    aside nav a.active {
+      background: rgba(37, 99, 235, 0.2);
+      color: #93C5FD;
+      font-weight: 600;
+    }
+
+    /* Badged items */
+    .nav-badge-yt {
+      margin-left: auto;
+      background: var(--red-600);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: var(--radius-full);
+    }
+
+    .nav-badge-free {
+      margin-left: auto;
+      background: #000;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: var(--radius-full);
+    }
+
+    /* Free accounting tools CTA button at bottom of nav */
+    aside nav a.free {
+      margin-top: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      color: #1A0D00;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(242, 140, 26, 0.25);
+    }
+    aside nav a.free:hover {
+      background: linear-gradient(135deg, var(--accent-hover), #C86C05);
+      color: #FFFFFF;
+      transform: translateY(-1px);
     }
 
     .ic {
-      width: 22px;
-      height: 22px;
+      width: 19px;
+      height: 19px;
       flex: none;
       fill: none;
       stroke: currentColor;
       stroke-width: 2;
       stroke-linecap: round;
-      stroke-linejoin: round
+      stroke-linejoin: round;
+      opacity: 0.88;
     }
 
     .side-foot {
       margin-top: auto;
-      font-size: .8rem;
-      opacity: .75
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.76rem;
+      color: #64748B;
+      line-height: 1.5;
     }
-
-    main {
-      padding: 20px 20px 0;
-      min-width: 0
+    .side-foot a {
+      color: #94A3B8;
     }
-
-    .banner {
-      background: linear-gradient(135deg, #0B3A75, #1F63C6);
+    .side-foot a:hover {
       color: #fff;
-      border-radius: 8px;
-      padding: 28px 30px;
-      margin-bottom: 18px
+      text-decoration: underline;
     }
 
-    .banner h1 {
-      margin: 0 0 8px;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      line-height: 1.2;
-      font-weight: 500
+    /* Main Content Area */
+    main {
+      padding: 24px 28px 48px;
+      min-width: 0;
+      max-width: 1240px;
     }
 
-    .banner p {
-      margin: 0 0 16px;
-      opacity: .92;
-      max-width: 44em
+    /* Hero Banner */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, #071326 0%, #0B254A 50%, #153E75 100%);
+      color: #fff;
+      border-radius: var(--radius-xl);
+      padding: 36px 38px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .btn {
-      display: inline-block;
-      background: var(--acc);
-      color: #1B1100;
-      padding: 9px 20px;
-      border-radius: 4px;
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.28) 0%, rgba(37, 99, 235, 0) 70%);
+      pointer-events: none;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #BFDBFE;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+      font-weight: 800;
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+      max-width: 32em;
+    }
+
+    .hero p {
+      margin: 0 0 24px;
+      color: #CBD5E1;
+      font-size: 1.02rem;
+      line-height: 1.6;
+      max-width: 46em;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #1A0D00;
       font-weight: 700;
-      text-decoration: none
+      padding: 11px 22px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 4px 14px rgba(242, 140, 26, 0.35);
+      transition: all .15s ease;
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      color: #fff;
+      transform: translateY(-1px);
     }
 
-    .btn:hover {
-      filter: brightness(1.08)
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #072610;
+      font-weight: 700;
+      padding: 11px 20px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+      transition: all .15s ease;
+    }
+    .btn-whatsapp:hover {
+      background: #20BA5A;
+      color: #fff;
+      transform: translateY(-1px);
     }
 
+    .btn-glass {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-weight: 600;
+      padding: 11px 20px;
+      border-radius: var(--radius-sm);
+      transition: background .15s ease;
+    }
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-trust {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #E2E8F0;
+    }
+    .trust-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #60A5FA;
+      flex: none;
+    }
+
+    /* Notice Banner */
     .notice {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       align-items: baseline;
-      background: var(--panel);
-      border-left: 4px solid var(--acc);
-      border-radius: 4px;
-      padding: 10px 14px;
-      margin-bottom: 18px;
-      font-size: .92rem
+      background: #FEF3C7;
+      color: #78350F;
+      border: 1px solid #FCD34D;
+      border-left: 5px solid #F59E0B;
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      font-size: 0.92rem;
+      box-shadow: var(--shadow-xs);
     }
-
     .notice b {
       flex: none;
-      background: var(--acc);
-      color: #1B1100;
-      border-radius: 3px;
-      padding: 1px 9px;
-      font-size: .78rem
+      background: #D97706;
+      color: #fff;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
+    /* Panels / Sections */
     .panel {
-      background: var(--panel);
-      border-radius: 6px;
-      padding: 22px 24px 26px;
-      margin-bottom: 18px
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px 28px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-sm);
+      transition: border-color .15s ease, box-shadow .15s ease;
     }
 
-    .panel.dark {
-      background: var(--dark);
-      color: #fff
+    .panel:hover {
+      border-color: #CBD5E1;
+      box-shadow: var(--shadow-md);
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
     }
 
     .panel h2 {
-      margin: 0 0 20px;
-      font-size: 1.2rem;
-      font-weight: 500
+      margin: 0;
+      font-size: 1.32rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
+    .panel h2::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      background: var(--blue-600);
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    .desc {
+      margin: 4px 0 0;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    /* Tiles Grid */
     .tiles {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 22px 14px
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
     }
 
     .t {
@@ -271,915 +610,1076 @@
       align-items: center;
       text-align: center;
       gap: 10px;
-      text-decoration: none;
-      font-size: .9rem;
-      font-weight: 500
+      padding: 16px 14px 18px;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      transition: all .2s ease;
+      position: relative;
+    }
+
+    .t:hover {
+      background: var(--surface);
+      border-color: var(--blue-500);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
     }
 
     .ib {
       position: relative;
-      width: 70px;
-      height: 70px;
-      border-radius: 10px;
-      background: var(--tile);
-      color: var(--icn);
+      width: 58px;
+      height: 58px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #FFFFFF, #EFF6FF);
+      color: var(--blue-600);
       display: grid;
       place-items: center;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, .12)
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .t:hover .ib {
+      background: linear-gradient(135deg, var(--blue-500), #1D4ED8);
+      color: #fff;
+      transform: scale(1.06);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
     }
 
     .ib .ic {
-      width: 34px;
-      height: 34px
+      width: 28px;
+      height: 28px;
     }
 
-    a.t:hover .ib {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, .2)
-    }
-
-    .new {
-      position: absolute;
-      top: -8px;
-      right: -14px;
-      background: var(--green);
-      color: #fff;
-      font-style: normal;
-      font-size: .72rem;
-      font-weight: 700;
-      padding: 0 7px;
-      border-radius: 3px
-    }
-
-    .two {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px
-    }
-
-    .two ul,
-    .dl {
-      list-style: none;
-      margin: 0;
-      padding: 0
-    }
-
-    .two li,
-    .dl li {
-      padding: 11px 0;
-      border-top: 1px solid var(--line);
-      font-size: .93rem
-    }
-
-    .two h3 {
-      margin: 0 0 6px;
-      font-size: 1.05rem;
-      font-weight: 500
-    }
-
-    .two time {
+    .t b {
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--text-main);
       display: block;
-      font-size: .8rem;
-      color: var(--muted)
     }
 
-    .dl li {
-      display: flex;
-      gap: 16px;
-      align-items: center
+    .t:hover b {
+      color: var(--blue-600);
     }
 
-    .dl .d {
-      flex: none;
-      width: 68px;
-      text-align: center;
-      background: var(--bg);
+    .t-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: -4px;
+    }
+
+    /* Government Official Tools badge */
+    .govt-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #1E40AF;
+      background: #DBEAFE;
+      padding: 1px 6px;
       border-radius: 4px;
-      padding: 4px 0;
-      font-weight: 700;
-      line-height: 1.25;
-      color: var(--icn)
+      margin-top: -2px;
     }
 
-    :root[data-theme="dark"] .dl .d {
-      color: #8DB8FF
-    }
-
-    @media (prefers-color-scheme:dark) {
-      :root:not([data-theme="light"]) .dl .d {
-        color: #8DB8FF
-      }
-    }
-
-    .dl small {
-      display: block;
-      font-weight: 500;
-      font-size: .72rem
-    }
-
-    .desc {
-      margin: -10px 0 20px;
-      opacity: .85;
-      font-size: .92rem
-    }
-
-    .small {
-      font-size: .82rem;
-      color: var(--muted);
-      margin: 14px 0 0
-    }
-
-    .toolframe {
-      display: block;
-      width: 100%;
-      height: 900px;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      background: var(--tile)
-    }
-
-    .bar {
-      padding: 14px 4px 18px;
-      font-size: .82rem;
-      color: var(--muted)
-    }
-
-    @media (max-width:900px) {
-      .app {
-        grid-template-columns: 1fr
-      }
-
-      aside {
-        position: static;
-        height: auto;
-        padding: 14px;
-        gap: 12px
-      }
-
-      .me,
-      .side-foot {
-        display: none
-      }
-
-      aside nav {
-        flex-direction: row;
-        overflow-x: auto;
-        gap: 4px
-      }
-
-      aside nav a {
-        flex: none;
-        padding: 8px 12px;
-        gap: 8px;
-        font-size: .9rem
-      }
-
-      aside nav .ic {
-        width: 18px;
-        height: 18px
-      }
-
-      .two {
-        grid-template-columns: 1fr
-      }
-
-      main {
-        padding: 14px 12px 0
-      }
-
-      .banner {
-        padding: 22px 20px
-      }
-    }
-
+    /* Updates Section */
     .ug {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
     }
 
-    .ug>div {
-      background: var(--bg);
-      border-radius: 6px;
-      padding: 16px 18px
+    .ug > div {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
     }
 
     .ug h3 {
-      margin: 0 0 6px;
-      font-size: 1.1rem;
-      font-weight: 700
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy-900);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .ug ul {
       list-style: none;
       margin: 0;
-      padding: 0
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .ug li {
-      padding: 9px 0;
-      border-top: 1px solid var(--line);
-      font-size: .9rem
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      line-height: 1.5;
     }
 
     .ug time {
-      display: block;
-      font-size: .78rem;
+      display: inline-block;
+      font-size: 0.72rem;
       font-weight: 700;
-      color: var(--icn)
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--blue-600);
+      background: var(--blue-50);
+      border: 1px solid var(--blue-100);
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-bottom: 4px;
     }
 
     .more {
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 2px solid var(--line);
-      font-size: .85rem
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 2px solid var(--border);
+      font-size: 0.82rem;
     }
 
     .more b {
       display: block;
-      margin-bottom: 2px
+      margin-bottom: 6px;
+      color: var(--text-main);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     .more a {
       display: block;
       padding: 2px 0;
+      color: var(--blue-600);
+      font-weight: 500;
+    }
+    .more a:hover {
       text-decoration: underline;
-      color: var(--icn)
     }
 
-    @media (max-width:900px) {
-      .ug {
-        grid-template-columns: 1fr
-      }
-    }
-
-    .free {
-      margin-top: 12px;
-      background: var(--acc);
-      color: #1B1100;
-      font-weight: 700
-    }
-
-    aside nav a.free:hover {
-      background: var(--acc);
-      filter: brightness(1.08)
-    }
-
+    /* Deadlines Filter & List */
     .flt {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      margin: -6px 0 14px
+      margin: 12px 0 16px;
     }
 
     .flt button {
-      font: inherit;
-      font-size: .85rem;
-      font-weight: 500;
-      padding: 4px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, .45);
-      background: transparent;
-      color: #fff;
-      cursor: pointer
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 16px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all .15s ease;
+    }
+
+    .flt button:hover {
+      border-color: var(--blue-500);
+      color: var(--text-main);
     }
 
     .flt button[aria-pressed="true"] {
-      background: var(--acc);
-      border-color: var(--acc);
-      color: #1B1100;
-      font-weight: 700
+      background: var(--navy-900);
+      border-color: var(--navy-900);
+      color: #fff;
+    }
+
+    .dl {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dl li {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+
+    .dl .d {
+      flex: none;
+      width: 72px;
+      text-align: center;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 6px 0;
+      font-weight: 800;
+      font-size: 1.15rem;
+      line-height: 1.15;
+      color: var(--blue-600);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .dl .d small {
+      display: block;
+      font-weight: 600;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-top: 2px;
     }
 
     .tag {
       display: inline-block;
-      font-size: .68rem;
+      font-size: 0.68rem;
       font-weight: 700;
-      padding: 0 8px;
+      padding: 1px 7px;
       margin-left: 8px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, .2);
-      vertical-align: 1px
+      border-radius: var(--radius-full);
+      vertical-align: 1px;
     }
+
+    .tag-itr { background: #DBEAFE; color: #1E40AF; }
+    .tag-gst { background: #DCFCE7; color: #166534; }
+    .tag-tds { background: #F3E8FF; color: #6B21A8; }
+    .tag-epf { background: #FEF3C7; color: #92400E; }
+    .tag-esi { background: #FFE4E6; color: #9F1239; }
 
     .dl li.sep {
       display: block;
       font-weight: 700;
-      font-size: .95rem;
+      font-size: 0.95rem;
       padding-top: 18px;
-      border-top: 2px solid rgba(255, 255, 255, .35)
+      margin-top: 8px;
+      border-top: 2px solid var(--border);
+      color: var(--blue-600);
     }
 
     .dl li[hidden] {
-      display: none
+      display: none;
     }
 
-    .panel.dark .dl .d {
-      background: #EAF0F8;
-      color: #164A9C
+    /* YouTube Section */
+    .yt-section {
+      background: linear-gradient(135deg, #070e1b, #111e33);
+      color: #fff;
+      border: 1px solid #1E293B;
     }
-
-    .t b {
-      line-height: 1.35;
-      font-weight: 500
+    .yt-section h2 {
+      color: #fff;
     }
-
-    .panel h2 {
-      font-weight: 700
+    .yt-section h2::before {
+      background: var(--red-600);
     }
-
-    .desc {
-      margin: -12px 0 22px
+    .yt-section .desc {
+      color: #94A3B8;
     }
-
-    @media (max-width:900px) {
-      .brand {
-        font-size: 1.15rem;
-        padding: 7px 12px
-      }
-
-      .panel {
-        padding: 18px 16px 22px
-      }
-
-      .notice {
-        flex-direction: column;
-        gap: 6px
-      }
+    .yt-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
     }
-
-    @media (max-width:480px) {
-      .tiles {
-        grid-template-columns: repeat(2, 1fr)
-      }
-    }
-
-    :root[data-theme="dark"] .ug time,
-    :root[data-theme="dark"] .more a {
-      color: #8DB8FF
-    }
-
-    @media (prefers-color-scheme:dark) {
-
-      :root:not([data-theme="light"]) .ug time,
-      :root:not([data-theme="light"]) .more a {
-        color: #8DB8FF
-      }
-    }
-
-    .brand {
-      background: #1D5FBF;
-      color: #FFFFFF;
-      border-radius: 4px;
-      padding: 6px 18px 8px;
-      font-size: 1rem;
-      font-weight: 400;
-      display: inline-block;
-      align-self: flex-start;
-      text-align: center;
-      line-height: 1.1
-    }
-
-    .b-name {
-      display: block;
-      font-family: "Kaushan Script", "Segoe Script", "Brush Script MT", cursive;
-      font-size: 2.3rem;
-      color: #FFFFFF;
-      line-height: 1.1
-    }
-
-    .b-tag {
-      display: block;
-      font-family: Arvo, Rockwell, Georgia, serif;
+    .btn-yt {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red-600);
+      color: #fff;
       font-weight: 700;
-      font-size: .58rem;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      margin-top: 4px
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+      transition: all .15s ease;
+    }
+    .btn-yt:hover {
+      background: #B91C1C;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .btn-yt svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
     }
 
-    .b-sub {
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .contact-card {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all .15s ease;
+    }
+
+    .contact-card:hover {
+      background: var(--surface);
+      border-color: var(--blue-500);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      background: var(--blue-50);
+      color: var(--blue-600);
+      display: grid;
+      place-items: center;
+      flex: none;
+    }
+
+    .contact-info b {
       display: block;
-      font-family: Arvo, Rockwell, Georgia, serif;
-      font-size: .5rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: #5C5057;
-      margin-top: 6px;
-      line-height: 1.35
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
     }
 
-    @media (max-width:900px) {
-      .brand {
-        align-self: flex-start;
-        padding: 6px 16px 7px
-      }
-
-      .b-name {
-        font-size: 1.9rem
-      }
-
-      .b-tag {
-        font-size: .5rem;
-        margin-top: 2px
-      }
-
-      .b-sub {
-        display: none
-      }
+    .contact-info span {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 2px;
     }
 
-    .yt-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:18px}
-    .yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
-    .yt-card{background:var(--tile);border-radius:8px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
-    .yt-card:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(0,0,0,.12)}
-    .yt-thumb{position:relative;width:100%;aspect-ratio:16/9;background:#0A1222;overflow:hidden}
-    .yt-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s ease}
-    .yt-card:hover .yt-thumb img{transform:scale(1.04)}
-    .yt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.25);transition:background .2s ease}
-    .yt-card:hover .yt-play{background:rgba(0,0,0,.45)}
-    .yt-play-btn{width:44px;height:32px;background:#FF0000;border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.4);transition:transform .15s ease}
-    .yt-card:hover .yt-play-btn{transform:scale(1.1)}
-    .yt-play-btn svg{width:16px;height:16px;fill:#fff;margin-left:2px}
-    .yt-info{padding:12px 14px;display:flex;flex-direction:column;flex:1}
-    .yt-title{font-size:.88rem;font-weight:700;line-height:1.35;margin:0 0 8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--ink)}
-    .yt-meta{margin-top:auto;font-size:.78rem;font-weight:600;color:var(--icn);display:flex;align-items:center;gap:6px}
-    .btn-yt{display:inline-flex;align-items:center;gap:8px;background:#FF0000;color:#fff;padding:9px 18px;border-radius:4px;font-weight:700;text-decoration:none;font-size:.9rem}
-    .btn-yt:hover{filter:brightness(1.08)}
-    .btn-yt svg{width:16px;height:16px;fill:#fff}
+    /* Footer */
+    .footer-bar {
+      margin-top: 36px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--blue-600);
+      font-weight: 500;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .small {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 14px;
+      line-height: 1.5;
+    }
+    .small a {
+      color: var(--blue-600);
+      text-decoration: underline;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 960px) {
+      .app {
+        grid-template-columns: 1fr;
+      }
+      .mobile-header {
+        display: flex;
+      }
+      aside {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        width: 100%;
+        max-width: 320px;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+      }
+      aside.open {
+        display: flex;
+      }
+      .aside-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        z-index: 99;
+      }
+      .aside-backdrop.open {
+        display: block;
+      }
+      main {
+        padding: 16px 16px 40px;
+      }
+      .hero {
+        padding: 24px 20px;
+      }
+      .tiles {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <!-- Hidden SVG Sprite -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
-      <symbol id="i-doc" viewBox="0 0 24 24">
-        <path d="M6 3h8l4 4v14H6z" />
-        <path d="M14 3v4h4M9 12h6M9 16h6" />
-      </symbol>
-      <symbol id="i-rupee" viewBox="0 0 24 24">
-        <path d="M7 5h10M7 9h10M7 5c6 0 6 8 0 8l7 7" />
-      </symbol>
-      <symbol id="i-cal" viewBox="0 0 24 24">
-        <rect x="4" y="5" width="16" height="15" rx="2" />
-        <path d="M4 10h16M9 3v4M15 3v4" />
-      </symbol>
-      <symbol id="i-calc" viewBox="0 0 24 24">
-        <rect x="5" y="3" width="14" height="18" rx="2" />
-        <path d="M8 7h8M8 12h2M12 12h2M8 16h2M12 16h2" />
-      </symbol>
-      <symbol id="i-card" viewBox="0 0 24 24">
-        <rect x="3" y="6" width="18" height="12" rx="2" />
-        <path d="M3 10h18M7 15h4" />
-      </symbol>
-      <symbol id="i-check" viewBox="0 0 24 24">
-        <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" />
-        <path d="M8.5 12l2.5 2.5 4.5-5" />
-      </symbol>
-      <symbol id="i-link" viewBox="0 0 24 24">
-        <path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1" />
-      </symbol>
-      <symbol id="i-search" viewBox="0 0 24 24">
-        <circle cx="11" cy="11" r="6" />
-        <path d="M16 16l5 5" />
-      </symbol>
-      <symbol id="i-bank" viewBox="0 0 24 24">
-        <path d="M3 9l9-5 9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18" />
-      </symbol>
-      <symbol id="i-phone" viewBox="0 0 24 24">
-        <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z" />
-      </symbol>
-      <symbol id="i-mail" viewBox="0 0 24 24">
-        <rect x="3" y="5" width="18" height="14" rx="2" />
-        <path d="M3 7l9 7 9-7" />
-      </symbol>
-      <symbol id="i-pin" viewBox="0 0 24 24">
-        <path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z" />
-        <circle cx="12" cy="10" r="2.5" />
-      </symbol>
-      <symbol id="i-book" viewBox="0 0 24 24">
-        <path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z" />
-        <path d="M5 17a3 3 0 0 1 3-3h11" />
-      </symbol>
-      <symbol id="i-bell" viewBox="0 0 24 24">
-        <path d="M6 17v-6a6 6 0 0 1 12 0v6l2 2H4zM10 21h4" />
-      </symbol>
-      <symbol id="i-users" viewBox="0 0 24 24">
-        <circle cx="9" cy="8" r="3.5" />
-        <path d="M3 20a6 6 0 0 1 12 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3 6" />
-      </symbol>
-      <symbol id="i-conv" viewBox="0 0 24 24">
-        <path d="M4 8h13l-3-3M20 16H7l3 3" />
-      </symbol>
-      <symbol id="i-clip" viewBox="0 0 24 24">
-        <rect x="6" y="4" width="12" height="17" rx="2" />
-        <path d="M9 4h6v3H9zM9 12h6M9 16h4" />
-      </symbol>
-      <symbol id="i-grid" viewBox="0 0 24 24">
-        <rect x="4" y="4" width="7" height="7" />
-        <rect x="13" y="4" width="7" height="7" />
-        <rect x="4" y="13" width="7" height="7" />
-        <rect x="13" y="13" width="7" height="7" />
-      </symbol>
-      <symbol id="i-youtube" viewBox="0 0 24 24">
-        <rect x="2" y="4" width="20" height="16" rx="4" />
-        <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" />
-      </symbol>
+      <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
+      <symbol id="i-rupee" viewBox="0 0 24 24"><path d="M7 5h10M7 9h10M7 5c6 0 6 8 0 8l7 7"/></symbol>
+      <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></symbol>
+      <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M12 12h2M8 16h2M12 16h2"/></symbol>
+      <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h4"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+      <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M16 16l5 5"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 17v-6a6 6 0 0 1 12 0v6l2 2H4zM10 21h4"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0 1 12 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3 6"/></symbol>
+      <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 10h18M3 14h18M5 10v4M9 10v4M13 10v4M17 10v4M19 10v4M3 6l9-4 9 4v2H3zM3 18h18v3H3z"/></symbol>
+      <symbol id="i-clip" viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4h6v3H9zM9 12h6M9 16h4"/></symbol>
+      <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="4"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.888 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/></symbol>
     </defs>
   </svg>
+
+  <!-- Mobile Top Bar -->
+  <div class="mobile-header">
+    <a class="mobile-logo" href="#top">All in 1</a>
+    <div class="mobile-actions">
+      <a class="mobile-call-btn" href="tel:+919625000350">
+        <svg class="ic" style="width:14px;height:14px;" aria-hidden="true"><use href="#i-phone"/></svg>
+        Call
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg class="ic" style="width:20px;height:20px;" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="aside-backdrop" id="asideBackdrop"></div>
+
   <div class="app">
-    <aside>
-      <a class="brand" href="#top" aria-label="All in 1, back to top"><span class="b-name">All in 1</span></a>
-      <div class="me"><b>All in 1 Accounting Solutions</b><span>Helpline: 96250 00350</span><a href="#contact">Book a
-          call</a></div>
-      <nav aria-label="Main"><a href="#itr"><svg class="ic" aria-hidden="true">
-            <use href="#i-doc" />
-          </svg>Income Tax Return</a><a href="#gst"><svg class="ic" aria-hidden="true">
-            <use href="#i-check" />
-          </svg>GST</a><a href="#tds"><svg class="ic" aria-hidden="true">
-            <use href="#i-card" />
-          </svg>TDS</a><a href="#epf"><svg class="ic" aria-hidden="true">
-            <use href="#i-users" />
-          </svg>EPF &amp; ESI</a><a href="#audit"><svg class="ic" aria-hidden="true">
-            <use href="#i-book" />
-          </svg>Accounting &amp; Audit</a><a href="#reg"><svg class="ic" aria-hidden="true">
-            <use href="#i-bank" />
-          </svg>Registrations</a><a href="#tools"><svg class="ic" aria-hidden="true">
-            <use href="#i-link" />
-          </svg>Official Tools</a><a href="#updates"><svg class="ic" aria-hidden="true">
-            <use href="#i-bell" />
-          </svg>Updates</a><a href="#deadlines"><svg class="ic" aria-hidden="true">
-            <use href="#i-cal" />
-          </svg>Deadlines</a><a href="blog.html"><svg class="ic" aria-hidden="true">
-            <use href="#i-book" />
-          </svg>Blog</a><a href="youtube.html" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true">
-            <use href="#i-youtube" />
-          </svg>YouTube Videos</a><a href="#contact"><svg class="ic" aria-hidden="true">
-            <use href="#i-phone" />
-          </svg>Contact</a><a class="free" href="free-accounting-tools.html" target="_blank" rel="noopener"><svg
-            class="ic" aria-hidden="true">
-            <use href="#i-calc" />
-          </svg>Free Accounting Tools</a></nav>
-      <div class="side-foot">allin1partners@gmail.com<br>Mon–Sat, 10 am to 7 pm</div>
-    </aside>
-    <main id="top">
-      <div class="banner">
-        <h1>Tax filing, GST and accounts, handled by people you can call.</h1>
-        <p>Bookkeeping, GST returns, income tax, audits and notice replies for individuals, shops, professionals and
-          companies, at a fixed price.</p><a class="btn" href="#contact">Book a free call</a>
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar">
+      <div class="brand-box">
+        <a class="brand" href="#top" aria-label="All in 1, back to top">
+          <span class="b-name">All in 1</span>
+          <span class="b-tag">Accounting Solutions</span>
+          <span class="b-sub">Tax &amp; Corporate Advisors</span>
+        </a>
       </div>
-      <div class="notice"><b>Notice</b><span>For taxpayers whose accounts are subject to audit, the ITR due date for AY
-          2026-27 is extended from 31 Oct to 21 Nov 2026 (CBDT Circular 07/2026). Ask us which date applies to
-          you.</span></div>
 
+      <div class="helpline-card">
+        <div class="helpline-status"><span class="status-dot"></span> Advisors Available</div>
+        <div class="helpline-num">+91 96250 00350</div>
+        <a class="helpline-btn" href="tel:+919625000350">
+          <svg class="ic" style="width:14px;height:14px;" aria-hidden="true"><use href="#i-phone"/></svg>
+          Call Directly
+        </a>
+      </div>
+
+      <!-- Navigation Tabs strictly in required order -->
+      <nav aria-label="Main Navigation">
+        <a href="#itr"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Income Tax Return</a>
+        <a href="#gst"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>GST</a>
+        <a href="#tds"><svg class="ic" aria-hidden="true"><use href="#i-card"/></svg>TDS</a>
+        <a href="#epf"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>EPF &amp; ESI</a>
+        <a href="#audit"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Accounting &amp; Audit</a>
+        <a href="#reg"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg>Registrations</a>
+        <a href="#tools"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg>Official Tools</a>
+        <a href="#updates"><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg>Updates</a>
+        <a href="#deadlines"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Deadlines</a>
+        <a href="blog.html"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Blog</a>
+        <a href="youtube.html" target="_blank" rel="noopener">
+          <svg class="ic" aria-hidden="true"><use href="#i-youtube"/></svg>YouTube Videos
+          <span class="nav-badge-yt">30 Videos</span>
+        </a>
+        <a href="#contact"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Contact</a>
+        <a class="free" href="free-accounting-tools.html" target="_blank" rel="noopener">
+          <svg class="ic" aria-hidden="true"><use href="#i-calc"/></svg>Free Accounting Tools
+          <span class="nav-badge-free">Calculator</span>
+        </a>
+      </nav>
+
+      <div class="side-foot">
+        <div><strong>All in 1 Accounting Solutions</strong></div>
+        <div>Delhi &bull; Mon–Sat, 10 am to 7 pm</div>
+        <div style="margin-top:4px;"><a href="mailto:allin1partners@gmail.com">allin1partners@gmail.com</a></div>
+      </div>
+    </aside>
+
+    <!-- Main Content Canvas -->
+    <main id="top">
+      <!-- Hero Banner -->
+      <div class="hero">
+        <span class="hero-pill">&#x2728; Certified Tax &amp; GST Practitioners &bull; Delhi</span>
+        <h1>Tax filing, GST and accounts, handled by people you can call.</h1>
+        <p>Bookkeeping, GST returns, income tax, audits and notice replies for individuals, shops, professionals and companies, at a fixed and transparent price.</p>
+        
+        <div class="hero-actions">
+          <a class="btn-primary" href="#contact">
+            <svg class="ic" style="width:16px;height:16px;stroke:#1A0D00;" aria-hidden="true"><use href="#i-phone"/></svg>
+            Book a Free Call (+91 96250 00350)
+          </a>
+          <a class="btn-whatsapp" href="https://wa.me/919625000350?text=Hi%2C%20I%20need%20tax%20and%20accounting%20assistance." target="_blank" rel="noopener">
+            <svg style="width:16px;height:16px;fill:currentColor;" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Chat on WhatsApp
+          </a>
+          <a class="btn-glass" href="free-accounting-tools.html" target="_blank" rel="noopener">
+            <svg class="ic" style="width:16px;height:16px;" aria-hidden="true"><use href="#i-calc"/></svg>
+            GST Late Fee Calculator &rarr;
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="trust-item"><span class="trust-icon">&#x2714;</span> 100% Fixed &amp; Clear Pricing</div>
+          <div class="trust-item"><span class="trust-icon">&#x26A1;</span> Same-Day E-Verification</div>
+          <div class="trust-item"><span class="trust-icon">&#x1F6E1;</span> Confidential &amp; Audit Ready</div>
+          <div class="trust-item"><span class="trust-icon">&#x1F4DE;</span> First Consultation is Free</div>
+        </div>
+      </div>
+
+      <!-- Live Regulatory Notice -->
+      <div class="notice">
+        <b>Important Notice</b>
+        <span>For taxpayers whose accounts are subject to audit, the ITR due date for AY 2026-27 is extended from 31 Oct to 21 Nov 2026 (CBDT Circular 07/2026). Contact us to verify which date applies to your return.</span>
+      </div>
+
+      <!-- Section: Income Tax Return -->
       <section class="panel" id="itr">
-        <h2>Income Tax Return</h2>
-        <p class="desc">Returns filed, e-verified and explained, for every kind of taxpayer.</p>
-        <div class="tiles"><a class="t" href="#contact"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-doc" />
-              </svg></span><b>Salaried ITR</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-book" />
-              </svg></span><b>Business &amp; Profession ITR</b></a><a class="t" href="#contact"><span class="ib"><svg
-                class="ic" aria-hidden="true">
-                <use href="#i-rupee" />
-              </svg></span><b>Capital Gains</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-users" />
-              </svg></span><b>NRI Returns</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-users" />
-              </svg></span><b>Senior Citizen &amp; HUF</b></a><a class="t" href="#contact"><span class="ib"><svg
-                class="ic" aria-hidden="true">
-                <use href="#i-clip" />
-              </svg></span><b>Revised &amp; Belated Returns</b></a><a class="t" href="#contact"><span class="ib"><svg
-                class="ic" aria-hidden="true">
-                <use href="#i-card" />
-              </svg></span><b>Refund Follow-up</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-check" />
-              </svg></span><b>Notice Replies</b></a></div>
-      </section>
-      <section class="panel dark" id="gst">
-        <h2>GST</h2>
-        <p class="desc">From registration to annual return, plus replies to notices.</p>
-        <div class="tiles"><a class="t" href="#contact"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-check" />
-              </svg></span><b>GST Registration</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-doc" />
-              </svg></span><b>GSTR-1 Filing</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-doc" />
-              </svg></span><b>GSTR-3B Filing</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-book" />
-              </svg></span><b>Annual Return (GSTR-9)</b></a><a class="t" href="#contact"><span class="ib"><svg
-                class="ic" aria-hidden="true">
-                <use href="#i-clip" />
-              </svg></span><b>Notices &amp; Refunds</b></a></div>
-      </section>
-      <section class="panel" id="tds">
-        <h2>TDS</h2>
-        <p class="desc">Deduct, deposit and report correctly, and issue certificates on time.</p>
-        <div class="tiles"><a class="t" href="#contact"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-check" />
-              </svg></span><b>TAN Registration</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-card" />
-              </svg></span><b>TDS Deduction &amp; Deposit</b></a><a class="t" href="#contact"><span class="ib"><svg
-                class="ic" aria-hidden="true">
-                <use href="#i-doc" />
-              </svg></span><b>Quarterly TDS Returns</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-clip" />
-              </svg></span><b>TDS Certificates</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-search" />
-              </svg></span><b>Correction Statements</b></a></div>
-      </section>
-      <section class="panel dark" id="epf">
-        <h2>EPF &amp; ESI</h2>
-        <p class="desc">Provident fund and ESI set-up, monthly compliance and employee claims.</p>
-        <div class="tiles"><a class="t" href="#contact"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-check" />
-              </svg></span><b>EPF Registration</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-check" />
-              </svg></span><b>ESI Registration</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-doc" />
-              </svg></span><b>Monthly EPF Return</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-card" />
-              </svg></span><b>Monthly ESI Contribution</b></a><a class="t" href="#contact"><span class="ib"><svg
-                class="ic" aria-hidden="true">
-                <use href="#i-users" />
-              </svg></span><b>UAN Activation &amp; KYC</b></a><a class="t" href="#contact"><span class="ib"><svg
-                class="ic" aria-hidden="true">
-                <use href="#i-rupee" />
-              </svg></span><b>PF Withdrawal &amp; Claims</b></a></div>
-      </section>
-      <section class="panel" id="audit">
-        <h2>Accounting &amp; Audit</h2>
-        <p class="desc">Clean books and audit-ready accounts all year.</p>
-        <div class="tiles"><a class="t" href="#contact"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-book" />
-              </svg></span><b>Bookkeeping</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-users" />
-              </svg></span><b>Payroll Processing</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-check" />
-              </svg></span><b>Tax &amp; Statutory Audit</b></a><a class="t" href="#contact"><span class="ib"><svg
-                class="ic" aria-hidden="true">
-                <use href="#i-doc" />
-              </svg></span><b>Financial Statements</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-bank" />
-              </svg></span><b>Loan &amp; Project Reports</b></a></div>
-      </section>
-      <section class="panel dark" id="reg">
-        <h2>Registrations &amp; Company Law</h2>
-        <p class="desc">Start a business and keep it compliant.</p>
-        <div class="tiles"><a class="t" href="#contact"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-card" />
-              </svg></span><b>PAN &amp; TAN</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-check" />
-              </svg></span><b>Udyam (MSME)</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-bank" />
-              </svg></span><b>Company &amp; LLP Incorporation</b></a><a class="t" href="#contact"><span class="ib"><svg
-                class="ic" aria-hidden="true">
-                <use href="#i-users" />
-              </svg></span><b>Partnership Firm</b></a><a class="t" href="#contact"><span class="ib"><svg class="ic"
-                aria-hidden="true">
-                <use href="#i-doc" />
-              </svg></span><b>ROC Annual Filings</b></a></div>
-      </section>
-      <section class="panel" id="tools">
-        <h2>Official Tax Tools</h2>
-        <div class="tiles"><a class="t" href="https://eportal.incometax.gov.in/iec/foservices/#/TaxCalc/calculator"
-            target="_blank" rel="noopener"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-calc" />
-              </svg></span><b>Income Tax Calculator</b></a><a class="t"
-            href="https://eportal.incometax.gov.in/iec/foservices/#/TaxCalc/calender" target="_blank"
-            rel="noopener"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-cal" />
-              </svg></span><b>Tax Calendar</b></a><a class="t"
-            href="https://eportal.incometax.gov.in/iec/foservices/#/tin/pre-login/e-pay-tax-prelogin/user-details"
-            target="_blank" rel="noopener"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-card" />
-              </svg></span><b>e-Pay Tax</b></a><a class="t"
-            href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/eVerifyReturn-bl" target="_blank"
-            rel="noopener"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-check" />
-              </svg></span><b>e-Verify Return</b></a><a class="t"
-            href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/bl-link-aadhaar-landing" target="_blank"
-            rel="noopener"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-link" />
-              </svg></span><b>Link Aadhaar with PAN</b></a><a class="t"
-            href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/verifyYourPAN" target="_blank"
-            rel="noopener"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-search" />
-              </svg></span><b>Verify PAN</b></a><a class="t"
-            href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/comply_to_notice" target="_blank"
-            rel="noopener"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-clip" />
-              </svg></span><b>Comply to Notice</b></a><a class="t" href="https://www.incometax.gov.in/iec/foportal/"
-            target="_blank" rel="noopener"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-bank" />
-              </svg></span><b>e-Filing Portal</b></a><a class="t" href="https://www.gst.gov.in/" target="_blank"
-            rel="noopener"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-bank" />
-              </svg></span><b>GST Portal</b></a><a class="t"
-            href="https://tutorial.gst.gov.in/userguide/taxpayersdashboard/Search_Taxpayer_manual.htm" target="_blank"
-            rel="noopener"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-search" />
-              </svg></span><b>Search GSTIN (Guide)</b></a><a class="t" href="tel:18001200232"><span class="ib"><svg
-                class="ic" aria-hidden="true">
-                <use href="#i-phone" />
-              </svg></span><b>GST Helpdesk 1800-1200-232</b></a></div>
-        <p class="small">Income tax tools open the Income Tax e-Filing portal and GST tools open the GST portal.</p>
-      </section>
-
-      <section class="panel" id="updates">
-        <h2>Latest Updates</h2>
-        <p class="desc">Income Tax, GST, TDS, EPF and ESI. Last updated on this site: 2 Nov 2026.</p>
-        <div class="ug">
+        <div class="panel-header">
           <div>
-            <h3>Income Tax</h3>
-            <ul>
-              <li><time>Due dates</time>ITR for AY 2026-27 is due 21 Nov 2026 (earlier 31 Oct) for taxpayers whose
-                accounts are subject to audit. The tax audit report date moved to 21 Oct. (CBDT Circular 07/2026, 28
-                Sep)</li>
-              <li><time>28 Oct 2026</time>Notification 138/2026: Chapter XIX of the Income-tax Act, 2025 does not apply
-                to payments received by the International Rice Research Institute.</li>
-              <li><time>27 Oct 2026</time>New Rule 281A and Form 173A for claiming exemption on interest and capital
-                gains from Government securities (Seventh Amendment Rules, 2026).</li>
-              <li><time>13 Oct 2026</time>Notification 135/2026: new India–Mauritius agreement and protocol to avoid
-                double taxation.</li>
-              <li><time>8 Oct 2026</time>Notification 134/2026: revised Form 161 to apply for waiver of penalty under
-                section 440(2) of the Income-tax Act, 2025.</li>
-              <li><time>Ongoing</time>Foreign Assets of Small Taxpayers Disclosure Scheme, 2026 (FADS) is live on the
-                e-Filing portal.</li>
-            </ul>
-            <div class="more"><b>Read more</b><a href="https://www.incometax.gov.in/iec/foportal/latest-news"
-                target="_blank" rel="noopener">Official: News &amp; e-Campaigns</a><a
-                href="https://www.incometaxindia.gov.in/documents/d/guest/cbdt-extends-due-date-for-furnishing-return-of-income-for-ay-2026-27-pdf"
-                target="_blank" rel="noopener">Official: CBDT press release on due dates (PDF)</a><a
-                href="https://www.caclubindia.com/news/cbdt-exempts-irri-payments-from-chapter-xix-of-income-tax-act-2025-26910.asp"
-                target="_blank" rel="noopener">News: Notification 138/2026</a></div>
-          </div>
-          <div>
-            <h3>GST</h3>
-            <ul>
-              <li><time>1 Nov 2026</time>GSTN advisory on FORM GST REG-01: One Person Company is now a separate
-                category, supporting documents are mandatory, SEZ units must give an SEZ Entity ID, and up to 10 bank
-                accounts can be declared.</li>
-              <li><time>1 Nov 2026</time>Registration amendments (Rule 19) changed: most changes take effect on
-                submission and online validation, and OTP verification of mobile and email is required (3-day window).
-              </li>
-              <li><time>28 Oct 2026</time>CBIC Circular 265/11/2026-GST clarifies GST treatment of toys, sublimation
-                paper, used cars under the margin scheme and seaweed bio-stimulants.</li>
-              <li><time>26 Oct 2026</time>Circular 262/08/2026-GST on input tax credit for authorised agents of vehicle
-                manufacturers.</li>
-              <li><time>16 Oct 2026</time>e-Invoicing now supports recipient-generated self-invoices under reverse
-                charge.</li>
-              <li><time>8 Oct 2026</time>GSTR-9 and GSTR-9C for FY 2025-26 enabled on the portal. The 57th GST Council
-                also recommended reforms on registration, returns, refunds, ITC and penalties.</li>
-            </ul>
-            <div class="more"><b>Read more</b><a href="https://www.gst.gov.in/" target="_blank" rel="noopener">Official:
-                GST portal</a><a href="https://idtc.icai.org/gstn-advisory.php" target="_blank" rel="noopener">GSTN
-                advisories list (ICAI)</a><a href="https://blog.saginfotech.com/gst-latest-updates" target="_blank"
-                rel="noopener">News: day-by-day GST updates</a><a
-                href="https://taxo.online/latest-news/02-11-2026-gstn-issued-advisory-on-important-changes-in-form-gst-reg-01-for-gst-registration/"
-                target="_blank" rel="noopener">News: REG-01 changes</a></div>
-          </div>
-          <div>
-            <h3>TDS</h3>
-            <ul>
-              <li><time>19 Oct 2026</time>Notification 136/2026: no TDS on interest paid to qualifying holders of the
-                NDB Maharajah INR Bond from tax year 2026-27. This is relief from TDS only, not an exemption of the
-                income.</li>
-              <li><time>Ongoing</time>Correction statements for TDS/TCS for Tax Year 2026-27 can be filed on the portal.
-              </li>
-              <li><time>Every month</time>TDS/TCS deposit is due by the 7th of the following month.</li>
-            </ul>
-            <div class="more"><b>Read more</b><a
-                href="https://taxguru.in/chartered-accountant/analysis-notifications-circulars-week-25th-october-2026.html"
-                target="_blank" rel="noopener">News: weekly notifications (to 25 Oct)</a><a
-                href="https://blog.saginfotech.com/income-tax-tds-latest-updates" target="_blank" rel="noopener">News:
-                Income Tax and TDS updates</a></div>
-          </div>
-          <div>
-            <h3>EPF</h3>
-            <ul>
-              <li><time>13 Oct 2026</time>EPFO extended the September 2026 ECR filing and PF payment from 15 Oct to 31
-                Oct, after the PF wage ceiling rose to ₹25,000 from 17 Sep 2026. The October ECR is still due 15 Nov.
-              </li>
-              <li><time>Ongoing</time>New UANs are allotted and activated only through Aadhaar face authentication on
-                the UMANG app. Direct UAN allotment on the portal is discontinued.</li>
-              <li><time>Ongoing</time>Filing nominations is shown as mandatory under the EPF Scheme 2026 on the member
-                portal.</li>
-            </ul>
-            <div class="more"><b>Read more</b><a
-                href="https://www.scconline.com/blog/post/2026/10/15/epfo-ecr-deadline-september-2026-extended-31-october/"
-                target="_blank" rel="noopener">News: ECR deadline extension</a><a
-                href="https://masllp.com/epfo-ecr-due-date-extended-september-2026-guide/" target="_blank"
-                rel="noopener">Guide: ECR and wage ceiling</a><a href="https://companyji.com/learn/epfo-new-rules-2026/"
-                target="_blank" rel="noopener">Guide: EPFO rules 2026</a></div>
-          </div>
-          <div>
-            <h3>ESI</h3>
-            <ul>
-              <li><time>As of 19 Oct 2026</time>The ESI wage ceiling is still ₹21,000 a month (₹25,000 for a person with
-                disability). A rise to ₹30,000 has been discussed, but no notification has been issued.</li>
-              <li><time>Unchanged</time>Contribution is 3.25% from the employer and 0.75% from the employee, deposited
-                by the 15th of the following month.</li>
-              <li><time>Note</time>ESI wages now follow the Code on Social Security definition, so check payroll for
-                employees near the ceiling.</li>
-            </ul>
-            <div class="more"><b>Read more</b><a href="https://hrtailor.com/esic-wage-ceiling-2026-employer-guide/"
-                target="_blank" rel="noopener">Guide: ESIC wage ceiling 2026</a><a
-                href="https://lexcomply.com/feeds/esic-applicability-contribution-rates" target="_blank"
-                rel="noopener">Guide: ESIC rates and applicability</a></div>
+            <h2>Income Tax Return</h2>
+            <p class="desc">Returns filed, e-verified and explained, for every kind of taxpayer.</p>
           </div>
         </div>
-        <p class="small">For the very latest news, open the official pages: <a
-            href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener">Income Tax e-Filing
-            portal</a> and <a href="https://www.gst.gov.in/" target="_blank" rel="noopener">GST portal</a>. News and
-          guide links are third-party sites; always confirm on the official portal before acting.</p>
+        <div class="tiles">
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span>
+            <b>Salaried ITR</b>
+            <span class="t-sub">Form 16 &amp; Deductions</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></span>
+            <b>Business &amp; Profession ITR</b>
+            <span class="t-sub">44AD, 44ADA &amp; Books</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-rupee"/></svg></span>
+            <b>Capital Gains</b>
+            <span class="t-sub">Shares, Property, Crypto</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <b>NRI Returns</b>
+            <span class="t-sub">DTAA &amp; Foreign Income</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <b>Senior Citizen &amp; HUF</b>
+            <span class="t-sub">Family Tax Planning</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-clip"/></svg></span>
+            <b>Revised &amp; Belated Returns</b>
+            <span class="t-sub">Missed Deadlines</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-card"/></svg></span>
+            <b>Refund Follow-up</b>
+            <span class="t-sub">Speed up processing</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <b>Notice Replies</b>
+            <span class="t-sub">143(1), 148 &amp; Appeals</span>
+          </a>
+        </div>
       </section>
 
-      <section class="panel dark" id="deadlines">
-        <h2>Important Deadlines: November 2026</h2>
-        <p class="desc">Every GST, ITR, TDS, EPF and ESI due date this month. Dates are for the October 2026 period
-          unless stated.</p>
-        <div class="flt" role="group" aria-label="Filter deadlines"><button type="button" data-f="all"
-            aria-pressed="true">All</button><button type="button" data-f="itr" aria-pressed="false">ITR</button><button
-            type="button" data-f="gst" aria-pressed="false">GST</button><button type="button" data-f="tds"
-            aria-pressed="false">TDS</button><button type="button" data-f="epf" aria-pressed="false">EPF</button><button
-            type="button" data-f="esi" aria-pressed="false">ESI</button></div>
-        <ul class="dl" id="dl-list">
-          <li data-t="tds"><span class="d">7<small>Sat</small></span><span><b>TDS/TCS deposit</b><span
-                class="tag">TDS</span><br>Tax deducted or collected in October 2026.</span></li>
-          <li data-t="gst"><span class="d">10<small>Tue</small></span><span><b>GSTR-7 and GSTR-8</b><span
-                class="tag">GST</span><br>GST TDS deductors and e-commerce operators, for October.</span></li>
-          <li data-t="gst"><span class="d">11<small>Wed</small></span><span><b>GSTR-1 (monthly)</b><span
-                class="tag">GST</span><br>Outward supplies for October.</span></li>
-          <li data-t="esi"><span class="d">11–12<small>Nov</small></span><span><b>ESI half-yearly return</b><span
-                class="tag">ESI</span><br>For April to September 2026. Date varies slightly, so confirm on the ESIC
-              portal.</span></li>
-          <li data-t="gst"><span class="d">13<small>Fri</small></span><span><b>GSTR-1 IFF, GSTR-5 and GSTR-6</b><span
-                class="tag">GST</span><br>Invoice furnishing facility for quarterly (QRMP) filers, non-resident
-              taxpayers and input service distributors.</span></li>
-          <li data-t="epf"><span class="d">15<small>Sun</small></span><span><b>EPF ECR and payment</b><span
-                class="tag">EPF</span><br>Provident fund for October wages. It is a Sunday, so file early.</span></li>
-          <li data-t="esi"><span class="d">15<small>Sun</small></span><span><b>ESI contribution</b><span
-                class="tag">ESI</span><br>Employee and employer contributions for October wages.</span></li>
-          <li data-t="tds"><span class="d">15<small>Sun</small></span><span><b>TDS certificates</b><span
-                class="tag">TDS</span><br>For the July to September 2026 quarter.</span></li>
-          <li data-t="gst"><span class="d">20<small>Fri</small></span><span><b>GSTR-3B (monthly)</b><span
-                class="tag">GST</span><br>October return and tax payment.</span></li>
-          <li data-t="itr"><span class="d">21<small>Sat</small></span><span><b>ITR for audit cases, AY 2026-27</b><span
-                class="tag">ITR</span><br>Extended from 31 Oct for taxpayers whose accounts are audited.</span></li>
-          <li data-t="gst"><span class="d">22/24<small>Nov</small></span><span><b>GSTR-3B (quarterly, QRMP)</b><span
-                class="tag">GST</span><br>For quarterly filers. The date is 22 or 24 Nov depending on the state.</span>
-          </li>
-          <li data-t="gst"><span class="d">25<small>Wed</small></span><span><b>GST PMT-06</b><span
-                class="tag">GST</span><br>Monthly tax payment for October by QRMP taxpayers.</span></li>
-          <li data-t="gst"><span class="d">28<small>Sat</small></span><span><b>GSTR-11</b><span
-                class="tag">GST</span><br>Statement of inward supplies by UIN holders.</span></li>
-          <li data-t="itr"><span class="d">30<small>Mon</small></span><span><b>ITR for transfer pricing cases, AY
-                2026-27</b><span class="tag">ITR</span><br>Also the master file (Form 3CEAA) for 2025-26.</span></li>
-          <li data-t="gst"><span class="d">30<small>Mon</small></span><span><b>Last date to claim FY 2025-26 input tax
-                credit</b><span class="tag">GST</span><br>Section 16(4) of the CGST Act.</span></li>
-          <li data-t="tds"><span class="d">30<small>Mon</small></span><span><b>TDS challan-cum-statement</b><span
-                class="tag">TDS</span><br>For October, on specified transactions.</span></li>
-          <li class="sep" data-t="sep">Coming up in December</li>
-          <li data-t="tds"><span class="d">7<small>Mon</small></span><span><b>TDS/TCS deposit</b><span
-                class="tag">TDS</span><br>Tax deducted or collected in November 2026.</span></li>
-          <li data-t="itr"><span class="d">15<small>Tue</small></span><span><b>Advance tax, 3rd instalment</b><span
-                class="tag">ITR</span><br>For those liable to pay advance tax.</span></li>
-        </ul>
-        <p class="small" style="color:#D3E0F6">Dates can be extended and vary by case. 15 Nov is a Sunday, so file
-          early. Sources: <a href="https://treelife.in/calendar/compliance-calendar-november-2026/" target="_blank"
-            rel="noopener">Treelife calendar</a> and <a href="https://taxgst.in/november-2026-tax-due-dates-calendar/"
-            target="_blank" rel="noopener">TaxGST calendar</a>. Confirm on the official portals. We track these for
-          every client.</p>
-      </section>
-
-      <section class="panel" id="youtube">
-        <div class="yt-header" style="margin-bottom:0;">
+      <!-- Section: GST -->
+      <section class="panel" id="gst">
+        <div class="panel-header">
           <div>
-            <h2 style="margin:0 0 6px;">YouTube Videos &amp; Tutorials</h2>
-            <p class="desc" style="margin:0;">30+ step-by-step video guides on GST, Income Tax, TDS, PF, Tally Prime and Tech tricks.</p>
+            <h2>GST (Goods &amp; Services Tax)</h2>
+            <p class="desc">From registration to annual return, input tax credit and replies to notices.</p>
           </div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
-            <a class="btn" href="youtube.html" target="_blank" rel="noopener">Browse All 30 Videos</a>
+        </div>
+        <div class="tiles">
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <b>GST Registration</b>
+            <span class="t-sub">Fresh &amp; Amendments</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span>
+            <b>GSTR-1 Filing</b>
+            <span class="t-sub">Monthly &amp; QRMP</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span>
+            <b>GSTR-3B Filing</b>
+            <span class="t-sub">ITC Reconciliation</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></span>
+            <b>Annual Return (GSTR-9)</b>
+            <span class="t-sub">9C Reconciliation</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-clip"/></svg></span>
+            <b>Notices &amp; Refunds</b>
+            <span class="t-sub">DRC-01 &amp; Export Refund</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section: TDS -->
+      <section class="panel" id="tds">
+        <div class="panel-header">
+          <div>
+            <h2>TDS (Tax Deducted at Source)</h2>
+            <p class="desc">Deduct, deposit and report correctly, and issue certificates on time.</p>
+          </div>
+        </div>
+        <div class="tiles">
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <b>TAN Registration</b>
+            <span class="t-sub">New Allotment</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-card"/></svg></span>
+            <b>TDS Deduction &amp; Deposit</b>
+            <span class="t-sub">Challan 281 Payment</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span>
+            <b>Quarterly TDS Returns</b>
+            <span class="t-sub">24Q, 26Q &amp; 27Q</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-clip"/></svg></span>
+            <b>TDS Certificates</b>
+            <span class="t-sub">Form 16 &amp; 16A Traces</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></span>
+            <b>Correction Statements</b>
+            <span class="t-sub">PAN &amp; Challan mismatch</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section: EPF & ESI -->
+      <section class="panel" id="epf">
+        <div class="panel-header">
+          <div>
+            <h2>EPF &amp; ESI (Employee Compliance)</h2>
+            <p class="desc">Provident fund and ESI set-up, monthly compliance and employee claims.</p>
+          </div>
+        </div>
+        <div class="tiles">
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <b>EPF Registration</b>
+            <span class="t-sub">Establishment Code</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <b>ESI Registration</b>
+            <span class="t-sub">Employer Code</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span>
+            <b>Monthly EPF Return</b>
+            <span class="t-sub">ECR Filing &amp; Challan</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-card"/></svg></span>
+            <b>Monthly ESI Contribution</b>
+            <span class="t-sub">Monthly Challan &amp; TIC</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <b>UAN Activation &amp; KYC</b>
+            <span class="t-sub">Aadhaar &amp; Bank Link</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-rupee"/></svg></span>
+            <b>PF Withdrawal &amp; Claims</b>
+            <span class="t-sub">Advance &amp; Full Settlement</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section: Accounting & Audit -->
+      <section class="panel" id="audit">
+        <div class="panel-header">
+          <div>
+            <h2>Accounting &amp; Audit</h2>
+            <p class="desc">Clean books and audit-ready accounts all year round.</p>
+          </div>
+        </div>
+        <div class="tiles">
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></span>
+            <b>Bookkeeping</b>
+            <span class="t-sub">Tally &amp; Cloud Ledger</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <b>Payroll Processing</b>
+            <span class="t-sub">Salary Slips &amp; TDS</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <b>Tax &amp; Statutory Audit</b>
+            <span class="t-sub">Section 44AB Assistance</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span>
+            <b>Financial Statements</b>
+            <span class="t-sub">Balance Sheet &amp; P&amp;L</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg></span>
+            <b>Loan &amp; Project Reports</b>
+            <span class="t-sub">CMA Data &amp; Banking</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section: Registrations & Company Law -->
+      <section class="panel" id="reg">
+        <div class="panel-header">
+          <div>
+            <h2>Registrations &amp; Company Law</h2>
+            <p class="desc">Start a business and keep it compliant with all authorities.</p>
+          </div>
+        </div>
+        <div class="tiles">
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-card"/></svg></span>
+            <b>PAN &amp; TAN</b>
+            <span class="t-sub">Individual &amp; Entity</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <b>Udyam (MSME)</b>
+            <span class="t-sub">Govt Subsidies &amp; Loans</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg></span>
+            <b>Company &amp; LLP</b>
+            <span class="t-sub">Incorporation in 7 Days</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <b>Partnership Firm</b>
+            <span class="t-sub">Deed Drafting &amp; ROF</span>
+          </a>
+          <a class="t" href="#contact">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span>
+            <b>ROC Annual Filings</b>
+            <span class="t-sub">AOC-4, MGT-7 &amp; KYC</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section: Official Tax Tools -->
+      <section class="panel" id="tools">
+        <div class="panel-header">
+          <div>
+            <h2>Official Government Tax Tools</h2>
+            <p class="desc">Direct shortcuts to authorized Income Tax &amp; GSTN official web utilities.</p>
+          </div>
+        </div>
+        <div class="tiles">
+          <a class="t" href="https://eportal.incometax.gov.in/iec/foservices/#/TaxCalc/calculator" target="_blank" rel="noopener">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-calc"/></svg></span>
+            <b>Income Tax Calculator</b>
+            <span class="govt-badge">Official Portal &nearr;</span>
+          </a>
+          <a class="t" href="https://eportal.incometax.gov.in/iec/foservices/#/TaxCalc/calender" target="_blank" rel="noopener">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg></span>
+            <b>Tax Calendar</b>
+            <span class="govt-badge">Official Portal &nearr;</span>
+          </a>
+          <a class="t" href="https://eportal.incometax.gov.in/iec/foservices/#/tin/pre-login/e-pay-tax-prelogin/user-details" target="_blank" rel="noopener">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-card"/></svg></span>
+            <b>e-Pay Tax</b>
+            <span class="govt-badge">Challan Payment &nearr;</span>
+          </a>
+          <a class="t" href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/eVerifyReturn-bl" target="_blank" rel="noopener">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <b>e-Verify Return</b>
+            <span class="govt-badge">Aadhaar OTP &nearr;</span>
+          </a>
+          <a class="t" href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/bl-link-aadhaar-landing" target="_blank" rel="noopener">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg></span>
+            <b>Link Aadhaar with PAN</b>
+            <span class="govt-badge">Mandatory Link &nearr;</span>
+          </a>
+          <a class="t" href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/verifyYourPAN" target="_blank" rel="noopener">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></span>
+            <b>Verify PAN</b>
+            <span class="govt-badge">Check Active Status &nearr;</span>
+          </a>
+          <a class="t" href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/comply_to_notice" target="_blank" rel="noopener">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-clip"/></svg></span>
+            <b>Comply to Notice</b>
+            <span class="govt-badge">e-Proceedings &nearr;</span>
+          </a>
+          <a class="t" href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg></span>
+            <b>e-Filing Portal</b>
+            <span class="govt-badge">ITD Main Site &nearr;</span>
+          </a>
+          <a class="t" href="https://www.gst.gov.in/" target="_blank" rel="noopener">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg></span>
+            <b>GST Portal</b>
+            <span class="govt-badge">GSTN Main Site &nearr;</span>
+          </a>
+          <a class="t" href="https://tutorial.gst.gov.in/userguide/taxpayersdashboard/Search_Taxpayer_manual.htm" target="_blank" rel="noopener">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></span>
+            <b>Search GSTIN (Guide)</b>
+            <span class="govt-badge">User Manual &nearr;</span>
+          </a>
+          <a class="t" href="tel:18001200232">
+            <span class="ib"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <b>GST Helpdesk</b>
+            <span class="govt-badge">1800-1200-232</span>
+          </a>
+        </div>
+        <p class="small">Income tax tools open the official Income Tax e-Filing portal and GST tools open the GST portal.</p>
+      </section>
+
+      <!-- Section: Latest Updates -->
+      <section class="panel" id="updates">
+        <div class="panel-header">
+          <div>
+            <h2>Latest Regulatory Updates</h2>
+            <p class="desc">Income Tax, GST, TDS, EPF and ESI circulars. Last updated: 2 Nov 2026.</p>
+          </div>
+        </div>
+        <div class="ug">
+          <div>
+            <h3><svg class="ic" style="color:var(--blue-600);" aria-hidden="true"><use href="#i-doc"/></svg>Income Tax</h3>
+            <ul>
+              <li><time>Due dates</time>ITR for AY 2026-27 is due 21 Nov 2026 (earlier 31 Oct) for taxpayers whose accounts are subject to audit. The tax audit report date moved to 21 Oct. (CBDT Circular 07/2026, 28 Sep)</li>
+              <li><time>28 Oct 2026</time>Notification 138/2026: Chapter XIX of the Income-tax Act, 2025 does not apply to payments received by the International Rice Research Institute.</li>
+              <li><time>27 Oct 2026</time>New Rule 281A and Form 173A for claiming exemption on interest and capital gains from Government securities (Seventh Amendment Rules, 2026).</li>
+              <li><time>13 Oct 2026</time>Notification 135/2026: new India–Mauritius agreement and protocol to avoid double taxation.</li>
+              <li><time>8 Oct 2026</time>Notification 134/2026: revised Form 161 to apply for waiver of penalty under section 440(2) of the Income-tax Act, 2025.</li>
+              <li><time>Ongoing</time>Foreign Assets of Small Taxpayers Disclosure Scheme, 2026 (FADS) is live on the e-Filing portal.</li>
+            </ul>
+            <div class="more">
+              <b>Read Official Sources</b>
+              <a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener">Official: News &amp; e-Campaigns &rarr;</a>
+              <a href="https://www.incometaxindia.gov.in/documents/d/guest/cbdt-extends-due-date-for-furnishing-return-of-income-for-ay-2026-27-pdf" target="_blank" rel="noopener">Official: CBDT press release on due dates (PDF) &rarr;</a>
+              <a href="https://www.caclubindia.com/news/cbdt-exempts-irri-payments-from-chapter-xix-of-income-tax-act-2025-26910.asp" target="_blank" rel="noopener">News: Notification 138/2026 &rarr;</a>
+            </div>
+          </div>
+
+          <div>
+            <h3><svg class="ic" style="color:var(--green-600);" aria-hidden="true"><use href="#i-check"/></svg>GST</h3>
+            <ul>
+              <li><time>1 Nov 2026</time>GSTN advisory on FORM GST REG-01: One Person Company is now a separate category, supporting documents are mandatory, SEZ units must give an SEZ Entity ID, and up to 10 bank accounts can be declared.</li>
+              <li><time>1 Nov 2026</time>Registration amendments (Rule 19) changed: most changes take effect on submission and online validation, and OTP verification of mobile and email is required (3-day window).</li>
+              <li><time>28 Oct 2026</time>CBIC Circular 265/11/2026-GST clarifies GST treatment of toys, sublimation paper, used cars under the margin scheme and seaweed bio-stimulants.</li>
+              <li><time>26 Oct 2026</time>Circular 262/08/2026-GST on input tax credit for authorised agents of vehicle manufacturers.</li>
+              <li><time>16 Oct 2026</time>e-Invoicing now supports recipient-generated self-invoices under reverse charge.</li>
+              <li><time>8 Oct 2026</time>GSTR-9 and GSTR-9C for FY 2025-26 enabled on the portal. The 57th GST Council also recommended reforms on registration, returns, refunds, ITC and penalties.</li>
+            </ul>
+            <div class="more">
+              <b>Read Official Sources</b>
+              <a href="https://www.gst.gov.in/" target="_blank" rel="noopener">Official: GST portal &rarr;</a>
+              <a href="https://idtc.icai.org/gstn-advisory.php" target="_blank" rel="noopener">GSTN advisories list (ICAI) &rarr;</a>
+              <a href="https://blog.saginfotech.com/gst-latest-updates" target="_blank" rel="noopener">News: day-by-day GST updates &rarr;</a>
+              <a href="https://taxo.online/latest-news/02-11-2026-gstn-issued-advisory-on-important-changes-in-form-gst-reg-01-for-gst-registration/" target="_blank" rel="noopener">News: REG-01 changes &rarr;</a>
+            </div>
+          </div>
+
+          <div>
+            <h3><svg class="ic" style="color:var(--purple-600);" aria-hidden="true"><use href="#i-card"/></svg>TDS</h3>
+            <ul>
+              <li><time>19 Oct 2026</time>Notification 136/2026: no TDS on interest paid to qualifying holders of the NDB Maharajah INR Bond from tax year 2026-27. This is relief from TDS only, not an exemption of the income.</li>
+              <li><time>Ongoing</time>Correction statements for TDS/TCS for Tax Year 2026-27 can be filed on the portal.</li>
+              <li><time>Every month</time>TDS/TCS deposit is due by the 7th of the following month.</li>
+            </ul>
+            <div class="more">
+              <b>Read Official Sources</b>
+              <a href="https://taxguru.in/chartered-accountant/analysis-notifications-circulars-week-25th-october-2026.html" target="_blank" rel="noopener">News: weekly notifications (to 25 Oct) &rarr;</a>
+              <a href="https://blog.saginfotech.com/income-tax-tds-latest-updates" target="_blank" rel="noopener">News: Income Tax and TDS updates &rarr;</a>
+            </div>
+          </div>
+
+          <div>
+            <h3><svg class="ic" style="color:var(--accent);" aria-hidden="true"><use href="#i-users"/></svg>EPF</h3>
+            <ul>
+              <li><time>13 Oct 2026</time>EPFO extended the September 2026 ECR filing and PF payment from 15 Oct to 31 Oct, after the PF wage ceiling rose to ₹25,000 from 17 Sep 2026. The October ECR is still due 15 Nov.</li>
+              <li><time>Ongoing</time>New UANs are allotted and activated only through Aadhaar face authentication on the UMANG app. Direct UAN allotment on the portal is discontinued.</li>
+              <li><time>Ongoing</time>Filing nominations is shown as mandatory under the EPF Scheme 2026 on the member portal.</li>
+            </ul>
+            <div class="more">
+              <b>Read Official Sources</b>
+              <a href="https://www.scconline.com/blog/post/2026/10/15/epfo-ecr-deadline-september-2026-extended-31-october/" target="_blank" rel="noopener">News: ECR deadline extension &rarr;</a>
+              <a href="https://masllp.com/epfo-ecr-due-date-extended-september-2026-guide/" target="_blank" rel="noopener">Guide: ECR and wage ceiling &rarr;</a>
+              <a href="https://companyji.com/learn/epfo-new-rules-2026/" target="_blank" rel="noopener">Guide: EPFO rules 2026 &rarr;</a>
+            </div>
+          </div>
+
+          <div>
+            <h3><svg class="ic" style="color:var(--rose-600);" aria-hidden="true"><use href="#i-check"/></svg>ESI</h3>
+            <ul>
+              <li><time>As of 19 Oct 2026</time>The ESI wage ceiling is still ₹21,000 a month (₹25,000 for a person with disability). A rise to ₹30,000 has been discussed, but no notification has been issued.</li>
+              <li><time>Unchanged</time>Contribution is 3.25% from the employer and 0.75% from the employee, deposited by the 15th of the following month.</li>
+              <li><time>Note</time>ESI wages now follow the Code on Social Security definition, so check payroll for employees near the ceiling.</li>
+            </ul>
+            <div class="more">
+              <b>Read Official Sources</b>
+              <a href="https://hrtailor.com/esic-wage-ceiling-2026-employer-guide/" target="_blank" rel="noopener">Guide: ESIC wage ceiling 2026 &rarr;</a>
+              <a href="https://lexcomply.com/feeds/esic-applicability-contribution-rates" target="_blank" rel="noopener">Guide: ESIC rates and applicability &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <p class="small">For the very latest news, open the official pages: <a href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener">Income Tax e-Filing portal</a> and <a href="https://www.gst.gov.in/" target="_blank" rel="noopener">GST portal</a>.</p>
+      </section>
+
+      <!-- Section: Deadlines -->
+      <section class="panel" id="deadlines">
+        <div class="panel-header">
+          <div>
+            <h2>Important Deadlines: November 2026</h2>
+            <p class="desc">Every GST, ITR, TDS, EPF and ESI due date this month. Dates apply to October 2026 period unless stated.</p>
+          </div>
+        </div>
+
+        <div class="flt" role="group" aria-label="Filter deadlines">
+          <button type="button" data-f="all" aria-pressed="true">All Deadlines</button>
+          <button type="button" data-f="itr" aria-pressed="false">ITR</button>
+          <button type="button" data-f="gst" aria-pressed="false">GST</button>
+          <button type="button" data-f="tds" aria-pressed="false">TDS</button>
+          <button type="button" data-f="epf" aria-pressed="false">EPF</button>
+          <button type="button" data-f="esi" aria-pressed="false">ESI</button>
+        </div>
+
+        <ul class="dl" id="dl-list">
+          <li data-t="tds">
+            <span class="d">7<small>Sat</small></span>
+            <span><b>TDS/TCS deposit</b><span class="tag tag-tds">TDS</span><br>Tax deducted or collected in October 2026.</span>
+          </li>
+          <li data-t="gst">
+            <span class="d">10<small>Tue</small></span>
+            <span><b>GSTR-7 and GSTR-8</b><span class="tag tag-gst">GST</span><br>GST TDS deductors and e-commerce operators, for October.</span>
+          </li>
+          <li data-t="gst">
+            <span class="d">11<small>Wed</small></span>
+            <span><b>GSTR-1 (monthly)</b><span class="tag tag-gst">GST</span><br>Outward supplies for October.</span>
+          </li>
+          <li data-t="esi">
+            <span class="d">11–12<small>Nov</small></span>
+            <span><b>ESI half-yearly return</b><span class="tag tag-esi">ESI</span><br>For April to September 2026. Date varies slightly, so confirm on the ESIC portal.</span>
+          </li>
+          <li data-t="gst">
+            <span class="d">13<small>Fri</small></span>
+            <span><b>GSTR-1 IFF, GSTR-5 and GSTR-6</b><span class="tag tag-gst">GST</span><br>Invoice furnishing facility for quarterly (QRMP) filers, non-resident taxpayers and input service distributors.</span>
+          </li>
+          <li data-t="epf">
+            <span class="d">15<small>Sun</small></span>
+            <span><b>EPF ECR and payment</b><span class="tag tag-epf">EPF</span><br>Provident fund for October wages. It is a Sunday, so file early.</span>
+          </li>
+          <li data-t="esi">
+            <span class="d">15<small>Sun</small></span>
+            <span><b>ESI contribution</b><span class="tag tag-esi">ESI</span><br>Employee and employer contributions for October wages.</span>
+          </li>
+          <li data-t="tds">
+            <span class="d">15<small>Sun</small></span>
+            <span><b>TDS certificates</b><span class="tag tag-tds">TDS</span><br>For the July to September 2026 quarter.</span>
+          </li>
+          <li data-t="gst">
+            <span class="d">20<small>Fri</small></span>
+            <span><b>GSTR-3B (monthly)</b><span class="tag tag-gst">GST</span><br>October return and tax payment.</span>
+          </li>
+          <li data-t="itr">
+            <span class="d">21<small>Sat</small></span>
+            <span><b>ITR for audit cases, AY 2026-27</b><span class="tag tag-itr">ITR</span><br>Extended from 31 Oct for taxpayers whose accounts are audited.</span>
+          </li>
+          <li data-t="gst">
+            <span class="d">22/24<small>Nov</small></span>
+            <span><b>GSTR-3B (quarterly, QRMP)</b><span class="tag tag-gst">GST</span><br>For quarterly filers. The date is 22 or 24 Nov depending on the state.</span>
+          </li>
+          <li data-t="gst">
+            <span class="d">25<small>Wed</small></span>
+            <span><b>GST PMT-06</b><span class="tag tag-gst">GST</span><br>Monthly tax payment for October by QRMP taxpayers.</span>
+          </li>
+          <li data-t="gst">
+            <span class="d">28<small>Sat</small></span>
+            <span><b>GSTR-11</b><span class="tag tag-gst">GST</span><br>Statement of inward supplies by UIN holders.</span>
+          </li>
+          <li data-t="itr">
+            <span class="d">30<small>Mon</small></span>
+            <span><b>ITR for transfer pricing cases, AY 2026-27</b><span class="tag tag-itr">ITR</span><br>Also the master file (Form 3CEAA) for 2025-26.</span>
+          </li>
+          <li data-t="gst">
+            <span class="d">30<small>Mon</small></span>
+            <span><b>Last date to claim FY 2025-26 input tax credit</b><span class="tag tag-gst">GST</span><br>Section 16(4) of the CGST Act.</span>
+          </li>
+          <li data-t="tds">
+            <span class="d">30<small>Mon</small></span>
+            <span><b>TDS challan-cum-statement</b><span class="tag tag-tds">TDS</span><br>For October, on specified transactions.</span>
+          </li>
+          <li class="sep" data-t="sep">&#x1F5D3;&#xFE0F; Coming up in December 2026</li>
+          <li data-t="tds">
+            <span class="d">7<small>Mon</small></span>
+            <span><b>TDS/TCS deposit</b><span class="tag tag-tds">TDS</span><br>Tax deducted or collected in November 2026.</span>
+          </li>
+          <li data-t="itr">
+            <span class="d">15<small>Tue</small></span>
+            <span><b>Advance tax, 3rd instalment</b><span class="tag tag-itr">ITR</span><br>For those liable to pay advance tax.</span>
+          </li>
+        </ul>
+        <p class="small">Dates can be extended and vary by case. 15 Nov is a Sunday, so file early. Sources: <a href="https://treelife.in/calendar/compliance-calendar-november-2026/" target="_blank" rel="noopener">Treelife calendar</a> and <a href="https://taxgst.in/november-2026-tax-due-dates-calendar/" target="_blank" rel="noopener">TaxGST calendar</a>. We track these deadlines for every client.</p>
+      </section>
+
+      <!-- Section: YouTube Showcase -->
+      <section class="panel yt-section" id="youtube">
+        <div class="yt-box">
+          <div>
+            <h2>YouTube Videos &amp; Tutorials</h2>
+            <p class="desc">30+ practical step-by-step video guides on GST, ITR, TDS, PF, Tally Prime and Tech tricks from our official channel.</p>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a class="btn-primary" href="youtube.html" target="_blank" rel="noopener">
+              Browse All 30 Videos &rarr;
+            </a>
             <a class="btn-yt" href="https://www.youtube.com/@Allin-eg7mp/videos" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg>
               Visit Channel (@Allin-eg7mp)
@@ -1188,41 +1688,130 @@
         </div>
       </section>
 
+      <!-- Section: Contact Us -->
       <section class="panel" id="contact">
-        <h2>Contact Us</h2>
-        <div class="tiles"><a class="t" href="tel:+919625000350"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-phone" />
-              </svg></span><b>Call +91 96250 00350</b></a><a class="t" href="mailto:allin1partners@gmail.com"><span
-              class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-mail" />
-              </svg></span><b>allin1partners@gmail.com</b></a>
-          <div class="t"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-pin" />
-              </svg></span><b>Delhi</b></div>
-          <div class="t"><span class="ib"><svg class="ic" aria-hidden="true">
-                <use href="#i-cal" />
-              </svg></span><b>Mon–Sat, 10 am to 7 pm</b></div>
+        <div class="panel-header">
+          <div>
+            <h2>Contact Our Team</h2>
+            <p class="desc">Get in touch directly with our tax practitioners in Delhi. First consultation is free.</p>
+          </div>
         </div>
-        <p class="small">First consultation is free. We reply within one working day.</p>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="tel:+919625000350">
+            <div class="contact-icon">
+              <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>
+            </div>
+            <div class="contact-info">
+              <b>+91 96250 00350</b>
+              <span>Call directly for urgent queries</span>
+            </div>
+          </a>
+
+          <a class="contact-card" href="https://wa.me/919625000350?text=Hi%2C%20I%20need%20tax%20and%20accounting%20assistance." target="_blank" rel="noopener">
+            <div class="contact-icon" style="background:#F0FDF4;color:#16A34A;">
+              <svg style="width:22px;height:22px;fill:currentColor;" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            </div>
+            <div class="contact-info">
+              <b>WhatsApp Support</b>
+              <span>Quick response on WhatsApp</span>
+            </div>
+          </a>
+
+          <a class="contact-card" href="mailto:allin1partners@gmail.com">
+            <div class="contact-icon">
+              <svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>
+            </div>
+            <div class="contact-info">
+              <b>allin1partners@gmail.com</b>
+              <span>Send documents &amp; inquiries</span>
+            </div>
+          </a>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>
+            </div>
+            <div class="contact-info">
+              <b>Delhi Office</b>
+              <span>Serving clients across India</span>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>
+            </div>
+            <div class="contact-info">
+              <b>Mon&ndash;Sat, 10 am to 7 pm</b>
+              <span>Working hours</span>
+            </div>
+          </div>
+        </div>
+        <p class="small" style="margin-top:20px;"><strong>Guarantee:</strong> First consultation is free of charge. We reply within one working day.</p>
       </section>
 
-      <div class="bar">© 2026 All in 1 Accounting Solutions. An independent firm, not part of the Income Tax Department
-        or GSTN.</div>
+      <!-- Footer -->
+      <footer class="footer-bar">
+        <div>&copy; 2026 All in 1 Accounting Solutions. An independent firm, not part of the Income Tax Department or GSTN.</div>
+        <div class="footer-links">
+          <a href="free-accounting-tools.html" target="_blank" rel="noopener">Free Tools</a>
+          <a href="youtube.html" target="_blank" rel="noopener">YouTube</a>
+          <a href="blog.html">Blog</a>
+          <a href="#top">Back to top &uarr;</a>
+        </div>
+      </footer>
     </main>
   </div>
+
   <script>
     (function () {
-      var l = document.getElementById('dl-list'); if (!l) return;
-      var bs = document.querySelectorAll('.flt button');
-      function apply(f) {
-        var items = [].slice.call(l.children), vis = false;
-        for (var i = items.length - 1; i >= 0; i--) {
-          var it = items[i]; var t = it.getAttribute('data-t');
-          if (t === 'sep') { it.hidden = (f !== 'all') && !vis; vis = false; continue }
-          var show = f === 'all' || t.split(' ').indexOf(f) > -1; it.hidden = !show; if (show) vis = true
+      // Deadlines filter
+      var l = document.getElementById('dl-list');
+      if (l) {
+        var bs = document.querySelectorAll('.flt button');
+        function apply(f) {
+          var items = [].slice.call(l.children), vis = false;
+          for (var i = items.length - 1; i >= 0; i--) {
+            var it = items[i]; var t = it.getAttribute('data-t');
+            if (t === 'sep') { it.hidden = (f !== 'all') && !vis; vis = false; continue; }
+            var show = f === 'all' || t.split(' ').indexOf(f) > -1;
+            it.hidden = !show;
+            if (show) vis = true;
+          }
         }
+        [].forEach.call(bs, function (b) {
+          b.addEventListener('click', function () {
+            [].forEach.call(bs, function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+            apply(b.getAttribute('data-f'));
+          });
+        });
       }
-      [].forEach.call(bs, function (b) { b.addEventListener('click', function () { [].forEach.call(bs, function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false') }); apply(b.getAttribute('data-f')) }) });
+
+      // Mobile Menu Toggle
+      var menuBtn = document.getElementById('menuToggle');
+      var sidebar = document.getElementById('sidebar');
+      var backdrop = document.getElementById('asideBackdrop');
+
+      function toggleMenu() {
+        if (!sidebar) return;
+        var isOpen = sidebar.classList.contains('open');
+        sidebar.classList.toggle('open', !isOpen);
+        if (backdrop) backdrop.classList.toggle('open', !isOpen);
+      }
+
+      if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+      if (backdrop) backdrop.addEventListener('click', toggleMenu);
+
+      // Close mobile menu on link click
+      var navLinks = document.querySelectorAll('aside nav a');
+      [].forEach.call(navLinks, function (link) {
+        link.addEventListener('click', function () {
+          if (window.innerWidth <= 960 && sidebar && sidebar.classList.contains('open')) {
+            toggleMenu();
+          }
+        });
+      });
     })();
   </script>
 </body>
