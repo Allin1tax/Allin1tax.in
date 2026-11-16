@@ -736,6 +736,11 @@
       border-radius: 4px;
       margin-bottom: 4px;
     }
+    .ug time.live {
+      color: #92400E;
+      background: #FEF3C7;
+      border-color: #FCD34D;
+    }
 
     .more {
       margin-top: auto;
@@ -850,6 +855,35 @@
     .tag-tds { background: #F3E8FF; color: #6B21A8; }
     .tag-epf { background: #FEF3C7; color: #92400E; }
     .tag-esi { background: #FFE4E6; color: #9F1239; }
+
+    .badge-due-now {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 800;
+      background: #DC2626;
+      color: #FFFFFF;
+      padding: 1px 7px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: 1px;
+    }
+
+    .badge-passed {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      background: var(--surface-subtle);
+      color: var(--text-light);
+      border: 1px solid var(--border);
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: 1px;
+    }
+
+    .dl li.passed {
+      opacity: 0.60;
+    }
 
     .dl li.sep {
       display: block;
@@ -1167,8 +1201,8 @@
 
       <!-- Live Regulatory Notice -->
       <div class="notice">
-        <b>Important Notice</b>
-        <span>For taxpayers whose accounts are subject to audit, the ITR due date for AY 2026-27 is extended from 31 Oct to 21 Nov 2026 (CBDT Circular 07/2026). Contact us to verify which date applies to your return.</span>
+        <b>Live Notice &bull; 17 Nov 2026</b>
+        <span>ITR filing deadline for audit cases (AY 2026-27) is 21 Nov 2026 (only 4 days remaining! &mdash; CBDT Circular 07/2026). In addition, GSTR-3B for October 2026 is due in 3 days on 20 Nov 2026. Contact our practitioners for priority filing and audit assistance.</span>
       </div>
 
       <!-- Section: Income Tax Return -->
@@ -1486,82 +1520,89 @@
         <div class="panel-header">
           <div>
             <h2>Latest Regulatory Updates</h2>
-            <p class="desc">Income Tax, GST, TDS, EPF and ESI circulars. Last updated: 2 Nov 2026.</p>
+            <p class="desc">Income Tax, GST, TDS, EPF and ESI circulars. Last updated: 17 Nov 2026.</p>
           </div>
+          <span style="display:inline-flex;align-items:center;gap:6px;background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;font-size:0.78rem;font-weight:700;padding:5px 12px;border-radius:9999px;">
+            <span style="width:7px;height:7px;background:#16A34A;border-radius:50%;display:inline-block;"></span>
+            Live as of 17 Nov 2026
+          </span>
         </div>
         <div class="ug">
           <div>
             <h3><svg class="ic" style="color:var(--blue-600);" aria-hidden="true"><use href="#i-doc"/></svg>Income Tax</h3>
             <ul>
-              <li><time>Due dates</time>ITR for AY 2026-27 is due 21 Nov 2026 (earlier 31 Oct) for taxpayers whose accounts are subject to audit. The tax audit report date moved to 21 Oct. (CBDT Circular 07/2026, 28 Sep)</li>
+              <li><time class="live">Urgent &bull; 21 Nov 2026</time><b>Final Countdown (4 Days Left):</b> ITR for AY 2026-27 is due 21 Nov 2026 (extended from 31 Oct under CBDT Circular 07/2026) for audit assessees and firms. Section 234A interest applies if net self-assessment tax liability exceeds ₹1 Lakh.</li>
+              <li><time>15 Nov 2026</time><b>Form 16A Issuance:</b> Statutory deadline for deductors to furnish quarterly TDS certificates in Form 16A for Q2 (ended 30 September 2026) downloaded from TRACES.</li>
+              <li><time>10 Nov 2026</time><b>Condonation of Delay (SOP):</b> CBDT issued operating guidelines for processing Section 119(2)(b) condonation petitions regarding delayed e-verification of past assessment years.</li>
               <li><time>28 Oct 2026</time>Notification 138/2026: Chapter XIX of the Income-tax Act, 2025 does not apply to payments received by the International Rice Research Institute.</li>
               <li><time>27 Oct 2026</time>New Rule 281A and Form 173A for claiming exemption on interest and capital gains from Government securities (Seventh Amendment Rules, 2026).</li>
-              <li><time>13 Oct 2026</time>Notification 135/2026: new India–Mauritius agreement and protocol to avoid double taxation.</li>
-              <li><time>8 Oct 2026</time>Notification 134/2026: revised Form 161 to apply for waiver of penalty under section 440(2) of the Income-tax Act, 2025.</li>
-              <li><time>Ongoing</time>Foreign Assets of Small Taxpayers Disclosure Scheme, 2026 (FADS) is live on the e-Filing portal.</li>
+              <li><time>Ongoing</time>Foreign Assets of Small Taxpayers Disclosure Scheme, 2026 (FADS) is active on the e-Filing portal.</li>
             </ul>
             <div class="more">
               <b>Read Official Sources</b>
               <a href="https://www.incometax.gov.in/iec/foportal/latest-news" target="_blank" rel="noopener">Official: News &amp; e-Campaigns &rarr;</a>
-              <a href="https://www.incometaxindia.gov.in/documents/d/guest/cbdt-extends-due-date-for-furnishing-return-of-income-for-ay-2026-27-pdf" target="_blank" rel="noopener">Official: CBDT press release on due dates (PDF) &rarr;</a>
-              <a href="https://www.caclubindia.com/news/cbdt-exempts-irri-payments-from-chapter-xix-of-income-tax-act-2025-26910.asp" target="_blank" rel="noopener">News: Notification 138/2026 &rarr;</a>
+              <a href="https://www.incometaxindia.gov.in/documents/d/guest/cbdt-extends-due-date-for-furnishing-return-of-income-for-ay-2026-27-pdf" target="_blank" rel="noopener">Official: CBDT circular on 21 Nov due date (PDF) &rarr;</a>
+              <a href="blog.html">Blog: Audit ITR extension explainer &rarr;</a>
             </div>
           </div>
 
           <div>
             <h3><svg class="ic" style="color:var(--green-600);" aria-hidden="true"><use href="#i-check"/></svg>GST</h3>
             <ul>
-              <li><time>1 Nov 2026</time>GSTN advisory on FORM GST REG-01: One Person Company is now a separate category, supporting documents are mandatory, SEZ units must give an SEZ Entity ID, and up to 10 bank accounts can be declared.</li>
-              <li><time>1 Nov 2026</time>Registration amendments (Rule 19) changed: most changes take effect on submission and online validation, and OTP verification of mobile and email is required (3-day window).</li>
-              <li><time>28 Oct 2026</time>CBIC Circular 265/11/2026-GST clarifies GST treatment of toys, sublimation paper, used cars under the margin scheme and seaweed bio-stimulants.</li>
-              <li><time>26 Oct 2026</time>Circular 262/08/2026-GST on input tax credit for authorised agents of vehicle manufacturers.</li>
-              <li><time>16 Oct 2026</time>e-Invoicing now supports recipient-generated self-invoices under reverse charge.</li>
-              <li><time>8 Oct 2026</time>GSTR-9 and GSTR-9C for FY 2025-26 enabled on the portal. The 57th GST Council also recommended reforms on registration, returns, refunds, ITC and penalties.</li>
+              <li><time class="live">Due in 3 Days &bull; 20 Nov 2026</time><b>GSTR-3B for October 2026:</b> Monthly return filing and cash liability settlement due 20 Nov for regular taxpayers. File early to prevent portal bottlenecks and avoid Section 47 late fees &amp; Sec 50 interest.</li>
+              <li><time>14 Nov 2026</time><b>GSTN Advisory on IMS (Invoice Management System):</b> Buyers can accept, reject or keep supplier invoices pending. Auto-populated ITC in GSTR-3B now aligns strictly with IMS actions taken.</li>
+              <li><time>11 Nov 2026</time><b>GSTR-1 Monthly Filing Closed:</b> October 2026 outward supplies closed on 11 Nov; amendments can be reported via GSTR-1A before filing GSTR-3B.</li>
+              <li><time>1 Nov 2026</time><b>REG-01 &amp; Rule 19 Overhaul:</b> One Person Company (OPC) is now a separate category, mandatory SEZ Entity ID, and instant automated approval for non-core amendments with OTP verification.</li>
+              <li><time>28 Oct 2026</time>CBIC Circular 265/11/2026-GST clarifies GST treatment of used cars under margin scheme, sublimation paper, and seaweed bio-stimulants.</li>
+              <li><time>FY 2025-26 Live</time>GSTR-9 and GSTR-9C annual return utilities live on the GST portal ahead of the 31 December 2026 statutory cutoff.</li>
             </ul>
             <div class="more">
               <b>Read Official Sources</b>
               <a href="https://www.gst.gov.in/" target="_blank" rel="noopener">Official: GST portal &rarr;</a>
               <a href="https://idtc.icai.org/gstn-advisory.php" target="_blank" rel="noopener">GSTN advisories list (ICAI) &rarr;</a>
-              <a href="https://blog.saginfotech.com/gst-latest-updates" target="_blank" rel="noopener">News: day-by-day GST updates &rarr;</a>
-              <a href="https://taxo.online/latest-news/02-11-2026-gstn-issued-advisory-on-important-changes-in-form-gst-reg-01-for-gst-registration/" target="_blank" rel="noopener">News: REG-01 changes &rarr;</a>
+              <a href="free-accounting-tools.html">Tool: GST late fee &amp; interest calculator &rarr;</a>
+              <a href="blog.html">Blog: GSTR-3B Section 50 interest rules &rarr;</a>
             </div>
           </div>
 
           <div>
             <h3><svg class="ic" style="color:var(--purple-600);" aria-hidden="true"><use href="#i-card"/></svg>TDS</h3>
             <ul>
-              <li><time>19 Oct 2026</time>Notification 136/2026: no TDS on interest paid to qualifying holders of the NDB Maharajah INR Bond from tax year 2026-27. This is relief from TDS only, not an exemption of the income.</li>
-              <li><time>Ongoing</time>Correction statements for TDS/TCS for Tax Year 2026-27 can be filed on the portal.</li>
-              <li><time>Every month</time>TDS/TCS deposit is due by the 7th of the following month.</li>
+              <li><time>15 Nov 2026</time><b>Form 16A Distributed:</b> Deductors must furnish quarterly TDS certificates for Q2 (ended 30 Sep 2026) downloaded with digital signatures from TRACES.</li>
+              <li><time>7 Nov 2026</time><b>October TDS/TCS Deposit:</b> Tax withheld in October 2026 deposited under Challan ITNS 281.</li>
+              <li><time class="live">30 Nov 2026</time><b>Challan-cum-Statement Form 26QB/26QC/26QD:</b> Deadline to deposit TDS on property purchases (1%), rent (>₹50k/month), and contractual work by individuals for October.</li>
+              <li><time>19 Oct 2026</time>Notification 136/2026: No TDS on interest paid to qualifying holders of NDB Maharajah INR Bonds.</li>
+              <li><time>Ongoing</time>TRACES single-window online correction for PAN updates, short deduction, and challan matching without paper filings.</li>
             </ul>
             <div class="more">
               <b>Read Official Sources</b>
-              <a href="https://taxguru.in/chartered-accountant/analysis-notifications-circulars-week-25th-october-2026.html" target="_blank" rel="noopener">News: weekly notifications (to 25 Oct) &rarr;</a>
-              <a href="https://blog.saginfotech.com/income-tax-tds-latest-updates" target="_blank" rel="noopener">News: Income Tax and TDS updates &rarr;</a>
+              <a href="https://taxguru.in/chartered-accountant/analysis-notifications-circulars-week-25th-october-2026.html" target="_blank" rel="noopener">News: weekly notifications summary &rarr;</a>
+              <a href="free-accounting-tools.html">Tool: TDS rate &amp; deduction calculator &rarr;</a>
             </div>
           </div>
 
           <div>
             <h3><svg class="ic" style="color:var(--accent);" aria-hidden="true"><use href="#i-users"/></svg>EPF</h3>
             <ul>
-              <li><time>13 Oct 2026</time>EPFO extended the September 2026 ECR filing and PF payment from 15 Oct to 31 Oct, after the PF wage ceiling rose to ₹25,000 from 17 Sep 2026. The October ECR is still due 15 Nov.</li>
-              <li><time>Ongoing</time>New UANs are allotted and activated only through Aadhaar face authentication on the UMANG app. Direct UAN allotment on the portal is discontinued.</li>
-              <li><time>Ongoing</time>Filing nominations is shown as mandatory under the EPF Scheme 2026 on the member portal.</li>
+              <li><time>15 Nov 2026</time><b>October 2026 ECR Closed:</b> Monthly Provident Fund electronic challan and employer deposit for October 2026 closed on 15 November 2026.</li>
+              <li><time>10 Nov 2026</time><b>Wage Ceiling Transition Guidelines:</b> EPFO circular clarifying employer liability and EPS pension contribution calculation following the statutory wage ceiling hike to ₹25,000.</li>
+              <li><time>Ongoing</time><b>Mandatory Face Authentication for New UAN:</b> Direct UAN allotment on the employer portal discontinued; new employees must authenticate via UMANG Aadhaar face recognition.</li>
+              <li><time>Ongoing</time><b>Mandatory E-Nomination:</b> Digital nominee declaration required under EPF Scheme 2026 for processing PF/EPS claims.</li>
             </ul>
             <div class="more">
               <b>Read Official Sources</b>
               <a href="https://www.scconline.com/blog/post/2026/10/15/epfo-ecr-deadline-september-2026-extended-31-october/" target="_blank" rel="noopener">News: ECR deadline extension &rarr;</a>
               <a href="https://masllp.com/epfo-ecr-due-date-extended-september-2026-guide/" target="_blank" rel="noopener">Guide: ECR and wage ceiling &rarr;</a>
-              <a href="https://companyji.com/learn/epfo-new-rules-2026/" target="_blank" rel="noopener">Guide: EPFO rules 2026 &rarr;</a>
+              <a href="blog.html">Blog: EPFO DSC setup &amp; KYC approval &rarr;</a>
             </div>
           </div>
 
           <div>
             <h3><svg class="ic" style="color:var(--rose-600);" aria-hidden="true"><use href="#i-check"/></svg>ESI</h3>
             <ul>
-              <li><time>As of 19 Oct 2026</time>The ESI wage ceiling is still ₹21,000 a month (₹25,000 for a person with disability). A rise to ₹30,000 has been discussed, but no notification has been issued.</li>
-              <li><time>Unchanged</time>Contribution is 3.25% from the employer and 0.75% from the employee, deposited by the 15th of the following month.</li>
-              <li><time>Note</time>ESI wages now follow the Code on Social Security definition, so check payroll for employees near the ceiling.</li>
+              <li><time>15 Nov 2026</time><b>October 2026 ESI Contribution Closed:</b> Statutory contribution of 3.25% (employer) and 0.75% (employee) for October wages deposited on the ESIC portal.</li>
+              <li><time>11–12 Nov 2026</time><b>ESI Half-Yearly Return Closed:</b> Return of contributions for the period April 2026 to September 2026 closed on ESIC employer portal.</li>
+              <li><time>Status as of 17 Nov 2026</time><b>Wage Ceiling Unchanged:</b> Monthly ESI wage ceiling remains ₹21,000 (₹25,000 for PwD). Employers must map gross wages as per the Code on Social Security definitions.</li>
             </ul>
             <div class="more">
               <b>Read Official Sources</b>
@@ -1592,45 +1633,45 @@
         </div>
 
         <ul class="dl" id="dl-list">
-          <li data-t="tds">
+          <li data-t="tds" class="passed">
             <span class="d">7<small>Sat</small></span>
-            <span><b>TDS/TCS deposit</b><span class="tag tag-tds">TDS</span><br>Tax deducted or collected in October 2026.</span>
+            <span><b>TDS/TCS deposit</b><span class="tag tag-tds">TDS</span><span class="badge-passed">Passed</span><br>Tax deducted or collected in October 2026.</span>
           </li>
-          <li data-t="gst">
+          <li data-t="gst" class="passed">
             <span class="d">10<small>Tue</small></span>
-            <span><b>GSTR-7 and GSTR-8</b><span class="tag tag-gst">GST</span><br>GST TDS deductors and e-commerce operators, for October.</span>
+            <span><b>GSTR-7 and GSTR-8</b><span class="tag tag-gst">GST</span><span class="badge-passed">Passed</span><br>GST TDS deductors and e-commerce operators, for October.</span>
           </li>
-          <li data-t="gst">
+          <li data-t="gst" class="passed">
             <span class="d">11<small>Wed</small></span>
-            <span><b>GSTR-1 (monthly)</b><span class="tag tag-gst">GST</span><br>Outward supplies for October.</span>
+            <span><b>GSTR-1 (monthly)</b><span class="tag tag-gst">GST</span><span class="badge-passed">Passed</span><br>Outward supplies for October.</span>
           </li>
-          <li data-t="esi">
+          <li data-t="esi" class="passed">
             <span class="d">11–12<small>Nov</small></span>
-            <span><b>ESI half-yearly return</b><span class="tag tag-esi">ESI</span><br>For April to September 2026. Date varies slightly, so confirm on the ESIC portal.</span>
+            <span><b>ESI half-yearly return</b><span class="tag tag-esi">ESI</span><span class="badge-passed">Passed</span><br>For April to September 2026.</span>
           </li>
-          <li data-t="gst">
+          <li data-t="gst" class="passed">
             <span class="d">13<small>Fri</small></span>
-            <span><b>GSTR-1 IFF, GSTR-5 and GSTR-6</b><span class="tag tag-gst">GST</span><br>Invoice furnishing facility for quarterly (QRMP) filers, non-resident taxpayers and input service distributors.</span>
+            <span><b>GSTR-1 IFF, GSTR-5 and GSTR-6</b><span class="tag tag-gst">GST</span><span class="badge-passed">Passed</span><br>Invoice furnishing facility for quarterly (QRMP) filers, non-resident taxpayers and input service distributors.</span>
           </li>
-          <li data-t="epf">
+          <li data-t="epf" class="passed">
             <span class="d">15<small>Sun</small></span>
-            <span><b>EPF ECR and payment</b><span class="tag tag-epf">EPF</span><br>Provident fund for October wages. It is a Sunday, so file early.</span>
+            <span><b>EPF ECR and payment</b><span class="tag tag-epf">EPF</span><span class="badge-passed">Passed</span><br>Provident fund for October wages.</span>
           </li>
-          <li data-t="esi">
+          <li data-t="esi" class="passed">
             <span class="d">15<small>Sun</small></span>
-            <span><b>ESI contribution</b><span class="tag tag-esi">ESI</span><br>Employee and employer contributions for October wages.</span>
+            <span><b>ESI contribution</b><span class="tag tag-esi">ESI</span><span class="badge-passed">Passed</span><br>Employee and employer contributions for October wages.</span>
           </li>
-          <li data-t="tds">
+          <li data-t="tds" class="passed">
             <span class="d">15<small>Sun</small></span>
-            <span><b>TDS certificates</b><span class="tag tag-tds">TDS</span><br>For the July to September 2026 quarter.</span>
+            <span><b>TDS certificates</b><span class="tag tag-tds">TDS</span><span class="badge-passed">Passed</span><br>Form 16A for the July to September 2026 quarter.</span>
           </li>
           <li data-t="gst">
-            <span class="d">20<small>Fri</small></span>
-            <span><b>GSTR-3B (monthly)</b><span class="tag tag-gst">GST</span><br>October return and tax payment.</span>
+            <span class="d" style="border-color:#DC2626;color:#DC2626;">20<small>Fri</small></span>
+            <span><b>GSTR-3B (monthly)</b><span class="tag tag-gst">GST</span><span class="badge-due-now">Due in 3 Days</span><br>October return and net cash tax payment.</span>
           </li>
           <li data-t="itr">
-            <span class="d">21<small>Sat</small></span>
-            <span><b>ITR for audit cases, AY 2026-27</b><span class="tag tag-itr">ITR</span><br>Extended from 31 Oct for taxpayers whose accounts are audited.</span>
+            <span class="d" style="border-color:#D97706;color:#D97706;">21<small>Sat</small></span>
+            <span><b>ITR for audit cases, AY 2026-27</b><span class="tag tag-itr">ITR</span><span class="badge-due-now" style="background:#D97706;">Due in 4 Days</span><br>Extended from 31 Oct for taxpayers whose accounts are audited (CBDT Circular 07/2026).</span>
           </li>
           <li data-t="gst">
             <span class="d">22/24<small>Nov</small></span>
@@ -1654,7 +1695,7 @@
           </li>
           <li data-t="tds">
             <span class="d">30<small>Mon</small></span>
-            <span><b>TDS challan-cum-statement</b><span class="tag tag-tds">TDS</span><br>For October, on specified transactions.</span>
+            <span><b>TDS challan-cum-statement (26QB/26QC/26QD)</b><span class="tag tag-tds">TDS</span><br>For October property, rent, and individual contract deductions.</span>
           </li>
           <li class="sep" data-t="sep">&#x1F5D3;&#xFE0F; Coming up in December 2026</li>
           <li data-t="tds">
