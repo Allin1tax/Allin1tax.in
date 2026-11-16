@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>GST Late Fee &amp; Interest Calculator | All in 1 Accounting Solutions</title>
-  <meta name="description" content="Free online GST Late Fee and Section 50 Interest Calculator for GSTR-3B and GSTR-1. Calculate CGST, SGST penalties and interest as per latest turnover caps.">
+  <title>Free Accounting &amp; Tax Calculators | All in 1 Accounting Solutions</title>
+  <meta name="description" content="Free online business accounting tools: GST Inclusive/Exclusive Calculator, GSTR-3B Late Fee & Interest (Sec 47 & 50), TDS Rate & Deduction Calculator, New vs Old Tax Regime, HRA Exemption, and Business Loan EMI.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Kaushan+Script&display=swap" rel="stylesheet">
@@ -89,356 +89,601 @@
       outline-offset: 3px;
     }
 
+    .wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
     /* Header */
     header {
       background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 60%, var(--navy-800) 100%);
       color: #fff;
+      padding: 24px 0 40px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
     }
 
-    .wrap {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    header .wrap {
-      padding-top: 24px;
-      padding-bottom: 30px;
+    header::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(29, 95, 191, 0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
     }
 
     .top-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 16px;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
     }
 
     .logo-badge {
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .logo {
-      background: linear-gradient(135deg, #1D5FBF, #2563EB);
-      border-radius: var(--radius-md);
-      padding: 6px 16px 8px;
-      font-family: "Kaushan Script", cursive;
-      font-size: 1.8rem;
-      line-height: 1.1;
-      color: #fff;
-      box-shadow: 0 4px 12px rgba(29, 95, 191, 0.35);
-      transition: transform .15s ease;
-    }
-
-    .logo:hover {
-      transform: translateY(-1px);
+      font-family: 'Kaushan Script', cursive;
+      font-size: 1.7rem;
+      color: #FFFFFF;
+      letter-spacing: 0.5px;
     }
 
     .back-home {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      color: #CBD5E1;
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       font-weight: 600;
-      padding: 6px 12px;
-      border-radius: var(--radius-sm);
+      color: rgba(255, 255, 255, 0.75);
       background: rgba(255, 255, 255, 0.08);
-      transition: all .15s ease;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
     }
 
     .back-home:hover {
+      color: #FFFFFF;
       background: rgba(255, 255, 255, 0.16);
-      color: #fff;
     }
 
     .header-actions {
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap;
     }
 
     .btn-help {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: var(--green-600);
-      color: #fff;
-      font-weight: 700;
+      background: rgba(255, 255, 255, 0.12);
+      color: #FFFFFF;
       font-size: 0.82rem;
-      padding: 7px 16px;
-      border-radius: var(--radius-full);
-      box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
-      transition: transform .15s ease;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      transition: all 0.2s ease;
     }
 
     .btn-help:hover {
-      transform: translateY(-1px);
-      filter: brightness(1.08);
+      background: rgba(255, 255, 255, 0.22);
     }
 
     header h1 {
-      margin: 0 0 6px;
-      font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+      font-size: clamp(1.8rem, 3.2vw, 2.4rem);
       font-weight: 800;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
+      margin: 0 0 8px;
+      line-height: 1.25;
     }
 
     header p {
+      font-size: clamp(0.92rem, 1.3vw, 1.02rem);
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 760px;
       margin: 0;
-      color: #CBD5E1;
-      font-size: 0.98rem;
-      max-width: 48em;
+      line-height: 1.55;
     }
 
-    /* Main Area */
-    main {
-      padding: 30px 0 50px;
+    /* Tool Tabs Bar */
+    .tools-nav-wrap {
+      margin-top: -24px;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .tools-tabs {
+      display: flex;
+      gap: 8px;
+      background: var(--surface);
+      padding: 8px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+
+    .tool-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: var(--radius-lg);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.18s ease;
+    }
+
+    .tool-tab:hover {
+      background: var(--surface-subtle);
+      color: var(--text-main);
+    }
+
+    .tool-tab.active {
+      background: var(--navy-900);
+      color: #FFFFFF;
+      box-shadow: 0 2px 6px rgba(11, 25, 44, 0.18);
+    }
+
+    .tool-tab svg {
+      width: 16px;
+      height: 16px;
+      stroke-width: 2;
+    }
+
+    /* Calculator Panels */
+    .tool-panel {
+      display: none;
+    }
+
+    .tool-panel.active {
+      display: block;
     }
 
     .calc-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
-      padding: 30px 32px;
-      box-shadow: var(--shadow-md);
-      margin-bottom: 24px;
+      padding: 32px 36px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 36px;
     }
 
     .calc-header {
-      margin-bottom: 24px;
-      padding-bottom: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 18px;
       border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
     .calc-header h2 {
-      margin: 0 0 4px;
-      font-size: 1.35rem;
+      font-size: 1.45rem;
       font-weight: 800;
       color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .calc-header h2::before {
-      content: "";
-      width: 4px;
-      height: 18px;
-      background: var(--blue-600);
-      border-radius: 2px;
+      margin: 0 0 6px;
+      letter-spacing: -0.015em;
     }
 
     .calc-header p {
-      margin: 0;
+      font-size: 0.88rem;
       color: var(--text-muted);
-      font-size: 0.9rem;
+      margin: 0;
     }
 
     .cols {
       display: grid;
-      grid-template-columns: 1.15fr 1fr;
-      gap: 26px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: start;
     }
 
-    /* Form Inputs */
     .box-inputs {
-      background: var(--surface-subtle);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
 
     label {
-      display: block;
       font-size: 0.84rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      margin: 14px 0 5px;
-    }
-
-    label:first-child {
-      margin-top: 0;
-    }
-
-    input, select {
-      width: 100%;
-      font-family: inherit;
-      font-size: 0.92rem;
-      padding: 10px 12px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      background: var(--surface);
+      font-weight: 700;
       color: var(--text-main);
-      transition: border-color .15s ease, box-shadow .15s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    input:focus, select:focus {
-      border-color: var(--blue-500);
+    label span.sub {
+      font-size: 0.76rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    select {
+      width: 100%;
+      height: 44px;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 0 14px;
+      font-size: 0.92rem;
+      font-family: inherit;
+      color: var(--text-main);
       outline: none;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+      transition: all 0.2s ease;
+    }
+
+    input:focus,
+    select:focus {
+      background: var(--surface);
+      border-color: var(--blue-500);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
     }
 
     .row2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      gap: 16px;
     }
 
-    [hidden] {
-      display: none !important;
+    .row3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
     }
 
-    /* Output Results Box */
-    .box-results {
-      background: linear-gradient(135deg, var(--surface), var(--surface-subtle));
+    /* Button Group Radio */
+    .btn-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      background: var(--surface-subtle);
+      padding: 4px;
+      border-radius: var(--radius-md);
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 24px 26px;
-      display: flex;
-      flex-direction: column;
+    }
+
+    .btn-option {
+      background: transparent;
+      border: none;
+      padding: 9px 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      font-family: inherit;
+      color: var(--text-muted);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+
+    .btn-option.active {
+      background: var(--surface);
+      color: var(--blue-600);
       box-shadow: var(--shadow-sm);
     }
 
-    .results-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--blue-600);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 12px;
-    }
-
-    .out {
-      margin: 0;
-      padding: 0;
-    }
-
-    .out div {
+    /* Preset Rate Pills */
+    .rate-pills {
       display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 12px;
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-      font-variant-numeric: tabular-nums;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
-    .out dt {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-    }
-
-    .out dd {
-      margin: 0;
+    .rate-btn {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      padding: 6px 14px;
+      font-size: 0.82rem;
       font-weight: 700;
-      font-size: 0.95rem;
-      text-align: right;
-      color: var(--text-main);
-    }
-
-    .out .big {
-      border-bottom: 0;
-      border-top: 2px solid var(--text-main);
-      margin-top: 8px;
-      padding-top: 14px;
-      font-size: 1.25rem;
-    }
-
-    .out .big dt {
-      color: var(--text-main);
-      font-weight: 800;
-    }
-
-    .out .big dd {
-      color: var(--blue-600);
-      font-size: 1.35rem;
-      font-weight: 800;
-    }
-
-    .hint {
-      margin: 20px 0;
+      font-family: inherit;
       color: var(--text-muted);
-      text-align: center;
-      font-size: 0.92rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
     }
 
-    .note {
-      margin: 14px 0 0;
+    .rate-btn:hover {
+      background: var(--border);
+      color: var(--text-main);
+    }
+
+    .rate-btn.active {
+      background: var(--blue-600);
+      color: #FFFFFF;
+      border-color: var(--blue-600);
+    }
+
+    /* Results Box */
+    .box-results {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      position: sticky;
+      top: 24px;
+    }
+
+    .results-badge {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      background: var(--blue-100);
+      color: var(--blue-600);
+      margin-bottom: 14px;
+    }
+
+    .results-badge.green {
+      background: var(--green-50);
+      color: var(--green-600);
+    }
+
+    .total-display {
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .total-label {
       font-size: 0.82rem;
       font-weight: 600;
-      padding: 8px 12px;
-      border-radius: var(--radius-sm);
-      background: var(--warn-bg);
-      color: var(--warn);
+      color: var(--text-muted);
+      margin-bottom: 4px;
     }
 
-    /* Reference & Information Cards */
-    .info-card {
+    .total-val {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--navy-900);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .total-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .data-table {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.86rem;
+    }
+
+    .data-row dt {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .data-row dd {
+      color: var(--text-main);
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .data-row.highlight {
+      background: var(--surface);
+      padding: 8px 12px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+    }
+
+    .data-row.highlight dd {
+      color: var(--blue-600);
+    }
+
+    .data-row.highlight.win {
+      border-color: #86EFAC;
+      background: #F0FDF4;
+    }
+
+    .data-row.highlight.win dd {
+      color: #16A34A;
+    }
+
+    .action-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-act {
+      flex: 1;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border-radius: var(--radius-md);
+      font-size: 0.84rem;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-main);
+    }
+
+    .btn-act:hover {
+      background: var(--border);
+    }
+
+    .btn-act.primary {
+      background: var(--blue-500);
+      color: #FFFFFF;
+      border-color: var(--blue-500);
+    }
+
+    .btn-act.primary:hover {
+      background: #1d4ed8;
+    }
+
+    /* Note Card */
+    .note-card {
+      margin-top: 24px;
+      background: var(--surface-subtle);
+      border-left: 4px solid var(--blue-500);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .note-card b {
+      color: var(--text-main);
+    }
+
+    /* Quick Links Bar */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .faq-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 22px 26px;
-      margin-top: 20px;
+      padding: 22px 24px;
     }
 
-    .info-card h3 {
-      margin: 0 0 8px;
-      font-size: 1.05rem;
+    .faq-card h4 {
+      font-size: 0.98rem;
       font-weight: 700;
-      color: var(--navy-900);
-    }
-
-    .rates {
-      margin: 0;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .rates b {
+      margin: 0 0 8px;
       color: var(--text-main);
     }
 
-    .small {
-      font-size: 0.8rem;
+    .faq-card p {
+      font-size: 0.84rem;
       color: var(--text-muted);
-      margin-top: 12px;
-      line-height: 1.5;
+      margin: 0;
+      line-height: 1.55;
     }
 
-    .small a {
-      color: var(--blue-600);
-      text-decoration: underline;
+    /* Banner CTA */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 32px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .cta-banner h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 0 0 6px;
+    }
+
+    .cta-banner p {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.82);
+      margin: 0;
+      max-width: 600px;
+    }
+
+    .btn-call {
+      background: var(--accent);
+      color: #1A0D00;
+      font-weight: 800;
+      padding: 10px 20px;
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: filter 0.15s ease;
+    }
+
+    .btn-call:hover {
+      filter: brightness(1.08);
     }
 
     /* Footer */
     footer {
+      background: var(--surface);
       border-top: 1px solid var(--border);
-      padding: 24px 0 40px;
-      text-align: center;
-      font-size: 0.82rem;
+      padding: 24px 0;
       color: var(--text-muted);
+      font-size: 0.84rem;
+      text-align: center;
     }
 
     footer a {
-      color: var(--blue-600);
-      font-weight: 500;
+      color: var(--text-main);
+      font-weight: 600;
     }
 
-    @media (max-width: 860px) {
+    footer a:hover {
+      color: var(--blue-600);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 840px) {
       .cols {
         grid-template-columns: 1fr;
+        gap: 24px;
       }
       .calc-card {
-        padding: 20px 18px;
+        padding: 22px 20px;
+      }
+      .cta-banner {
+        padding: 24px 20px;
       }
     }
   </style>
@@ -454,89 +699,618 @@
           <a class="back-home" href="index.html">&larr; Back to Main Site</a>
         </div>
         <div class="header-actions">
+          <a class="btn-help" href="youtube.html" target="_blank" rel="noopener">
+            YouTube Tutorials (30 Guides)
+          </a>
           <a class="btn-help" href="tel:+919625000350">
-            &#x1F4DE; Free Tax Consultation (+91 96250 00350)
+            &#x1F4DE; Free Consultation (+91 96250 00350)
           </a>
         </div>
       </div>
-      <h1>Free GST Late Fee &amp; Interest Calculator</h1>
-      <p>Accurate, real-time calculation of late filing fees (under Section 47) and interest on delayed cash payments (under Section 50) for GSTR-3B and GSTR-1.</p>
+      <h1>Free Accounting &amp; Tax Calculators</h1>
+      <p>Instant, client-side financial tools for Indian MSMEs, accountants, traders and salaried individuals. Select any tool below to calculate instantly with zero signup.</p>
     </div>
   </header>
 
-  <!-- Main Calculator -->
+  <!-- Main Suite -->
   <main>
     <div class="wrap">
-      <div class="calc-card">
-        <div class="calc-header">
-          <h2>Calculator Parameters</h2>
-          <p>Everything runs privately in your web browser. Nothing is saved or uploaded.</p>
-        </div>
+      <!-- Tools Tab Bar -->
+      <div class="tools-nav-wrap">
+        <nav class="tools-tabs" id="toolTabs" aria-label="Accounting Tools Navigation">
+          <button class="tool-tab active" data-target="panel-gst">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            GST Calculator (Add/Remove)
+          </button>
+          <button class="tool-tab" data-target="panel-latefee">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            GSTR-3B Late Fee &amp; Interest
+          </button>
+          <button class="tool-tab" data-target="panel-tds">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            TDS Rate &amp; Deduction
+          </button>
+          <button class="tool-tab" data-target="panel-regime">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            New vs Old Tax Regime
+          </button>
+          <button class="tool-tab" data-target="panel-hra">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            HRA Exemption (10(13A))
+          </button>
+          <button class="tool-tab" data-target="panel-emi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            Business Loan &amp; EMI
+          </button>
+        </nav>
+      </div>
 
-        <div class="cols">
-          <!-- Input Form -->
-          <div class="box-inputs">
-            <label for="ret">Select Return Type</label>
-            <select id="ret">
-              <option value="3b">GSTR-3B (Monthly or Quarterly)</option>
-              <option value="1">GSTR-1 (Outward Supplies)</option>
-            </select>
+      <!-- ========================================================
+           TOOL 1: GST INCLUSIVE / EXCLUSIVE CALCULATOR
+           ======================================================== -->
+      <section class="tool-panel active" id="panel-gst">
+        <div class="calc-card">
+          <div class="calc-header">
+            <div>
+              <h2>GST Amount &amp; Rate Calculator</h2>
+              <p>Calculate Base Price, CGST, SGST, IGST, and Gross Billing Amount with one click.</p>
+            </div>
+            <span class="results-badge">&#x26A1; Real-Time</span>
+          </div>
 
-            <label for="kind">Return Status</label>
-            <select id="kind">
-              <option value="normal">Normal Return (With tax or supplies)</option>
-              <option value="nil">Nil Return (No transactions)</option>
-            </select>
-
-            <label for="turn">Previous Financial Year Turnover Slab</label>
-            <select id="turn">
-              <option value="2000">Up to ₹1.5 Crore (Max Fee: ₹2,000)</option>
-              <option value="5000">₹1.5 Crore to ₹5 Crore (Max Fee: ₹5,000)</option>
-              <option value="10000">Above ₹5 Crore (Max Fee: ₹10,000)</option>
-            </select>
-
-            <div class="row2">
-              <div>
-                <label for="due">Statutory Due Date</label>
-                <input id="due" type="date">
+          <div class="cols">
+            <div class="box-inputs">
+              <div class="form-group">
+                <label>Calculation Mode</label>
+                <div class="btn-group" id="gstModeGroup">
+                  <button type="button" class="btn-option active" data-mode="add">Add GST (Exclusive)</button>
+                  <button type="button" class="btn-option" data-mode="remove">Remove GST (Inclusive)</button>
+                </div>
               </div>
-              <div>
-                <label for="filed">Actual Filing Date</label>
-                <input id="filed" type="date">
+
+              <div class="form-group">
+                <label for="gstAmount">Amount (₹)</label>
+                <input id="gstAmount" type="number" min="0" step="any" inputmode="decimal" value="10000" placeholder="e.g. 10000">
+              </div>
+
+              <div class="form-group">
+                <label>Select GST Rate (%)</label>
+                <div class="rate-pills" id="gstRatePills">
+                  <button type="button" class="rate-btn" data-rate="0">0%</button>
+                  <button type="button" class="rate-btn" data-rate="3">3%</button>
+                  <button type="button" class="rate-btn" data-rate="5">5%</button>
+                  <button type="button" class="rate-btn" data-rate="12">12%</button>
+                  <button type="button" class="rate-btn active" data-rate="18">18%</button>
+                  <button type="button" class="rate-btn" data-rate="28">28%</button>
+                </div>
+              </div>
+
+              <div class="row2">
+                <div class="form-group">
+                  <label for="gstCustomRate">Custom Rate (%)</label>
+                  <input id="gstCustomRate" type="number" min="0" max="100" step="0.01" placeholder="Or enter %">
+                </div>
+                <div class="form-group">
+                  <label for="gstSupplyType">Supply Type</label>
+                  <select id="gstSupplyType">
+                    <option value="intra">Intra-State (CGST + SGST)</option>
+                    <option value="inter">Inter-State (IGST)</option>
+                  </select>
+                </div>
               </div>
             </div>
 
-            <div id="int-box">
-              <label for="tax">Tax Paid Late in Cash (₹)</label>
-              <input id="tax" type="number" min="0" step="any" inputmode="decimal" placeholder="e.g. 25000">
+            <!-- GST Output -->
+            <div class="box-results">
+              <span class="results-badge" id="gstBadge">Exclusive Mode</span>
+              <div class="total-display">
+                <div class="total-label" id="gstTotalLabel">Total Invoice Value (Gross)</div>
+                <div class="total-val" id="gstTotalVal">₹11,800.00</div>
+                <div class="total-sub" id="gstSubText">Net Base Price: ₹10,000.00 | GST: ₹1,800.00</div>
+              </div>
 
-              <label for="paid">Date of Cash Tax Payment (Leave blank if same as filing date)</label>
-              <input id="paid" type="date">
+              <dl class="data-table">
+                <div class="data-row">
+                  <dt>Net Base Amount</dt>
+                  <dd id="gstOutBase">₹10,000.00</dd>
+                </div>
+                <div class="data-row" id="rowCgst">
+                  <dt>CGST (<span id="rateCgst">9%</span>)</dt>
+                  <dd id="gstOutCgst">₹900.00</dd>
+                </div>
+                <div class="data-row" id="rowSgst">
+                  <dt>SGST (<span id="rateSgst">9%</span>)</dt>
+                  <dd id="gstOutSgst">₹900.00</dd>
+                </div>
+                <div class="data-row" id="rowIgst" style="display:none;">
+                  <dt>IGST (<span id="rateIgst">18%</span>)</dt>
+                  <dd id="gstOutIgst">₹1,800.00</dd>
+                </div>
+                <div class="data-row highlight">
+                  <dt>Total Tax Amount</dt>
+                  <dd id="gstOutTax">₹1,800.00</dd>
+                </div>
+              </dl>
+
+              <div class="action-row">
+                <button type="button" class="btn-act primary" id="btnCopyGst">Copy Result</button>
+                <button type="button" class="btn-act" onclick="window.print()">Print</button>
+              </div>
             </div>
           </div>
 
-          <!-- Live Output -->
-          <div class="box-results">
-            <span class="results-badge">&#x26A1; Instant Calculation Breakdown</span>
-            <div id="out" aria-live="polite">
-              <p class="hint">&#x1F4C5; Please select your Due Date and Filing Date to calculate late fees.</p>
+          <div class="note-card">
+            <b>Tax Tip:</b> For intra-state transactions (within the same State/UT), GST is split equally between Central GST (CGST) and State GST (SGST). For inter-state sales, Integrated GST (IGST) is charged entirely.
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           TOOL 2: GSTR-3B LATE FEE & SECTION 50 INTEREST
+           ======================================================== -->
+      <section class="tool-panel" id="panel-latefee">
+        <div class="calc-card">
+          <div class="calc-header">
+            <div>
+              <h2>GST Late Fee &amp; Section 50 Interest Calculator</h2>
+              <p>Section 47 statutory caps (Nil vs normal, turnover slabs) &amp; Section 50 interest on cash payments.</p>
+            </div>
+            <span class="results-badge">&#x26A1; Statutory Compliant</span>
+          </div>
+
+          <div class="cols">
+            <div class="box-inputs">
+              <div class="form-group">
+                <label for="ret">Select Return Type</label>
+                <select id="ret">
+                  <option value="3b">GSTR-3B (Monthly or Quarterly)</option>
+                  <option value="1">GSTR-1 (Outward Supplies)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="kind">Return Status</label>
+                <select id="kind">
+                  <option value="normal">Normal Return (With tax or supplies)</option>
+                  <option value="nil">Nil Return (No transactions)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="turn">Previous FY Turnover Slab</label>
+                <select id="turn">
+                  <option value="2000">Up to ₹1.5 Crore (Max Fee: ₹2,000)</option>
+                  <option value="5000">₹1.5 Crore to ₹5 Crore (Max Fee: ₹5,000)</option>
+                  <option value="10000">Above ₹5 Crore (Max Fee: ₹10,000)</option>
+                </select>
+              </div>
+
+              <div class="row2">
+                <div class="form-group">
+                  <label for="due">Statutory Due Date</label>
+                  <input id="due" type="date">
+                </div>
+                <div class="form-group">
+                  <label for="filed">Actual Filing Date</label>
+                  <input id="filed" type="date">
+                </div>
+              </div>
+
+              <div id="int-box" class="form-group">
+                <label for="tax">Tax Paid Late in Cash (₹)</label>
+                <input id="tax" type="number" min="0" step="any" inputmode="decimal" placeholder="e.g. 25000">
+
+                <label for="paid" style="margin-top:10px;">Date of Cash Payment <span class="sub">(Defaults to filing date)</span></label>
+                <input id="paid" type="date">
+              </div>
+            </div>
+
+            <!-- Late Fee Output -->
+            <div class="box-results">
+              <span class="results-badge">Penalty Breakdown</span>
+              <div class="total-display">
+                <div class="total-label">Total Late Fee &amp; Interest Payable</div>
+                <div class="total-val" id="outTotal">₹0.00</div>
+                <div class="total-sub" id="outSub">Delay: 0 days | Interest Rate: 18% p.a.</div>
+              </div>
+
+              <dl class="data-table" id="outRows">
+                <div class="data-row"><dt>Days of Delay</dt><dd>0 days</dd></div>
+                <div class="data-row"><dt>CGST Late Fee</dt><dd>₹0.00</dd></div>
+                <div class="data-row"><dt>SGST Late Fee</dt><dd>₹0.00</dd></div>
+                <div class="data-row"><dt>Total Late Fee (Sec 47)</dt><dd>₹0.00</dd></div>
+                <div class="data-row"><dt>Section 50 Interest</dt><dd>₹0.00</dd></div>
+              </dl>
+
+              <div class="action-row">
+                <button type="button" class="btn-act primary" id="btnCopyLate">Copy Breakdown</button>
+                <button type="button" class="btn-act" id="btnResetLate">Reset</button>
+              </div>
             </div>
           </div>
+
+          <div class="note-card">
+            <b>Rule Reference:</b> Section 50(1) interest (18% p.a.) applies strictly to net cash liability deposited via PMT-06 or cash ledger balance, not on input tax credit (ITC). Late fee under Section 47 is waived or capped as per Notification 19/2021-CT.
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           TOOL 3: TDS RATE & DEDUCTION CALCULATOR
+           ======================================================== -->
+      <section class="tool-panel" id="panel-tds">
+        <div class="calc-card">
+          <div class="calc-header">
+            <div>
+              <h2>TDS Rate &amp; Deduction Calculator (FY 2026-27)</h2>
+              <p>Determine exact withholding tax amount, vendor net payout and Challan 281 deposit due date.</p>
+            </div>
+            <span class="results-badge">&#x26A1; FY 2026-27</span>
+          </div>
+
+          <div class="cols">
+            <div class="box-inputs">
+              <div class="form-group">
+                <label for="tdsSection">Select TDS Section / Nature of Payment</label>
+                <select id="tdsSection">
+                  <option value="194C_ind">194C - Contractor: Individual / HUF (1%)</option>
+                  <option value="194C_oth">194C - Contractor: Company / Firm (2%)</option>
+                  <option value="194J_tech">194J - Technical Services &amp; Call Center (2%)</option>
+                  <option value="194J_prof">194J - Professional Fees &amp; Royalty (10%)</option>
+                  <option value="194I_plant">194I - Rent on Plant &amp; Machinery (2%)</option>
+                  <option value="194I_land">194I - Rent on Land, Building &amp; Furniture (10%)</option>
+                  <option value="194H">194H - Commission &amp; Brokerage (2%)</option>
+                  <option value="194Q">194Q - Purchase of Goods > ₹50 Lakhs (0.1%)</option>
+                  <option value="194A">194A - Interest Other Than Securities (10%)</option>
+                  <option value="194DA">194DA - Life Insurance Policy Maturity (5%)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="tdsAmount">Bill / Invoice Gross Amount (₹)</label>
+                <input id="tdsAmount" type="number" min="0" step="any" inputmode="decimal" value="50000" placeholder="e.g. 50000">
+              </div>
+
+              <div class="row2">
+                <div class="form-group">
+                  <label for="tdsPanStatus">PAN Availability</label>
+                  <select id="tdsPanStatus">
+                    <option value="pan_valid">Valid PAN Available (Standard Rate)</option>
+                    <option value="no_pan">No PAN / Inoperative PAN (Section 206AA - 20%)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="tdsInvoiceDate">Invoice / Credit Date</label>
+                  <input id="tdsInvoiceDate" type="date">
+                </div>
+              </div>
+            </div>
+
+            <!-- TDS Output -->
+            <div class="box-results">
+              <span class="results-badge" id="tdsBadge">Withholding Tax</span>
+              <div class="total-display">
+                <div class="total-label">Net Payable to Vendor / Payee</div>
+                <div class="total-val" id="tdsNetVal">₹45,000.00</div>
+                <div class="total-sub" id="tdsSubText">TDS to be deducted: ₹5,000.00 (10%)</div>
+              </div>
+
+              <dl class="data-table">
+                <div class="data-row">
+                  <dt>Gross Bill Amount</dt>
+                  <dd id="tdsOutGross">₹50,000.00</dd>
+                </div>
+                <div class="data-row">
+                  <dt>Applicable Section</dt>
+                  <dd id="tdsOutSec">Section 194J (10%)</dd>
+                </div>
+                <div class="data-row">
+                  <dt>Exemption Threshold</dt>
+                  <dd id="tdsOutThresh">₹30,000 / FY</dd>
+                </div>
+                <div class="data-row highlight">
+                  <dt>TDS to Deduct (Challan 281)</dt>
+                  <dd id="tdsOutTax">₹5,000.00</dd>
+                </div>
+                <div class="data-row">
+                  <dt>Deposit Due Date</dt>
+                  <dd id="tdsOutDueDate">7th of Next Month</dd>
+                </div>
+              </dl>
+
+              <div class="action-row">
+                <button type="button" class="btn-act primary" id="btnCopyTds">Copy Summary</button>
+                <a class="btn-act" href="https://www.youtube.com/watch?v=n1ULvQFPtcQ" target="_blank" rel="noopener">TDS Guide</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="note-card">
+            <b>Important:</b> If the payee fails to furnish a valid PAN, tax must be deducted at a mandatory flat rate of <b>20%</b> under Section 206AA. Delayed payment of deducted TDS attracts interest at 1.5% per month under Section 201(1A).
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           TOOL 4: NEW VS OLD TAX REGIME CALCULATOR
+           ======================================================== -->
+      <section class="tool-panel" id="panel-regime">
+        <div class="calc-card">
+          <div class="calc-header">
+            <div>
+              <h2>Income Tax Regime Comparison (FY 2026-27 / AY 2027-28)</h2>
+              <p>Compare tax liability under New Regime (Sec 115BAC with ₹75k std deduction) vs Old Regime.</p>
+            </div>
+            <span class="results-badge green">Budget Slabs</span>
+          </div>
+
+          <div class="cols">
+            <div class="box-inputs">
+              <div class="form-group">
+                <label for="taxIncome">Annual Gross Income (₹)</label>
+                <input id="taxIncome" type="number" min="0" step="any" inputmode="decimal" value="950000" placeholder="e.g. 950000">
+              </div>
+
+              <div class="form-group">
+                <label for="taxCategory">Taxpayer Type</label>
+                <select id="taxCategory">
+                  <option value="salaried">Salaried Employee (₹75k Std Deduction in New / ₹50k in Old)</option>
+                  <option value="business">Business / Professional / Non-Salaried</option>
+                </select>
+              </div>
+
+              <div style="font-weight:700;font-size:0.9rem;margin-top:10px;color:var(--navy-900);">Old Regime Deductions (Optional)</div>
+
+              <div class="row2">
+                <div class="form-group">
+                  <label for="tax80c">Section 80C <span class="sub">(EPF, PPF, ELSS, LIC - Max 1.5L)</span></label>
+                  <input id="tax80c" type="number" min="0" max="150000" step="any" value="150000" placeholder="e.g. 150000">
+                </div>
+                <div class="form-group">
+                  <label for="tax80d">Section 80D <span class="sub">(Health Mediclaim)</span></label>
+                  <input id="tax80d" type="number" min="0" max="100000" step="any" value="25000" placeholder="e.g. 25000">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="taxHomeLoan">Home Loan Interest (Sec 24b) / HRA Exemption</label>
+                <input id="taxHomeLoan" type="number" min="0" max="200000" step="any" value="0" placeholder="Max ₹2,00,000 for self-occupied property">
+              </div>
+            </div>
+
+            <!-- Tax Comparison Output -->
+            <div class="box-results">
+              <span class="results-badge green" id="regimeBadge">Tax Recommendation</span>
+              <div class="total-display">
+                <div class="total-label" id="regimeWinLabel">Best Choice</div>
+                <div class="total-val" id="regimeSavings">Save ₹18,200.00</div>
+                <div class="total-sub" id="regimeAdvise">New Regime is more beneficial for your income level.</div>
+              </div>
+
+              <dl class="data-table">
+                <div class="data-row highlight" id="rowNewRegime">
+                  <dt><b>New Tax Regime Tax</b></dt>
+                  <dd id="outNewTax">₹44,200.00</dd>
+                </div>
+                <div class="data-row highlight" id="rowOldRegime">
+                  <dt><b>Old Tax Regime Tax</b></dt>
+                  <dd id="outOldTax">₹62,400.00</dd>
+                </div>
+                <div class="data-row">
+                  <dt>New Regime Net Taxable Income</dt>
+                  <dd id="outNewTaxable">₹8,75,000.00</dd>
+                </div>
+                <div class="data-row">
+                  <dt>Old Regime Net Taxable Income</dt>
+                  <dd id="outOldTaxable">₹7,25,000.00</dd>
+                </div>
+                <div class="data-row">
+                  <dt>Health &amp; Education Cess (4%)</dt>
+                  <dd>Included in totals</dd>
+                </div>
+              </dl>
+
+              <div class="action-row">
+                <button type="button" class="btn-act primary" id="btnCopyRegime">Copy Comparison</button>
+                <a class="btn-act" href="index.html#contact">Consult CA</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="note-card">
+            <b>Budget Update:</b> Under the New Regime, income up to ₹7 Lakh is completely tax-free due to Section 87A rebate. For salaried employees, standard deduction of ₹75,000 makes income up to <b>₹7.75 Lakh completely zero tax</b>!
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           TOOL 5: HRA EXEMPTION CALCULATOR
+           ======================================================== -->
+      <section class="tool-panel" id="panel-hra">
+        <div class="calc-card">
+          <div class="calc-header">
+            <div>
+              <h2>House Rent Allowance (HRA) Exemption Calculator</h2>
+              <p>Section 10(13A) rule 2A calculator to determine tax-free HRA and taxable portion.</p>
+            </div>
+            <span class="results-badge">&#x26A1; Sec 10(13A)</span>
+          </div>
+
+          <div class="cols">
+            <div class="box-inputs">
+              <div class="form-group">
+                <label for="hraBasic">Basic Salary + DA (Annual in ₹)</label>
+                <input id="hraBasic" type="number" min="0" step="any" inputmode="decimal" value="600000" placeholder="e.g. 600000">
+              </div>
+
+              <div class="form-group">
+                <label for="hraReceived">HRA Received from Employer (Annual in ₹)</label>
+                <input id="hraReceived" type="number" min="0" step="any" inputmode="decimal" value="240000" placeholder="e.g. 240000">
+              </div>
+
+              <div class="form-group">
+                <label for="hraRent">Total Rent Actually Paid (Annual in ₹)</label>
+                <input id="hraRent" type="number" min="0" step="any" inputmode="decimal" value="180000" placeholder="e.g. 180000">
+              </div>
+
+              <div class="form-group">
+                <label for="hraCity">Residential City Type</label>
+                <select id="hraCity">
+                  <option value="50">Metro City (Delhi, Mumbai, Kolkata, Chennai - 50% of Basic)</option>
+                  <option value="40">Non-Metro City (Any other city - 40% of Basic)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- HRA Output -->
+            <div class="box-results">
+              <span class="results-badge green">Exemption Breakdown</span>
+              <div class="total-display">
+                <div class="total-label">Tax-Exempt HRA (Free of Tax)</div>
+                <div class="total-val" id="hraExemptVal" style="color:#16A34A;">₹1,20,000.00</div>
+                <div class="total-sub" id="hraSubText">Taxable HRA: ₹1,20,000.00 added to salary income</div>
+              </div>
+
+              <dl class="data-table">
+                <div class="data-row">
+                  <dt>1. Actual HRA Received</dt>
+                  <dd id="hraCond1">₹2,40,000.00</dd>
+                </div>
+                <div class="data-row">
+                  <dt>2. Rent Paid &minus; 10% of Basic</dt>
+                  <dd id="hraCond2">₹1,20,000.00</dd>
+                </div>
+                <div class="data-row">
+                  <dt>3. 50% / 40% of Basic Salary</dt>
+                  <dd id="hraCond3">₹3,00,000.00</dd>
+                </div>
+                <div class="data-row highlight win">
+                  <dt><b>Exempt HRA (Least of above)</b></dt>
+                  <dd id="hraOutExempt">₹1,20,000.00</dd>
+                </div>
+                <div class="data-row highlight">
+                  <dt>Taxable HRA Amount</dt>
+                  <dd id="hraOutTaxable">₹1,20,000.00</dd>
+                </div>
+              </dl>
+
+              <div class="action-row">
+                <button type="button" class="btn-act primary" id="btnCopyHra">Copy Result</button>
+                <button type="button" class="btn-act" onclick="window.print()">Print</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="note-card">
+            <b>Rule Check:</b> HRA tax exemption can only be claimed if you reside in a rented house and actually pay rent. If total annual rent exceeds ₹1,00,000, providing the landlord's PAN to your employer is legally mandatory.
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           TOOL 6: BUSINESS LOAN & EMI CALCULATOR
+           ======================================================== -->
+      <section class="tool-panel" id="panel-emi">
+        <div class="calc-card">
+          <div class="calc-header">
+            <div>
+              <h2>Business &amp; Machinery Loan EMI Calculator</h2>
+              <p>Compute monthly installments, interest burden, and total payout for term loans or equipment financing.</p>
+            </div>
+            <span class="results-badge">&#x26A1; Amortization</span>
+          </div>
+
+          <div class="cols">
+            <div class="box-inputs">
+              <div class="form-group">
+                <label for="emiPrincipal">Loan / Borrowing Amount (₹)</label>
+                <input id="emiPrincipal" type="number" min="0" step="any" inputmode="decimal" value="500000" placeholder="e.g. 500000">
+              </div>
+
+              <div class="row2">
+                <div class="form-group">
+                  <label for="emiRate">Annual Interest Rate (% p.a.)</label>
+                  <input id="emiRate" type="number" min="0" max="50" step="0.1" value="10.5" placeholder="e.g. 10.5">
+                </div>
+                <div class="form-group">
+                  <label for="emiTenure">Tenure (in Years)</label>
+                  <input id="emiTenure" type="number" min="0.5" max="30" step="0.5" value="3" placeholder="e.g. 3">
+                </div>
+              </div>
+            </div>
+
+            <!-- EMI Output -->
+            <div class="box-results">
+              <span class="results-badge">Repayment Schedule</span>
+              <div class="total-display">
+                <div class="total-label">Monthly EMI Installment</div>
+                <div class="total-val" id="emiMonthlyVal">₹16,252.00</div>
+                <div class="total-sub" id="emiSubText">Total Tenure: 36 monthly payments</div>
+              </div>
+
+              <dl class="data-table">
+                <div class="data-row">
+                  <dt>Principal Borrowed</dt>
+                  <dd id="emiOutPrincipal">₹5,00,000.00</dd>
+                </div>
+                <div class="data-row">
+                  <dt>Total Interest Payable</dt>
+                  <dd id="emiOutInterest">₹85,072.00</dd>
+                </div>
+                <div class="data-row highlight">
+                  <dt>Total Amount Payable</dt>
+                  <dd id="emiOutTotal">₹5,85,072.00</dd>
+                </div>
+                <div class="data-row">
+                  <dt>Interest % of Total Outflow</dt>
+                  <dd id="emiOutRatio">14.5%</dd>
+                </div>
+              </dl>
+
+              <div class="action-row">
+                <button type="button" class="btn-act primary" id="btnCopyEmi">Copy EMI</button>
+                <button type="button" class="btn-act" onclick="window.print()">Print</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="note-card">
+            <b>Tax Advantage:</b> For registered businesses and professionals, interest paid on business loans and machinery loans is 100% tax-deductible as an allowable business expenditure under Section 36(1)(iii).
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Guidance FAQ Cards -->
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h4>&#x1F4CB; Compliance Deadlines</h4>
+          <p>Stay on track with our live statutory calendar tracking monthly GSTR-3B, quarterly TDS and advance tax installments.</p>
+          <a style="display:inline-block;margin-top:10px;font-weight:700;color:var(--blue-600);" href="index.html#deadlines">View Deadlines &rarr;</a>
+        </div>
+        <div class="faq-card">
+          <h4>&#x1F3A5; Video Tutorials</h4>
+          <p>Watch step-by-step practical guides on return filing, DSC setup, and Tally Prime directly from our YouTube channel.</p>
+          <a style="display:inline-block;margin-top:10px;font-weight:700;color:var(--blue-600);" href="youtube.html" target="_blank" rel="noopener">Browse 30 Videos &rarr;</a>
+        </div>
+        <div class="faq-card">
+          <h4>&#x1F4D6; Tax Knowledge Blog</h4>
+          <p>Read in-depth statutory circulars, CBDT extension notices, and detailed accounting explainers written by practitioners.</p>
+          <a style="display:inline-block;margin-top:10px;font-weight:700;color:var(--blue-600);" href="blog.html">Read Insights &rarr;</a>
         </div>
       </div>
 
-      <!-- Compliance Details Card -->
-      <div class="info-card">
-        <h3>&#x1F4D6; Applicable Statutory Rules &amp; Rates</h3>
-        <p class="rates">
-          <b>Late Fee Rates:</b> ₹50 per day (₹25 CGST + ₹25 SGST) for regular returns with tax liabilities or outward supplies, and ₹20 per day (₹10 CGST + ₹10 SGST) for Nil returns.<br>
-          <b>Maximum Fee Caps:</b> Per-return maximum limit is capped by previous year turnover: ₹2,000 (up to ₹1.5 Cr), ₹5,000 (₹1.5 Cr–₹5 Cr), or ₹10,000 (above ₹5 Cr). Nil returns are capped at ₹500.<br>
-          <b>Section 50 Interest:</b> 18% per annum on net cash tax liability paid after the due date (applicable to GSTR-3B only).
-        </p>
-        <p class="small">
-          This calculator provides an accurate estimate based on standard CGST/SGST rules. The final fee is generated in the portal liability ledger upon return generation. Need expert assistance? <a href="index.html#contact">Contact our tax practitioners in Delhi</a>.
-        </p>
-      </div>
+      <!-- Banner CTA -->
+      <section class="cta-banner">
+        <div>
+          <h3>Need Professional Accounting &amp; Filing Support?</h3>
+          <p>From GST returns and notice replies to tax audits and company registrations, All in 1 Accounting Solutions handles everything accurately.</p>
+        </div>
+        <div>
+          <a class="btn-call" href="tel:+919625000350">
+            &#x1F4DE; Call +91 96250 00350
+          </a>
+        </div>
+      </section>
     </div>
   </main>
 
@@ -547,59 +1321,544 @@
     </div>
   </footer>
 
+  <!-- Combined JavaScript Application Logic -->
   <script>
     (function () {
-      var $ = function (i) { return document.getElementById(i) };
-      var inr = function (v) { return '₹' + v.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) };
-      function d(id) { var v = $(id).value; if (!v) return null; var p = v.split('-'); return Date.UTC(+p[0], +p[1] - 1, +p[2]) }
-      function row(k, v, c) { return '<div' + (c ? ' class="' + c + '"' : '') + '><dt>' + k + '</dt><dd>' + v + '</dd></div>' }
+      'use strict';
 
-      function calc() {
-        var is3b = $('ret').value === '3b', nil = $('kind').value === 'nil';
-        $('int-box').hidden = !is3b || nil;
-        var due = d('due'), fil = d('filed'), out = $('out');
-        if (due === null || fil === null) {
-          out.innerHTML = '<p class="hint">&#x1F4C5; Please select your Due Date and Filing Date to calculate late fees.</p>';
-          return;
-        }
-        var days = Math.round((fil - due) / 864e5);
-        var perDay = nil ? 20 : 50, cap = nil ? 500 : +$('turn').value;
-        var raw = days > 0 ? perDay * days : 0, fee = Math.min(raw, cap), capped = raw > cap;
-        var tax = parseFloat($('tax').value), interest = 0, idays = 0;
-
-        if (is3b && !nil && isFinite(tax) && tax > 0) {
-          var pd = d('paid');
-          if (pd === null) pd = fil;
-          idays = Math.round((pd - due) / 864e5);
-          if (idays > 0) interest = tax * 0.18 * idays / 365;
-        }
-
-        var h = '<dl class="out">' + row('Days Delayed', days > 0 ? days + ' days' : '0 days') + row('Late Fee Rate', inr(perDay) + ' / day');
-        if (days > 0) {
-          h += row('Raw Fee (before cap)', inr(raw)) + row('Turnover Cap Limit', inr(cap));
-        }
-        h += row('Late Fee &bull; CGST', inr(fee / 2)) + row('Late Fee &bull; SGST', inr(fee / 2)) + row('Total Late Fee', inr(fee));
-        if (is3b && !nil) {
-          h += row('Interest @ 18% p.a.' + (idays > 0 ? ' (' + idays + ' days)' : ''), inr(interest));
-        }
-        h += row('Total Amount Payable', inr(fee + interest), 'big') + '</dl>';
-
-        if (days <= 0) {
-          h += '<p class="note" style="background:#F0FDF4;color:#166534;">&#x2714; Return filed on or before due date &mdash; No late fee payable!</p>';
-        } else if (capped) {
-          h += '<p class="note">&#x26A0;&#xFE0F; Late fee reached statutory maximum cap for this turnover slab (' + inr(cap) + ').</p>';
-        }
-        if (!is3b) {
-          h += '<p class="note">&#x2139;&#xFE0F; Note: GSTR-1 carries late fee only. Interest applies to cash tax liability in GSTR-3B.</p>';
-        }
-        out.innerHTML = h;
+      // Helper function for INR formatting
+      function inr(v) {
+        if (isNaN(v) || v === null) v = 0;
+        return '₹' + v.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       }
 
-      ['ret', 'kind', 'turn', 'due', 'filed', 'tax', 'paid'].forEach(function (i) {
-        $(i).addEventListener('input', calc);
-        $(i).addEventListener('change', calc);
+      function parseDate(v) {
+        if (!v) return null;
+        var p = v.split('-');
+        return Date.UTC(+p[0], +p[1] - 1, +p[2]);
+      }
+
+      // ========================================================
+      // TAB NAVIGATION LOGIC
+      // ========================================================
+      var toolTabs = document.getElementById('toolTabs');
+      var tabBtns = toolTabs.querySelectorAll('.tool-tab');
+      var panels = document.querySelectorAll('.tool-panel');
+
+      toolTabs.addEventListener('click', function (e) {
+        var btn = e.target.closest('.tool-tab');
+        if (!btn) return;
+        var targetId = btn.getAttribute('data-target');
+        if (!targetId) return;
+
+        tabBtns.forEach(function (b) { b.classList.remove('active'); });
+        panels.forEach(function (p) { p.classList.remove('active'); });
+
+        btn.classList.add('active');
+        var targetPanel = document.getElementById(targetId);
+        if (targetPanel) targetPanel.classList.add('active');
       });
-      calc();
+
+      // ========================================================
+      // 1. GST INCLUSIVE / EXCLUSIVE CALCULATOR LOGIC
+      // ========================================================
+      var gstMode = 'add'; // 'add' or 'remove'
+      var gstRate = 18;
+      var gstModeGroup = document.getElementById('gstModeGroup');
+      var gstAmountInput = document.getElementById('gstAmount');
+      var gstRatePills = document.getElementById('gstRatePills');
+      var gstCustomRate = document.getElementById('gstCustomRate');
+      var gstSupplyType = document.getElementById('gstSupplyType');
+
+      function calcGst() {
+        var amt = parseFloat(gstAmountInput.value) || 0;
+        var rate = gstRate;
+        if (gstCustomRate.value !== '' && !isNaN(parseFloat(gstCustomRate.value))) {
+          rate = parseFloat(gstCustomRate.value);
+        }
+
+        var isIntra = (gstSupplyType.value === 'intra');
+        var base = 0, tax = 0, total = 0;
+
+        if (gstMode === 'add') {
+          base = amt;
+          tax = base * (rate / 100);
+          total = base + tax;
+          document.getElementById('gstBadge').textContent = 'Exclusive Mode (Add GST)';
+          document.getElementById('gstTotalLabel').textContent = 'Total Invoice Value (Gross)';
+        } else {
+          total = amt;
+          base = total / (1 + (rate / 100));
+          tax = total - base;
+          document.getElementById('gstBadge').textContent = 'Inclusive Mode (Remove GST)';
+          document.getElementById('gstTotalLabel').textContent = 'Net Base Amount (Excl. Tax)';
+        }
+
+        var cgst = isIntra ? (tax / 2) : 0;
+        var sgst = isIntra ? (tax / 2) : 0;
+        var igst = !isIntra ? tax : 0;
+
+        document.getElementById('gstTotalVal').textContent = inr(gstMode === 'add' ? total : base);
+        document.getElementById('gstSubText').textContent = 'Total Tax (' + rate + '%): ' + inr(tax) + ' | Gross Bill: ' + inr(total);
+
+        document.getElementById('gstOutBase').textContent = inr(base);
+        document.getElementById('gstOutTax').textContent = inr(tax);
+
+        var rowCgst = document.getElementById('rowCgst');
+        var rowSgst = document.getElementById('rowSgst');
+        var rowIgst = document.getElementById('rowIgst');
+
+        if (isIntra) {
+          rowCgst.style.display = 'flex';
+          rowSgst.style.display = 'flex';
+          rowIgst.style.display = 'none';
+          document.getElementById('rateCgst').textContent = (rate / 2) + '%';
+          document.getElementById('rateSgst').textContent = (rate / 2) + '%';
+          document.getElementById('gstOutCgst').textContent = inr(cgst);
+          document.getElementById('gstOutSgst').textContent = inr(sgst);
+        } else {
+          rowCgst.style.display = 'none';
+          rowSgst.style.display = 'none';
+          rowIgst.style.display = 'flex';
+          document.getElementById('rateIgst').textContent = rate + '%';
+          document.getElementById('gstOutIgst').textContent = inr(igst);
+        }
+      }
+
+      gstModeGroup.addEventListener('click', function (e) {
+        var opt = e.target.closest('.btn-option');
+        if (!opt) return;
+        gstModeGroup.querySelectorAll('.btn-option').forEach(function (b) { b.classList.remove('active'); });
+        opt.classList.add('active');
+        gstMode = opt.getAttribute('data-mode');
+        calcGst();
+      });
+
+      gstRatePills.addEventListener('click', function (e) {
+        var pill = e.target.closest('.rate-btn');
+        if (!pill) return;
+        gstRatePills.querySelectorAll('.rate-btn').forEach(function (p) { p.classList.remove('active'); });
+        pill.classList.add('active');
+        gstRate = parseFloat(pill.getAttribute('data-rate'));
+        gstCustomRate.value = '';
+        calcGst();
+      });
+
+      gstCustomRate.addEventListener('input', function () {
+        if (gstCustomRate.value !== '') {
+          gstRatePills.querySelectorAll('.rate-btn').forEach(function (p) { p.classList.remove('active'); });
+        }
+        calcGst();
+      });
+
+      gstAmountInput.addEventListener('input', calcGst);
+      gstSupplyType.addEventListener('change', calcGst);
+
+      document.getElementById('btnCopyGst').addEventListener('click', function () {
+        var text = 'GST Calculation:\nBase Amount: ' + document.getElementById('gstOutBase').textContent +
+          '\nGST (' + gstRate + '%): ' + document.getElementById('gstOutTax').textContent +
+          '\nTotal Gross Value: ' + document.getElementById('gstTotalVal').textContent;
+        navigator.clipboard.writeText(text).then(function () {
+          alert('GST breakdown copied to clipboard!');
+        });
+      });
+
+      // ========================================================
+      // 2. GSTR-3B LATE FEE & SECTION 50 INTEREST LOGIC
+      // ========================================================
+      var retEl = document.getElementById('ret');
+      var kindEl = document.getElementById('kind');
+      var turnEl = document.getElementById('turn');
+      var dueEl = document.getElementById('due');
+      var filedEl = document.getElementById('filed');
+      var taxEl = document.getElementById('tax');
+      var paidEl = document.getElementById('paid');
+      var intBox = document.getElementById('int-box');
+
+      function initDates() {
+        var n = new Date();
+        var y = n.getFullYear();
+        var m = n.getMonth();
+        var dueD = new Date(Date.UTC(y, m, 20));
+        var dueStr = dueD.toISOString().slice(0, 10);
+        var filedStr = n.toISOString().slice(0, 10);
+        if (!dueEl.value) dueEl.value = dueStr;
+        if (!filedEl.value) filedEl.value = filedStr;
+
+        var inDateEl = document.getElementById('tdsInvoiceDate');
+        if (inDateEl && !inDateEl.value) inDateEl.value = filedStr;
+      }
+
+      function calcLateFee() {
+        var is3b = retEl.value === '3b';
+        var isNil = kindEl.value === 'nil';
+        intBox.style.display = is3b ? 'flex' : 'none';
+
+        var tDue = parseDate(dueEl.value);
+        var tFiled = parseDate(filedEl.value);
+        if (!tDue || !tFiled) return;
+
+        var days = Math.max(0, Math.round((tFiled - tDue) / 86400000));
+        var cap = isNil ? 500 : +turnEl.value;
+        var perDay = isNil ? 20 : 50;
+
+        var totalFee = Math.min(days * perDay, cap);
+        var cgstFee = totalFee / 2;
+        var sgstFee = totalFee / 2;
+
+        var interest = 0;
+        var tax = Math.max(0, parseFloat(taxEl.value) || 0);
+
+        if (is3b && tax > 0) {
+          var tPaid = parseDate(paidEl.value) || tFiled;
+          var intDays = Math.max(0, Math.round((tPaid - tDue) / 86400000));
+          interest = (tax * 0.18 * intDays) / 365;
+        }
+
+        var total = totalFee + interest;
+
+        document.getElementById('outTotal').textContent = inr(total);
+        document.getElementById('outSub').textContent = 'Delay: ' + days + ' days | Interest: 18% p.a. on cash liability';
+
+        var rowsHtml = '';
+        rowsHtml += '<div class="data-row"><dt>Days of Delay</dt><dd>' + days + ' day' + (days === 1 ? '' : 's') + '</dd></div>';
+        rowsHtml += '<div class="data-row"><dt>CGST Late Fee</dt><dd>' + inr(cgstFee) + '</dd></div>';
+        rowsHtml += '<div class="data-row"><dt>SGST Late Fee</dt><dd>' + inr(sgstFee) + '</dd></div>';
+        rowsHtml += '<div class="data-row highlight"><dt>Total Late Fee (Sec 47)</dt><dd>' + inr(totalFee) + '</dd></div>';
+        if (is3b) {
+          rowsHtml += '<div class="data-row"><dt>Section 50 Interest (18%)</dt><dd>' + inr(interest) + '</dd></div>';
+        }
+        document.getElementById('outRows').innerHTML = rowsHtml;
+      }
+
+      retEl.addEventListener('change', calcLateFee);
+      kindEl.addEventListener('change', calcLateFee);
+      turnEl.addEventListener('change', calcLateFee);
+      dueEl.addEventListener('change', calcLateFee);
+      filedEl.addEventListener('change', calcLateFee);
+      taxEl.addEventListener('input', calcLateFee);
+      paidEl.addEventListener('change', calcLateFee);
+
+      document.getElementById('btnResetLate').addEventListener('click', function () {
+        retEl.value = '3b';
+        kindEl.value = 'normal';
+        turnEl.value = '2000';
+        taxEl.value = '';
+        paidEl.value = '';
+        initDates();
+        calcLateFee();
+      });
+
+      document.getElementById('btnCopyLate').addEventListener('click', function () {
+        var text = 'GSTR-3B Late Fee & Interest Breakdown:\nTotal Payable: ' + document.getElementById('outTotal').textContent +
+          '\n' + document.getElementById('outSub').textContent;
+        navigator.clipboard.writeText(text).then(function () {
+          alert('Breakdown copied to clipboard!');
+        });
+      });
+
+      // ========================================================
+      // 3. TDS RATE & DEDUCTION CALCULATOR LOGIC
+      // ========================================================
+      var tdsSection = document.getElementById('tdsSection');
+      var tdsAmount = document.getElementById('tdsAmount');
+      var tdsPanStatus = document.getElementById('tdsPanStatus');
+
+      var TDS_DATA = {
+        '194C_ind': { sec: 'Sec 194C', name: 'Contractor (Ind/HUF)', rate: 1, thresh: '₹30k single / ₹1L annual' },
+        '194C_oth': { sec: 'Sec 194C', name: 'Contractor (Co/Firm)', rate: 2, thresh: '₹30k single / ₹1L annual' },
+        '194J_tech': { sec: 'Sec 194J', name: 'Technical Services', rate: 2, thresh: '₹30,000 / FY' },
+        '194J_prof': { sec: 'Sec 194J', name: 'Professional & Royalty', rate: 10, thresh: '₹30,000 / FY' },
+        '194I_plant': { sec: 'Sec 194I', name: 'Rent - Plant & Machinery', rate: 2, thresh: '₹2,40,000 / FY' },
+        '194I_land': { sec: 'Sec 194I', name: 'Rent - Land & Building', rate: 10, thresh: '₹2,40,000 / FY' },
+        '194H': { sec: 'Sec 194H', name: 'Commission & Brokerage', rate: 2, thresh: '₹15,000 / FY' },
+        '194Q': { sec: 'Sec 194Q', name: 'Purchase of Goods', rate: 0.1, thresh: '> ₹50 Lakhs' },
+        '194A': { sec: 'Sec 194A', name: 'Interest non-securities', rate: 10, thresh: '₹40,000 / FY' },
+        '194DA': { sec: 'Sec 194DA', name: 'Life Insurance Maturity', rate: 5, thresh: '₹1,00,000 / FY' }
+      };
+
+      function calcTds() {
+        var item = TDS_DATA[tdsSection.value] || TDS_DATA['194J_prof'];
+        var gross = parseFloat(tdsAmount.value) || 0;
+        var hasPan = (tdsPanStatus.value === 'pan_valid');
+        var rate = hasPan ? item.rate : 20.0;
+
+        var tax = gross * (rate / 100);
+        var net = Math.max(0, gross - tax);
+
+        document.getElementById('tdsNetVal').textContent = inr(net);
+        document.getElementById('tdsSubText').textContent = 'TDS to deduct: ' + inr(tax) + ' (' + rate + '%) | Gross: ' + inr(gross);
+
+        document.getElementById('tdsOutGross').textContent = inr(gross);
+        document.getElementById('tdsOutSec').textContent = item.sec + ' (' + item.name + ' - ' + rate + '%)';
+        document.getElementById('tdsOutThresh').textContent = item.thresh;
+        document.getElementById('tdsOutTax').textContent = inr(tax);
+
+        var dateVal = document.getElementById('tdsInvoiceDate').value;
+        if (dateVal) {
+          var p = dateVal.split('-');
+          var m = parseInt(p[1], 10);
+          if (m === 3) {
+            document.getElementById('tdsOutDueDate').textContent = '30 April (March Deduction)';
+          } else {
+            document.getElementById('tdsOutDueDate').textContent = '7th of Next Month';
+          }
+        } else {
+          document.getElementById('tdsOutDueDate').textContent = '7th of Next Month';
+        }
+      }
+
+      tdsSection.addEventListener('change', calcTds);
+      tdsAmount.addEventListener('input', calcTds);
+      tdsPanStatus.addEventListener('change', calcTds);
+      document.getElementById('tdsInvoiceDate').addEventListener('change', calcTds);
+
+      document.getElementById('btnCopyTds').addEventListener('click', function () {
+        var text = 'TDS Deduction Details:\nGross Bill: ' + document.getElementById('tdsOutGross').textContent +
+          '\nSection: ' + document.getElementById('tdsOutSec').textContent +
+          '\nTDS Deducted: ' + document.getElementById('tdsOutTax').textContent +
+          '\nNet Payable: ' + document.getElementById('tdsNetVal').textContent +
+          '\nDeposit Due Date: ' + document.getElementById('tdsOutDueDate').textContent;
+        navigator.clipboard.writeText(text).then(function () {
+          alert('TDS calculation copied!');
+        });
+      });
+
+      // ========================================================
+      // 4. NEW VS OLD TAX REGIME CALCULATOR LOGIC
+      // ========================================================
+      var taxIncome = document.getElementById('taxIncome');
+      var taxCategory = document.getElementById('taxCategory');
+      var tax80c = document.getElementById('tax80c');
+      var tax80d = document.getElementById('tax80d');
+      var taxHomeLoan = document.getElementById('taxHomeLoan');
+
+      function computeNewRegimeTax(income, isSalaried) {
+        var stdDed = isSalaried ? 75000 : 0;
+        var taxable = Math.max(0, income - stdDed);
+
+        if (taxable <= 700000) {
+          // Section 87A Full Rebate up to 7 Lakhs
+          return { tax: 0, taxable: taxable };
+        }
+
+        var t = 0;
+        // 0 - 3L : 0%
+        // 3L - 7L : 5% (4,00,000 * 5% = 20,000)
+        if (taxable > 300000) {
+          t += Math.min(taxable - 300000, 400000) * 0.05;
+        }
+        // 7L - 10L : 10% (3,00,000 * 10% = 30,000)
+        if (taxable > 700000) {
+          t += Math.min(taxable - 700000, 300000) * 0.10;
+        }
+        // 10L - 12L : 15% (2,00,000 * 15% = 30,000)
+        if (taxable > 1000000) {
+          t += Math.min(taxable - 1000000, 200000) * 0.15;
+        }
+        // 12L - 15L : 20% (3,00,000 * 20% = 60,000)
+        if (taxable > 1200000) {
+          t += Math.min(taxable - 1200000, 300000) * 0.20;
+        }
+        // > 15L : 30%
+        if (taxable > 1500000) {
+          t += (taxable - 1500000) * 0.30;
+        }
+
+        // Add 4% Cess
+        t = t * 1.04;
+        return { tax: t, taxable: taxable };
+      }
+
+      function computeOldRegimeTax(income, isSalaried, d80c, d80d, dHome) {
+        var stdDed = isSalaried ? 50000 : 0;
+        var totalDed = stdDed + Math.min(150000, d80c) + Math.min(100000, d80d) + Math.min(200000, dHome);
+        var taxable = Math.max(0, income - totalDed);
+
+        if (taxable <= 500000) {
+          // Section 87A rebate for Old Regime up to 5L
+          return { tax: 0, taxable: taxable };
+        }
+
+        var t = 0;
+        // 0 - 2.5L : 0%
+        // 2.5L - 5L : 5% (2,50,000 * 5% = 12,500)
+        if (taxable > 250000) {
+          t += Math.min(taxable - 250000, 250000) * 0.05;
+        }
+        // 5L - 10L : 20% (5,00,000 * 20% = 1,00,000)
+        if (taxable > 500000) {
+          t += Math.min(taxable - 500000, 500000) * 0.20;
+        }
+        // > 10L : 30%
+        if (taxable > 1000000) {
+          t += (taxable - 1000000) * 0.30;
+        }
+
+        // Add 4% Cess
+        t = t * 1.04;
+        return { tax: t, taxable: taxable };
+      }
+
+      function calcRegime() {
+        var inc = parseFloat(taxIncome.value) || 0;
+        var isSalaried = (taxCategory.value === 'salaried');
+        var d80c = parseFloat(tax80c.value) || 0;
+        var d80d = parseFloat(tax80d.value) || 0;
+        var dHome = parseFloat(taxHomeLoan.value) || 0;
+
+        var newRes = computeNewRegimeTax(inc, isSalaried);
+        var oldRes = computeOldRegimeTax(inc, isSalaried, d80c, d80d, dHome);
+
+        document.getElementById('outNewTax').textContent = inr(newRes.tax);
+        document.getElementById('outOldTax').textContent = inr(oldRes.tax);
+        document.getElementById('outNewTaxable').textContent = inr(newRes.taxable);
+        document.getElementById('outOldTaxable').textContent = inr(oldRes.taxable);
+
+        var diff = Math.abs(newRes.tax - oldRes.tax);
+        var rowNew = document.getElementById('rowNewRegime');
+        var rowOld = document.getElementById('rowOldRegime');
+
+        rowNew.classList.remove('win');
+        rowOld.classList.remove('win');
+
+        if (newRes.tax < oldRes.tax) {
+          rowNew.classList.add('win');
+          document.getElementById('regimeWinLabel').textContent = 'Recommended: New Tax Regime';
+          document.getElementById('regimeSavings').textContent = 'Save ' + inr(diff);
+          document.getElementById('regimeAdvise').textContent = 'The New Tax Regime saves you more tax due to lower tax slabs & ₹75k standard deduction.';
+        } else if (oldRes.tax < newRes.tax) {
+          rowOld.classList.add('win');
+          document.getElementById('regimeWinLabel').textContent = 'Recommended: Old Tax Regime';
+          document.getElementById('regimeSavings').textContent = 'Save ' + inr(diff);
+          document.getElementById('regimeAdvise').textContent = 'The Old Tax Regime is better due to your high deductions (80C, 80D, Home loan interest/HRA).';
+        } else {
+          document.getElementById('regimeWinLabel').textContent = 'Both Regimes Equal';
+          document.getElementById('regimeSavings').textContent = 'Tax is identical';
+          document.getElementById('regimeAdvise').textContent = 'Both regimes result in the exact same tax liability. You may choose either.';
+        }
+      }
+
+      taxIncome.addEventListener('input', calcRegime);
+      taxCategory.addEventListener('change', calcRegime);
+      tax80c.addEventListener('input', calcRegime);
+      tax80d.addEventListener('input', calcRegime);
+      taxHomeLoan.addEventListener('input', calcRegime);
+
+      document.getElementById('btnCopyRegime').addEventListener('click', function () {
+        var text = 'Tax Regime Comparison (FY 2026-27):\nGross Income: ' + inr(parseFloat(taxIncome.value) || 0) +
+          '\nNew Regime Tax: ' + document.getElementById('outNewTax').textContent +
+          '\nOld Regime Tax: ' + document.getElementById('outOldTax').textContent +
+          '\nVerdict: ' + document.getElementById('regimeWinLabel').textContent + ' (' + document.getElementById('regimeSavings').textContent + ')';
+        navigator.clipboard.writeText(text).then(function () {
+          alert('Comparison summary copied!');
+        });
+      });
+
+      // ========================================================
+      // 5. HRA EXEMPTION CALCULATOR LOGIC
+      // ========================================================
+      var hraBasic = document.getElementById('hraBasic');
+      var hraReceived = document.getElementById('hraReceived');
+      var hraRent = document.getElementById('hraRent');
+      var hraCity = document.getElementById('hraCity');
+
+      function calcHra() {
+        var basic = parseFloat(hraBasic.value) || 0;
+        var received = parseFloat(hraReceived.value) || 0;
+        var rent = parseFloat(hraRent.value) || 0;
+        var cityPct = parseFloat(hraCity.value) / 100;
+
+        var cond1 = received;
+        var cond2 = Math.max(0, rent - (0.10 * basic));
+        var cond3 = basic * cityPct;
+
+        var exempt = Math.min(cond1, cond2, cond3);
+        var taxable = Math.max(0, received - exempt);
+
+        document.getElementById('hraExemptVal').textContent = inr(exempt);
+        document.getElementById('hraSubText').textContent = 'Taxable HRA: ' + inr(taxable) + ' added to taxable salary';
+
+        document.getElementById('hraCond1').textContent = inr(cond1);
+        document.getElementById('hraCond2').textContent = inr(cond2);
+        document.getElementById('hraCond3').textContent = inr(cond3);
+        document.getElementById('hraOutExempt').textContent = inr(exempt);
+        document.getElementById('hraOutTaxable').textContent = inr(taxable);
+      }
+
+      hraBasic.addEventListener('input', calcHra);
+      hraReceived.addEventListener('input', calcHra);
+      hraRent.addEventListener('input', calcHra);
+      hraCity.addEventListener('change', calcHra);
+
+      document.getElementById('btnCopyHra').addEventListener('click', function () {
+        var text = 'HRA Exemption (Sec 10(13A)):\nExempt HRA: ' + document.getElementById('hraOutExempt').textContent +
+          '\nTaxable HRA: ' + document.getElementById('hraOutTaxable').textContent;
+        navigator.clipboard.writeText(text).then(function () {
+          alert('HRA summary copied!');
+        });
+      });
+
+      // ========================================================
+      // 6. BUSINESS LOAN & EMI CALCULATOR LOGIC
+      // ========================================================
+      var emiPrincipal = document.getElementById('emiPrincipal');
+      var emiRate = document.getElementById('emiRate');
+      var emiTenure = document.getElementById('emiTenure');
+
+      function calcEmi() {
+        var p = parseFloat(emiPrincipal.value) || 0;
+        var annualRate = parseFloat(emiRate.value) || 0;
+        var years = parseFloat(emiTenure.value) || 0;
+
+        var months = years * 12;
+        var monthlyRate = (annualRate / 12) / 100;
+
+        var emi = 0;
+        if (p > 0 && months > 0) {
+          if (monthlyRate === 0) {
+            emi = p / months;
+          } else {
+            var factor = Math.pow(1 + monthlyRate, months);
+            emi = (p * monthlyRate * factor) / (factor - 1);
+          }
+        }
+
+        var totalPayment = emi * months;
+        var totalInterest = Math.max(0, totalPayment - p);
+        var ratio = totalPayment > 0 ? ((totalInterest / totalPayment) * 100).toFixed(1) : '0';
+
+        document.getElementById('emiMonthlyVal').textContent = inr(emi);
+        document.getElementById('emiSubText').textContent = 'Tenure: ' + months + ' monthly installments (' + years + ' years)';
+
+        document.getElementById('emiOutPrincipal').textContent = inr(p);
+        document.getElementById('emiOutInterest').textContent = inr(totalInterest);
+        document.getElementById('emiOutTotal').textContent = inr(totalPayment);
+        document.getElementById('emiOutRatio').textContent = ratio + '%';
+      }
+
+      emiPrincipal.addEventListener('input', calcEmi);
+      emiRate.addEventListener('input', calcEmi);
+      emiTenure.addEventListener('input', calcEmi);
+
+      document.getElementById('btnCopyEmi').addEventListener('click', function () {
+        var text = 'Loan EMI Breakdown:\nPrincipal: ' + document.getElementById('emiOutPrincipal').textContent +
+          '\nMonthly EMI: ' + document.getElementById('emiMonthlyVal').textContent +
+          '\nTotal Interest: ' + document.getElementById('emiOutInterest').textContent +
+          '\nTotal Payable: ' + document.getElementById('emiOutTotal').textContent;
+        navigator.clipboard.writeText(text).then(function () {
+          alert('EMI details copied!');
+        });
+      });
+
+      // Initialize all calculations on load
+      initDates();
+      calcGst();
+      calcLateFee();
+      calcTds();
+      calcRegime();
+      calcHra();
+      calcEmi();
     })();
   </script>
 </body>
