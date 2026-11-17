@@ -278,19 +278,29 @@
     aside nav {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 4px;
     }
 
     aside nav a {
       display: flex;
       align-items: center;
-      gap: 12px;
-      padding: 8px 12px;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 9px 12px;
       border-radius: var(--radius-sm);
       font-size: 0.88rem;
       font-weight: 500;
       color: #CBD5E1;
       transition: all .15s ease;
+      white-space: nowrap;
+    }
+
+    aside nav a .nav-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      white-space: nowrap;
     }
 
     aside nav a:hover {
@@ -305,39 +315,90 @@
       font-weight: 600;
     }
 
-    /* Badged items */
+    /* YouTube Videos Nav Item & Pill Badge */
+    aside nav a.nav-yt .ic-yt {
+      color: #EF4444;
+      opacity: 0.95;
+    }
+
     .nav-badge-yt {
       margin-left: auto;
-      background: var(--red-600);
-      color: #fff;
-      font-size: 0.65rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(239, 68, 68, 0.14);
+      color: #F87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      font-size: 0.68rem;
       font-weight: 700;
-      padding: 1px 6px;
+      line-height: 1;
+      padding: 3px 8px;
       border-radius: var(--radius-full);
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+      transition: all .15s ease;
+    }
+
+    aside nav a.nav-yt:hover {
+      background: rgba(239, 68, 68, 0.08);
+      color: #FFFFFF;
+    }
+
+    aside nav a.nav-yt:hover .nav-badge-yt {
+      background: #EF4444;
+      color: #FFFFFF;
+      border-color: #EF4444;
+      box-shadow: 0 2px 8px rgba(239, 68, 68, 0.35);
+    }
+
+    /* Free Accounting Tools: High-End Translucent Card */
+    aside nav a.free {
+      margin-top: 8px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(30, 41, 59, 0.5) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.32);
+      color: #FEF3C7;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+      transition: all .2s ease;
+    }
+
+    aside nav a.free .ic-calc {
+      color: #FBBF24;
+      opacity: 1;
+    }
+
+    aside nav a.free:hover {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(30, 41, 59, 0.7) 100%);
+      border-color: rgba(245, 158, 11, 0.6);
+      color: #FFFFFF;
+      transform: translateX(2px);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.2);
     }
 
     .nav-badge-free {
       margin-left: auto;
-      background: #000;
-      color: #fff;
-      font-size: 0.65rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(245, 158, 11, 0.2);
+      color: #FDE68A;
+      border: 1px solid rgba(245, 158, 11, 0.38);
+      font-size: 0.68rem;
       font-weight: 700;
-      padding: 1px 6px;
+      line-height: 1;
+      padding: 3px 8px;
       border-radius: var(--radius-full);
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+      transition: all .18s ease;
     }
 
-    /* Free accounting tools CTA button at bottom of nav */
-    aside nav a.free {
-      margin-top: 10px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
-      color: #1A0D00;
-      font-weight: 700;
-      box-shadow: 0 4px 12px rgba(242, 140, 26, 0.25);
-    }
-    aside nav a.free:hover {
-      background: linear-gradient(135deg, var(--accent-hover), #C86C05);
+    aside nav a.free:hover .nav-badge-free {
+      background: #D97706;
       color: #FFFFFF;
-      transform: translateY(-1px);
+      border-color: #D97706;
+      box-shadow: 0 2px 8px rgba(217, 119, 6, 0.35);
     }
 
     .ic {
@@ -944,6 +1005,93 @@
       fill: #fff;
     }
 
+    .yt-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .yt-prev-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: all .2s ease;
+    }
+    .yt-prev-card:hover {
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(239, 68, 68, 0.45);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    }
+    .yt-prev-thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      overflow: hidden;
+    }
+    .yt-prev-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .25s ease;
+    }
+    .yt-prev-card:hover .yt-prev-thumb img {
+      transform: scale(1.06);
+    }
+    .yt-prev-play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.3);
+      transition: background .2s ease;
+    }
+    .yt-prev-card:hover .yt-prev-play {
+      background: rgba(0,0,0,0.5);
+    }
+    .yt-prev-play svg {
+      width: 38px;
+      height: 38px;
+      padding: 9px;
+      background: #EF4444;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(239, 68, 68, 0.6);
+      transition: transform .2s ease;
+    }
+    .yt-prev-card:hover .yt-prev-play svg {
+      transform: scale(1.12);
+    }
+    .yt-prev-info {
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .yt-prev-info b {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 0.88rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .yt-prev-info span {
+      font-size: 0.76rem;
+      color: #94A3B8;
+      margin-top: auto;
+    }
+
     /* Contact Section */
     .contact-grid {
       display: grid;
@@ -1140,24 +1288,24 @@
 
       <!-- Navigation Tabs strictly in required order -->
       <nav aria-label="Main Navigation">
-        <a href="#itr"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Income Tax Return</a>
-        <a href="#gst"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>GST</a>
-        <a href="#tds"><svg class="ic" aria-hidden="true"><use href="#i-card"/></svg>TDS</a>
-        <a href="#epf"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>EPF &amp; ESI</a>
-        <a href="#audit"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Accounting &amp; Audit</a>
-        <a href="#reg"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg>Registrations</a>
-        <a href="#tools"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg>Official Tools</a>
-        <a href="#updates"><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg>Updates</a>
-        <a href="#deadlines"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Deadlines</a>
-        <a href="blog.html"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Blog</a>
-        <a href="youtube.html" target="_blank" rel="noopener">
-          <svg class="ic" aria-hidden="true"><use href="#i-youtube"/></svg>YouTube Videos
+        <a href="#itr"><span class="nav-label"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Income Tax Return</span></a>
+        <a href="#gst"><span class="nav-label"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>GST</span></a>
+        <a href="#tds"><span class="nav-label"><svg class="ic" aria-hidden="true"><use href="#i-card"/></svg>TDS</span></a>
+        <a href="#epf"><span class="nav-label"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>EPF &amp; ESI</span></a>
+        <a href="#audit"><span class="nav-label"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Accounting &amp; Audit</span></a>
+        <a href="#reg"><span class="nav-label"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg>Registrations</span></a>
+        <a href="#tools"><span class="nav-label"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg>Official Tools</span></a>
+        <a href="#updates"><span class="nav-label"><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg>Updates</span></a>
+        <a href="#deadlines"><span class="nav-label"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Deadlines</span></a>
+        <a href="blog.html"><span class="nav-label"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Blog</span></a>
+        <a class="nav-yt" href="youtube.html" target="_blank" rel="noopener">
+          <span class="nav-label"><svg class="ic ic-yt" aria-hidden="true"><use href="#i-youtube"/></svg>YouTube Videos</span>
           <span class="nav-badge-yt">30 Videos</span>
         </a>
-        <a href="#contact"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Contact</a>
+        <a href="#contact"><span class="nav-label"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Contact</span></a>
         <a class="free" href="free-accounting-tools.html" target="_blank" rel="noopener">
-          <svg class="ic" aria-hidden="true"><use href="#i-calc"/></svg>Free Accounting Tools
-          <span class="nav-badge-free">6 Free Tools</span>
+          <span class="nav-label"><svg class="ic ic-calc" aria-hidden="true"><use href="#i-calc"/></svg>Free Accounting Tools</span>
+          <span class="nav-badge-free">6 Tools</span>
         </a>
       </nav>
 
@@ -1726,6 +1874,40 @@
               Visit Channel (@Allin-eg7mp)
             </a>
           </div>
+        </div>
+
+        <!-- 3 Featured Preview Cards -->
+        <div class="yt-preview-grid">
+          <a class="yt-prev-card" href="https://www.youtube.com/watch?v=czeVIFp8Mj8" target="_blank" rel="noopener">
+            <div class="yt-prev-thumb">
+              <img src="https://i.ytimg.com/vi/czeVIFp8Mj8/hqdefault.jpg" alt="QRMP Challan Create and Payment" loading="lazy">
+              <span class="yt-prev-play"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span>
+            </div>
+            <div class="yt-prev-info">
+              <b>QRMP Challan Create &amp; Payment Live GST Payment PMT-06</b>
+              <span>GST Compliance &bull; Official Guide</span>
+            </div>
+          </a>
+          <a class="yt-prev-card" href="https://www.youtube.com/watch?v=n1ULvQFPtcQ" target="_blank" rel="noopener">
+            <div class="yt-prev-thumb">
+              <img src="https://i.ytimg.com/vi/n1ULvQFPtcQ/hqdefault.jpg" alt="TDS Late Payment Fee &amp; Interest" loading="lazy">
+              <span class="yt-prev-play"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span>
+            </div>
+            <div class="yt-prev-info">
+              <b>TDS Late Payment Fee &amp; Interest Section 201 &amp; 234E</b>
+              <span>TDS Filing &bull; Penalties Explained</span>
+            </div>
+          </a>
+          <a class="yt-prev-card" href="https://www.youtube.com/watch?v=jw6PZ-D27DM" target="_blank" rel="noopener">
+            <div class="yt-prev-thumb">
+              <img src="https://i.ytimg.com/vi/jw6PZ-D27DM/hqdefault.jpg" alt="EPFO Latest DSC Process for KYC" loading="lazy">
+              <span class="yt-prev-play"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" fill="#fff"/></svg></span>
+            </div>
+            <div class="yt-prev-info">
+              <b>EPFO Latest New DSC Process for Approval of KYC</b>
+              <span>PF Portal &bull; Signer Utility</span>
+            </div>
+          </a>
         </div>
       </section>
 
